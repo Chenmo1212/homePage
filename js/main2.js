@@ -17,10 +17,10 @@ class Scene {
             this.photo(),
             this.node(),
             this.design(),
-            this.camarts(),
-            this.camartsShowcase(),
-            this.markly(),
-            this.vary(),
+            this.blog(),
+            this.blogShowcase(),
+            this.emoji(),
+            this.tiku(),
         ])
     }
     intro() {
@@ -99,49 +99,49 @@ class Scene {
         })
             .setTween(tween)
     }
-    camarts() {
+    blog() {
         const tween = new TimelineMax().add([
-            TweenMax.fromTo("#text-camarts", 1, {y: "-50vh"}, {y: 0, ease: Linear.easeNone}),
+            TweenMax.fromTo("#text-blog", 1, {y: "-50vh"}, {y: 0, ease: Linear.easeNone}),
             TweenMax.fromTo("#backdrop", 1, {height: 0}, {height: "100%", ease: Linear.easeNone})
         ])
 
         return new ScrollMagic.Scene({
-            triggerElement: "#camarts",
+            triggerElement: "#blog",
             triggerHook: 1,
             duration: "100%",
         })
             .setTween(tween)
     }
-    camartsShowcase() {
+    blogShowcase() {
         return new ScrollMagic.Scene({
-            triggerElement: "#camarts",
+            triggerElement: "#blog",
             triggerHook: .1,
             duration: "100%",
         })
-            .setClassToggle("#camarts", "active")
+            .setClassToggle("#blog", "active")
     }
-    markly() {
+    emoji() {
         const tween = new TimelineMax().add([
-            TweenMax.to("#markly-showcase-a", 1, {yPercent: -10, ease: Linear.easeNone}),
-            TweenMax.to("#markly-showcase-b", 1, {yPercent: -30, ease: Linear.easeNone})
+            TweenMax.to("#emoji-showcase-a", 1, {yPercent: -10, ease: Linear.easeNone}),
+            TweenMax.to("#emoji-showcase-b", 1, {yPercent: -30, ease: Linear.easeNone})
         ])
 
         return new ScrollMagic.Scene({
-            triggerElement: "#markly",
+            triggerElement: "#emoji",
             triggerHook: .1,
             duration: "100%",
         })
             .setTween(tween)
     }
-    vary() {
+    tiku() {
         const tween = new TimelineMax().add([
-            TweenMax.from("#vary-showcase-a", 1, {xPercent: 10, ease: Linear.easeNone}),
-            TweenMax.from("#vary-showcase-b", 1, {xPercent: 30, ease: Linear.easeNone}),
-            TweenMax.from("#vary-showcase-c", 1, {xPercent: 60, ease: Linear.easeNone}),
+            TweenMax.from("#tiku-showcase-a", 1, {xPercent: 10, ease: Linear.easeNone}),
+            TweenMax.from("#tiku-showcase-b", 1, {xPercent: 30, ease: Linear.easeNone}),
+            TweenMax.from("#tiku-showcase-c", 1, {xPercent: 60, ease: Linear.easeNone}),
         ])
 
         return new ScrollMagic.Scene({
-            triggerElement: "#vary",
+            triggerElement: "#tiku",
             triggerHook: .9,
             duration: "100%",
         })

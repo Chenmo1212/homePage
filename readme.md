@@ -25,7 +25,7 @@ TweenLite.to('div', 5, {x:300});
 
 链接：https://www.tweenmax.com.cn/api/tweenmax/TweenMax.set()
 
-```javascript
+```javascripttriggerHook
 // TweenMax.set( target:Object, vars:Object ) : TweenMax
 ```
 - 立即设置目标的属性值而不产生过渡动画，相当于0的动画时间。

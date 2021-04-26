@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b4d0a86-6f54-4a38-a4a3-a793a3d13f0d" name="Default Changelist" comment="" />
+    <list default="true" id="4b4d0a86-6f54-4a38-a4a3-a793a3d13f0d" name="Default Changelist" comment="change page style">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/SemiBold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/SemiBold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/SemiBold.woff" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/SemiBold.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/plantc.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main2.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +27,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1rZd8qSorxs04SyHqlNktsUmnCT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,11 +40,13 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/book" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\模板2\book" />
       <recent name="C:\Users\Administrator\Desktop\模板2\images" />
       <recent name="C:\Users\Administrator\Desktop\模板2\images\photograph" />
       <recent name="C:\Users\Administrator\Desktop\模板2" />
@@ -59,22 +77,30 @@
       <workItem from="1619187392836" duration="28843000" />
       <workItem from="1619267335904" duration="10429000" />
       <workItem from="1619357107663" duration="6890000" />
-      <workItem from="1619433153826" duration="636000" />
+      <workItem from="1619433153826" duration="9055000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="change page style" />
+    <option name="LAST_COMMIT_MESSAGE" value="change page style" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="-1298" y="569" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619235343788">
       <screen x="-1920" y="247" width="1920" height="1040" />
     </state>
     <state x="-1298" y="569" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619235343788" />
-    <state x="-1286" y="503" width="786" height="590" key="find.popup" timestamp="1619433509644">
+    <state x="-1360" y="357" key="CommitChangelistDialog2" timestamp="1619446779725">
       <screen x="-1920" y="247" width="1920" height="1040" />
     </state>
-    <state x="-1286" y="503" width="786" height="590" key="find.popup/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619433509644" />
+    <state x="-1360" y="357" key="CommitChangelistDialog2/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619446779725" />
+    <state x="-1147" y="346" width="786" height="590" key="find.popup" timestamp="1619439906259">
+      <screen x="-1920" y="247" width="1920" height="1040" />
+    </state>
+    <state x="-1147" y="346" width="786" height="590" key="find.popup/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619439906259" />
     <state x="-1304" y="364" key="run.anything.popup" timestamp="1619268295992">
       <screen x="-1920" y="247" width="1920" height="1040" />
     </state>

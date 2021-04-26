@@ -126,12 +126,13 @@ class Scene {
 			this.goFar(),
 			this.photo(),
 			this.design(),
+			this.programming(),
 			this.node(),
 			this.connectProgram(),
-			this.camarts(),
-			this.camartsShowcase(),
-			this.markly(),
-			this.vary(),
+			this.blog(),
+			this.blogShowcase(),
+			this.emoji(),
+			this.tiku(),
 		])
 	}
 	intro() {
@@ -156,7 +157,7 @@ class Scene {
 			// TweenMax.fromTo("#text-learn-from", 1, {y: 200}, {y: 0, ease: Linear.easeNone}),
 			// TweenMax.to("#text-learn-from", .5, {autoAlpha: 0, ease: Linear.easeNone}),
 
-			TweenMax.fromTo("#traveling1", 1, {y: 400}, {y: 680, ease: Linear.easeNone}),
+			TweenMax.fromTo("#traveling1", 1, {y: 200}, {y: 380, ease: Linear.easeNone}),
 			TweenMax.fromTo("#traveling1", .5, {autoAlpha: 0}, {autoAlpha: 1, ease: Linear.easeNone})
 		])
 
@@ -171,20 +172,21 @@ class Scene {
 		const blur = d3.scale.linear().domain([375, 2560]).range([3, 6])
 		const tween = new TimelineMax().add([
 			TweenMax.fromTo("#globe-container", .8, {"-webkit-filter": `blur(${blur(window.innerWidth)}px)`}, {"-webkit-filter": "blur(0)", ease: Linear.easeNone}),
-			TweenMax.fromTo("#globe", 1, {scale: Math.max(800, window.innerWidth) / globe.diameter}, {scale: 1, y: 580, ease: Linear.easeNone})
+			TweenMax.fromTo("#globe", 1, {scale: Math.max(800, window.innerWidth) / globe.diameter}, {scale: 1, y: 200, ease: Linear.easeNone})
 		])
 
 		return new ScrollMagic.Scene({
 			triggerElement: "#content",
-			offset: 450,
+			offset: 380,
 			duration: "50%",
 		})
 			.setTween(tween)
 	}
 	goFar() {
 		const tween = new TimelineMax().add([
-			TweenMax.to("#look", 1, {yPercent: -30, autoAlpha: 0, ease: Linear.easeNone}),
-			TweenMax.fromTo("#photo", 1, {yPercent: 30, autoAlpha: 0}, {yPercent: 0, autoAlpha: 1, ease: Linear.easeNone})
+			TweenMax.to("#motto", 1, {yPercent: -30, autoAlpha: 0, ease: Linear.easeNone}),
+			TweenMax.fromTo("#look", 1, {yPercent: 30, autoAlpha: 0}, {yPercent: 0, autoAlpha: 1, ease: Linear.easeNone}),
+			TweenMax.fromTo("#photo", 1, {yPercent: 30, autoAlpha: 0}, {yPercent: 0, autoAlpha: 1, ease: Linear.easeNone}),
 		])
 
 		return new ScrollMagic.Scene({
@@ -201,16 +203,43 @@ class Scene {
 			TweenMax.to("#photo-b", 1, {xPercent: -18.2, yPercent: -18.2, ease: Linear.easeIn}),
 			TweenMax.fromTo("#photo-c", 1, {"-webkit-filter": "blur(0)"}, {"-webkit-filter": `blur(6px)`, scale: 1.6, xPercent: -61.8, yPercent: -61.8, ease: Linear.easeIn}),
 			TweenMax.to("#photo-d", 1, {xPercent: -1.8, yPercent: -1.8, ease: Linear.easeIn}),
-			TweenMax.fromTo("#photo-e", 1, {"-webkit-filter": "blur(0)"}, {"-webkit-filter": `blur(8px)`, scale: 1.8, xPercent: -88.8, yPercent: -88.8, ease: Linear.easeIn}),
-			TweenMax.fromTo("#photo-f", 1, {"-webkit-filter": "blur(0)"}, {"-webkit-filter": `blur(6px)`, scale: 1.6, xPercent: -61.8, yPercent: -61.8, ease: Linear.easeIn}),
-			TweenMax.fromTo("#photo-g", 1, {"-webkit-filter": "blur(0)"}, {"-webkit-filter": `blur(3px)`, xPercent: -38.2, yPercent: -38.2, ease: Linear.easeIn}),
-			TweenMax.fromTo("#photo-h", 1, {"-webkit-filter": "blur(0)"}, {"-webkit-filter": `blur(2px)`, xPercent: -21.8, yPercent: -21.8, ease: Linear.easeIn})
+			TweenMax.fromTo("#photo-e", 1, {"-webkit-filter": "blur(0)"}, {"-webkit-filter": `blur(8px)`, xPercent: -38.2, yPercent: -38.2, ease: Linear.easeIn}),
+			TweenMax.fromTo("#photo-f", 1, {"-webkit-filter": "blur(0)"}, {"-webkit-filter": `blur(6px)`, xPercent: -21.8, yPercent: -21.8, ease: Linear.easeIn}),
+			TweenMax.fromTo("#photo-g", 1, {"-webkit-filter": "blur(0)"}, {"-webkit-filter": `blur(3px)`, scale: 1.4, xPercent: -88.8, yPercent: -88.8, ease: Linear.easeIn}),
+			TweenMax.fromTo("#photo-h", 1, {"-webkit-filter": "blur(0)"}, {"-webkit-filter": `blur(2px)`, scale: 1.5, xPercent: -61.8, yPercent: -61.8, ease: Linear.easeIn}),
 		])
 
 		return new ScrollMagic.Scene({
 			triggerElement: "#photography",
 			triggerHook: .1,
 			duration: "100%",
+		})
+			.setTween(tween)
+	}
+	programming() {
+		const tween = new TimelineMax().add([
+			TweenMax.fromTo(".text-programming", 1,{autoAlpha: 0}, {yPercent: -30, autoAlpha: 1, ease: Linear.easeNone}),
+		])
+
+		return new ScrollMagic.Scene({
+			triggerElement: "#programming",
+			triggerHook: .5,
+			duration: "38.2%",
+		})
+			.setTween(tween)
+	}
+	design() {
+		const tween = new TimelineMax().add([
+			TweenMax.fromTo("#text-design", .5,{autoAlpha: 0.5}, {yPercent: -30, autoAlpha: 1, ease: Linear.easeNone}),
+			TweenMax.fromTo(".design-pic-left", 1, {rotation: 60, scale: 0.6, autoAlpha: 0, x:-100}, { rotation: 0, scale: 1.1, autoAlpha: 1,x:0, ease: Linear.easeNone}),
+			TweenMax.fromTo(".design-pic-right", 1, {rotation: -60, scale: 0.6, autoAlpha: 0, x:100}, { rotation: 0, scale: 1.1, autoAlpha: 1,x:0, ease: Linear.easeNone})
+		])
+
+		return new ScrollMagic.Scene({
+			triggerElement: "#design",
+			triggerHook: .5,
+			offset: -200,
+			duration: "40.2%",
 		})
 			.setTween(tween)
 	}
@@ -223,19 +252,6 @@ class Scene {
 			triggerElement: "#nodes",
 			triggerHook: .5,
 			duration: "80%",
-		})
-			.setTween(tween)
-	}
-	design() {
-		const tween = new TimelineMax().add([
-			TweenMax.to("#text-design", 1, {yPercent: -30, autoAlpha: 0, ease: Linear.easeNone}),
-			TweenMax.fromTo("#text-dot-connecting", 1, {yPercent: 30, autoAlpha: 0}, {yPercent: 0, autoAlpha: 1, ease: Linear.easeNone})
-		])
-
-		return new ScrollMagic.Scene({
-			triggerElement: "#design",
-			triggerHook: .5,
-			duration: "38.2%",
 		})
 			.setTween(tween)
 	}
@@ -252,59 +268,54 @@ class Scene {
 		})
 			.setTween(tween)
 	}
-	camarts() {
+	blog() {
 		const tween = new TimelineMax().add([
-			TweenMax.fromTo("#text-camarts", 1, {y: "-50vh"}, {y: 0, ease: Linear.easeNone}),
+			TweenMax.fromTo("#text-blog", 1, {y: "-50vh"}, {y: 0, ease: Linear.easeNone}),
 			TweenMax.fromTo("#backdrop", 1, {height: 0}, {height: "100%", ease: Linear.easeNone})
 		])
 
 		return new ScrollMagic.Scene({
-			triggerElement: "#camarts",
+			triggerElement: "#blog",
 			triggerHook: 1,
 			duration: "100%",
 		})
 			.setTween(tween)
 	}
-	camartsShowcase() {
+	blogShowcase() {
 		return new ScrollMagic.Scene({
-			triggerElement: "#camarts",
+			triggerElement: "#blog",
 			triggerHook: .1,
 			duration: "100%",
 		})
-			.setClassToggle("#camarts", "active")
+			.setClassToggle("#blog", "active")
 	}
-	markly() {
+	emoji() {
 		const tween = new TimelineMax().add([
-			TweenMax.to("#markly-showcase-a", 1, {yPercent: -10, ease: Linear.easeNone}),
-			TweenMax.to("#markly-showcase-b", 1, {yPercent: -30, ease: Linear.easeNone})
+			TweenMax.to("#emoji-showcase-a", 1, {yPercent: -10, ease: Linear.easeNone}),
+			TweenMax.to("#emoji-showcase-b", 1, {yPercent: -30, ease: Linear.easeNone})
 		])
 
 		return new ScrollMagic.Scene({
-			triggerElement: "#markly",
+			triggerElement: "#emoji",
 			triggerHook: .1,
 			duration: "100%",
 		})
 			.setTween(tween)
 	}
-	vary() {
+	tiku() {
 		const tween = new TimelineMax().add([
-			TweenMax.from("#vary-showcase-a", 1, {xPercent: 10, ease: Linear.easeNone}),
-			TweenMax.from("#vary-showcase-b", 1, {xPercent: 30, ease: Linear.easeNone}),
-			TweenMax.from("#vary-showcase-c", 1, {xPercent: 60, ease: Linear.easeNone}),
+			TweenMax.from("#tiku-showcase-a", 1, {xPercent: 10, ease: Linear.easeNone}),
+			TweenMax.from("#tiku-showcase-b", 1, {xPercent: 30, ease: Linear.easeNone}),
+			TweenMax.from("#tiku-showcase-c", 1, {xPercent: 60, ease: Linear.easeNone}),
 		])
 
 		return new ScrollMagic.Scene({
-			triggerElement: "#vary",
+			triggerElement: "#tiku",
 			triggerHook: .9,
 			duration: "100%",
 		})
 			.setTween(tween)
 	}
-}
-
-function logMsg(){
-	let a = document.documentElement.scrollTop;
-	console.log("滑动距离为：",a);
 }
 
 class Node {
