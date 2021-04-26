@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 800" style="enable-background:new 0 0 1920 800;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#858585;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#B8B8B8;}
+	.st2{fill:none;}
+	.st3{fill:none;stroke:#979797;}
+	.st4{fill:#404040;}
+	.st5{font-family:'AdobeSongStd-Light-GBpc-EUC-H';}
+	.st6{font-size:12px;}
+	.st7{font-family:'ArialMT';}
+</style>
+<g>
+	<path class="st0" d="M919.5,471.8L862.1,555L919.5,471.8z"/>
+	<path class="st1" d="M1407.1,365.8l-14.5,92.8l-78,75.9l-149-54.9"/>
+	<line class="st2" x1="914.1" y1="225" x2="833.1" y2="127.8"/>
+	<line class="st3" x1="669.1" y1="452" x2="1314.6" y2="534.5"/>
+	<path class="st3" d="M584.1,369l-81-88 M584.1,369l47-88l-77-55"/>
+	<path class="st3" d="M644.1,226l-13,55 M584.1,369l85,83l-25,83 M669.1,452l87,63 M829.1,369l-160,83 M829.1,369l91,103l106,58"/>
+	<path class="st3" d="M920.1,472l182-103 M920.1,472l-9,161 M669.1,452l58,124 M669.1,452l-3,233 M669.1,452l-217-2 M669.1,452
+		l-233,63l-42,38 M914.1,225l96-4"/>
+	<path class="st3" d="M669.1,452l-247,147 M669.1,452l40,181"/>
+	<path class="st3" d="M669.1,452l151,234 M669.1,452l-260,223 M669.1,452l-122-287l-44,116"/>
+	<path class="st3" d="M829.1,369l85-144"/>
+	<path class="st3" d="M1102.1,369l62-79l-15-120 M1165.1,290l107-68 M1228.1,112l-63,177"/>
+	<path class="st3" d="M1392.6,457.5l86,148 M1406.6,366.5l66-111l20-91 M1423.1,152l-16.5,214.5l-66-89l29-79"/>
+	<path class="st3" d="M669.1,452l-95,121"/>
+	<path class="st3" d="M564.1,626l105-174l326,211"/>
+	<line class="st3" x1="547.1" y1="165" x2="644.1" y2="224"/>
+	<path class="st1" d="M1276.3,317.7l130.9,48.8"/>
+</g>
+<g>
+	<text transform="matrix(1 0 0 1 597.1077 375)" class="st4 st5 st6">网站前端</text>
+	<circle class="st4" cx="583.1" cy="369" r="4"/>
+	<text transform="matrix(1 0 0 1 1115.1078 375)" class="st4 st5 st6">人工智能</text>
+	<circle class="st4" cx="1101.1" cy="369" r="4"/>
+	<text transform="matrix(1 0 0 1 842.1077 375)" class="st4 st5 st6">服务器</text>
+	<circle class="st4" cx="828.1" cy="369" r="4"/>
+	<text transform="matrix(1 0 0 1 1023.1077 362.5)" class="st4 st7 st6">AR/VR</text>
+	<circle class="st4" cx="1009.1" cy="356.5" r="4"/>
+	<text transform="matrix(1 0 0 1 1420.6078 372.5)" class="st4 st5 st6">数据库</text>
+	<circle class="st4" cx="1406.6" cy="366.5" r="4"/>
+	<text transform="matrix(1 0 0 1 682.1077 458)" class="st4 st7 st6">JavaScript</text>
+	<circle class="st4" cx="668.1" cy="452" r="4"/>
+	<text transform="matrix(1 0 0 1 644.1077 287)" class="st4 st7 st6">CSS</text>
+	<circle class="st4" cx="630.1" cy="281" r="4"/>
+	<text transform="matrix(1 0 0 1 515.1077 286)" class="st4 st7 st6">HTML</text>
+	<circle class="st4" cx="501.1" cy="280" r="4"/>
+	<text transform="matrix(1 0 0 1 933.1077 478)" class="st4 st7 st6">Python</text>
+	<circle class="st4" cx="919.1" cy="472" r="4"/>
+	<text transform="matrix(1 0 0 1 1179.6078 485.5)" class="st4 st7 st6">C++</text>
+	<circle class="st4" cx="1165.6" cy="479.5" r="4"/>
+	<text transform="matrix(1 0 0 1 1006.1077 289)" class="st4 st7 st6">PHP</text>
+	<circle class="st4" cx="992.1" cy="283" r="4"/>
+	<text transform="matrix(1 0 0 1 801.1077 232)" class="st4 st7 st6">Docker</text>
+	<circle class="st4" cx="787.1" cy="226" r="4"/>
+	<text transform="matrix(1 0 0 1 747.1077 187)" class="st4 st7 st6">Kubernetes</text>
+	<circle class="st4" cx="733.1" cy="181" r="4"/>
+	<text transform="matrix(1 0 0 1 927.1077 231)" class="st4 st7 st6">Nginx</text>
+	<circle class="st4" cx="913.1" cy="225" r="4"/>
+	<text transform="matrix(1 0 0 1 921.1077 177)" class="st4 st7 st6">Apache</text>
+	<circle class="st4" cx="907.1" cy="171" r="4"/>
+	<text transform="matrix(1 0 0 1 1039.1078 536)" class="st4 st7 st6">Flask</text>
+	<circle class="st4" cx="1025.1" cy="530" r="4"/>
+	<text transform="matrix(1 0 0 1 978.1077 590)" class="st4 st7 st6">Django</text>
+	<circle class="st4" cx="964.1" cy="584" r="4"/>
+	<text transform="matrix(1 0 0 1 1178.1078 295)" class="st4 st5 st6">机器学习</text>
+	<circle class="st4" cx="1164.1" cy="289" r="4"/>
+	<text transform="matrix(1 0 0 1 1354.6078 283.5)" class="st4 st5 st6">缓存策略</text>
+	<circle class="st4" cx="1340.6" cy="277.5" r="4"/>
+	<text transform="matrix(1 0 0 1 1162.1078 176)" class="st4 st5 st6">图像分类</text>
+	<circle class="st4" cx="1148.1" cy="170" r="4"/>
+	<text transform="matrix(1 0 0 1 1241.1078 118)" class="st4 st5 st6">图像识别</text>
+	<circle class="st4" cx="1227.1" cy="112" r="4"/>
+	<text transform="matrix(1 0 0 1 1285.1078 228)" class="st4 st7 st6">TensorFlow</text>
+	<circle class="st4" cx="1271.1" cy="222" r="4"/>
+	<text transform="matrix(1 0 0 1 876.1077 561)" class="st4 st5 st6">爬虫</text>
+	<circle class="st4" cx="862.1" cy="555" r="4"/>
+	<text transform="matrix(1 0 0 1 1023.1077 227)" class="st4 st7 st6">WordPress</text>
+	<circle class="st4" cx="1009.1" cy="221" r="4"/>
+	<text transform="matrix(1 0 0 1 657.1077 541)" class="st4 st7 st6">Vue.js</text>
+	<circle class="st4" cx="643.1" cy="535" r="4"/>
+	<text transform="matrix(1 0 0 1 587.1077 579)" class="st4 st7 st6">D3.js</text>
+	<circle class="st4" cx="573.1" cy="573" r="4"/>
+	<text transform="matrix(1 0 0 1 567.1077 232)" class="st4 st7 st6">SCSS</text>
+	<circle class="st4" cx="553.1" cy="226" r="4"/>
+	<text transform="matrix(1 0 0 1 657.1077 230)" class="st4 st7 st6">LESS</text>
+	<circle class="st4" cx="643.1" cy="224" r="4"/>
+	<text transform="matrix(1 0 0 1 560.1077 171)" class="st4 st7 st6">Bootstrap</text>
+	<circle class="st4" cx="546.1" cy="165" r="4"/>
+	<text transform="matrix(1 0 0 1 769.1077 521)" class="st4 st7 st6">NodeJS</text>
+	<circle class="st4" cx="755.1" cy="515" r="4"/>
+	<text transform="matrix(1 0 0 1 679.1077 691)" class="st4 st7 st6">NPM</text>
+	<circle class="st4" cx="665.1" cy="685" r="4"/>
+	<text transform="matrix(1 0 0 1 833.1077 692)" class="st4 st7 st6">SVG</text>
+	<circle class="st4" cx="819.1" cy="686" r="4"/>
+	<text transform="matrix(1 0 0 1 924.1077 639)" class="st4 st7 st6">PIP</text>
+	<circle class="st4" cx="910.1" cy="633" r="4"/>
+	<text transform="matrix(1 0 0 1 578.1077 632)" class="st4 st7 st6">Electron</text>
+	<circle class="st4" cx="564.1" cy="626" r="4"/>
+	<text transform="matrix(1 0 0 1 435.1077 605)" class="st4 st7 st6">jQuery</text>
+	<circle class="st4" cx="421.1" cy="599" r="4"/>
+	<text transform="matrix(1 0 0 1 449.1077 521)" class="st4 st7 st6">Webpack</text>
+	<circle class="st4" cx="435.1" cy="515" r="4"/>
+	<text transform="matrix(1 0 0 1 407.1077 559)" class="st4 st7 st6">Three.js</text>
+	<circle class="st4" cx="393.1" cy="553" r="4"/>
+	<text transform="matrix(1 0 0 1 418.1077 309)" class="st4 st7 st6">Yarn</text>
+	<circle class="st4" cx="404.1" cy="303" r="4"/>
+	<text transform="matrix(1 0 0 1 465.1077 456)" class="st4 st7 st6">WebGL</text>
+	<circle class="st4" cx="451.1" cy="450" r="4"/>
+	<text transform="matrix(1 0 0 1 1106.1075 451)" class="st4 st7 st6">Unity</text>
+	<circle class="st4" cx="1092.1" cy="445" r="4"/>
+	<text transform="matrix(1 0 0 1 1486.6078 261.5)" class="st4 st7 st6">NoSQL</text>
+	<circle class="st4" cx="1472.6" cy="255.5" r="4"/>
+	<text transform="matrix(1 0 0 1 1505.6078 171.5)" class="st4 st7 st6">MongoDB</text>
+	<circle class="st4" cx="1491.6" cy="165.5" r="4"/>
+	<text transform="matrix(1 0 0 1 1492.6078 611.5)" class="st4 st7 st6">Access</text>
+	<circle class="st4" cx="1478.6" cy="605.5" r="4"/>
+	<text transform="matrix(1 0 0 1 1406.6078 463.5)" class="st4 st5 st6">关系型数据库</text>
+	<circle class="st4" cx="1392.6" cy="457.5" r="4"/>
+	<text transform="matrix(1 0 0 1 1328.6078 540.3823)" class="st4 st7 st6">MySQL</text>
+	<ellipse class="st4" cx="1314.6" cy="534.5" rx="4" ry="4"/>
+	<text transform="matrix(1 0 0 1 1383.6078 204.5)" class="st4 st7 st6">Redis</text>
+	<circle class="st4" cx="1369.6" cy="198.5" r="4"/>
+	<text transform="matrix(1 0 0 1 847.1077 134)" class="st4 st7 st6">Linux</text>
+	<circle class="st4" cx="833.1" cy="128" r="4"/>
+	<text transform="matrix(1 0 0 1 435.1077 196)" class="st4 st7 st6">XML</text>
+	<circle class="st4" cx="421.1" cy="190" r="4"/>
+	<text transform="matrix(1 0 0 1 439.1077 254)" class="st4 st7 st6">TypeScript</text>
+	<circle class="st4" cx="425.1" cy="248" r="4"/>
+	<text transform="matrix(1 0 0 1 1437.1078 158)" class="st4 st7 st6">Git</text>
+	<circle class="st4" cx="1423.1" cy="152" r="4"/>
+	<text transform="matrix(1 0 0 1 1008.1077 669)" class="st4 st7 st6">JSON</text>
+	<circle class="st4" cx="994.1" cy="663" r="4"/>
+	<text transform="matrix(1 0 0 1 422.1077 681)" class="st4 st5 st6">微信小程序</text>
+	<circle class="st4" cx="408.1" cy="675" r="4"/>
+	<text transform="matrix(1 0 0 1 740.1077 582)" class="st4 st7 st6">React</text>
+	<circle class="st4" cx="726.1" cy="576" r="4"/>
+	<text transform="matrix(1 0 0 1 722.1077 639)" class="st4 st7 st6">GSAP</text>
+	<circle class="st4" cx="708.1" cy="633" r="4"/>
+	<text transform="matrix(1 0 0 1 759.1077 283)" class="st4 st5 st6">容器化</text>
+	<circle class="st4" cx="745.1" cy="277" r="4"/>
+</g>
+<path class="st3" d="M1242.4,422.8"/>
+<path class="st3" d="M1279.7,317.7"/>
+<text transform="matrix(1 0 0 1 1289.4719 321.6791)" class="st4 st7 st6">SVN</text>
+<circle class="st4" cx="1276.1" cy="317.7" r="4"/>
+<path class="st4" d="M1276.1,317.7"/>
+<line class="st2" x1="1276.1" y1="317.7" x2="1407.1" y2="365.8"/>
+</svg>
