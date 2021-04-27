@@ -7,10 +7,11 @@
 	.st1{fill:none;stroke:#B8B8B8;}
 	.st2{fill:none;}
 	.st3{fill:none;stroke:#979797;}
-	.st4{fill:#404040;}
+	.st4{fill:#FFFFFF;}
 	.st5{font-family:'AdobeSongStd-Light-GBpc-EUC-H';}
 	.st6{font-size:12px;}
 	.st7{font-family:'ArialMT';}
+	.st8{fill:#404040;}
 </style>
 <g>
 	<path class="st0" d="M919.5,471.8L862.1,555L919.5,471.8z"/>
@@ -145,8 +146,8 @@
 </g>
 <path class="st3" d="M1242.4,422.8"/>
 <path class="st3" d="M1279.7,317.7"/>
-<text transform="matrix(1 0 0 1 1289.4719 321.6791)" class="st4 st7 st6">SVN</text>
-<circle class="st4" cx="1276.1" cy="317.7" r="4"/>
-<path class="st4" d="M1276.1,317.7"/>
+<text transform="matrix(1 0 0 1 1289.4719 321.6791)" class="st8 st7 st6">SVN</text>
+<circle class="st8" cx="1276.1" cy="317.7" r="4"/>
+<path class="st8" d="M1276.1,317.7"/>
 <line class="st2" x1="1276.1" y1="317.7" x2="1407.1" y2="365.8"/>
 </svg>

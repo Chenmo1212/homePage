@@ -17,8 +17,12 @@
 
 
 :root {
-    --color-font: #404040;
-    --color-background: #fdfdfd;
+    /*--color-font: #404040;*/
+    /*--color-background: #fdfdfd;*/
+
+    --color-font: #fdfdfd;
+    --color-background: #404040;
+
     --view-minmax: calc((100vw - 500px) / (1920 - 500));
 }
 
@@ -1139,7 +1143,8 @@ footer p.weak {
     opacity: .6;
 }
 
-#switch-language {
+#switch-language,
+.dark_mode {
     position: absolute;
     background-color: var(--color-background);
     top: 1em;
@@ -1147,4 +1152,97 @@ footer p.weak {
     border: none;
     font-size: 12px;
     cursor: pointer;
+}
+
+body.dark {
+    background-color: #606578;
+    background-image: linear-gradient(#7a6163, #556681);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+.mode {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+    text-align: center;
+}
+.mode:before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #fff 50%, #000 50.01%);
+    border: 1px solid #fff;
+    transition: transform 0.5s ease-out;
+}
+.mode:after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+    mix-blend-mode: difference;
+}
+.mode div {
+    position: absolute;
+    bottom: -22px;
+    width: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 18px;
+    pointer-events: none;
+}
+.mode div:after {
+    content: 'Off';
+    font-weight: 400;
+}
+.dark .mode {
+    background: #fff;
+    box-shadow: 0 6px 7px 0 rgba(0,0,0,0.08), 0 2px 9px 0 rgba(0,0,0,0.1);
+}
+.dark .mode:before {
+    border: 2px solid #000;
+    transform: rotate(180deg);
+}
+.dark .mode div:after {
+    content: 'On';
+}
+.scaling:after {
+    animation: scaleInner 0.5s ease forwards;
+}
+@-moz-keyframes scaleInner {
+    50% {
+        transform: scale(1.8);
+    }
+}
+@-webkit-keyframes scaleInner {
+    50% {
+        transform: scale(1.8);
+    }
+}
+@-o-keyframes scaleInner {
+    50% {
+        transform: scale(1.8);
+    }
+}
+@keyframes scaleInner {
+    50% {
+        transform: scale(1.8);
+    }
 }
