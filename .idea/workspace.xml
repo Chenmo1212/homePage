@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b4d0a86-6f54-4a38-a4a3-a793a3d13f0d" name="Default Changelist" comment="change page style">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="4b4d0a86-6f54-4a38-a4a3-a793a3d13f0d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/SemiBold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/SemiBold.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/SemiBold.woff" beforeDir="false" afterPath="$PROJECT_DIR$/fonts/SemiBold.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/plantc.woff2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main2.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,8 +71,17 @@
       <workItem from="1619187392836" duration="28843000" />
       <workItem from="1619267335904" duration="10429000" />
       <workItem from="1619357107663" duration="6890000" />
-      <workItem from="1619433153826" duration="9055000" />
+      <workItem from="1619433153826" duration="11638000" />
+      <workItem from="1619518875545" duration="5247000" />
     </task>
+    <task id="LOCAL-00001" summary="change page style">
+      <created>1619446809636</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1619446809636</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,14 +96,14 @@
       <screen x="-1920" y="247" width="1920" height="1040" />
     </state>
     <state x="-1298" y="569" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619235343788" />
-    <state x="-1360" y="357" key="CommitChangelistDialog2" timestamp="1619446779725">
+    <state x="-1360" y="357" key="CommitChangelistDialog2" timestamp="1619446806137">
       <screen x="-1920" y="247" width="1920" height="1040" />
     </state>
-    <state x="-1360" y="357" key="CommitChangelistDialog2/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619446779725" />
-    <state x="-1147" y="346" width="786" height="590" key="find.popup" timestamp="1619439906259">
+    <state x="-1360" y="357" key="CommitChangelistDialog2/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619446806137" />
+    <state x="-1147" y="346" width="786" height="590" key="find.popup" timestamp="1619521138566">
       <screen x="-1920" y="247" width="1920" height="1040" />
     </state>
-    <state x="-1147" y="346" width="786" height="590" key="find.popup/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619439906259" />
+    <state x="-1147" y="346" width="786" height="590" key="find.popup/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619521138566" />
     <state x="-1304" y="364" key="run.anything.popup" timestamp="1619268295992">
       <screen x="-1920" y="247" width="1920" height="1040" />
     </state>

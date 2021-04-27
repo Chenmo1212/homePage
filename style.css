@@ -45,7 +45,16 @@ h1, h2, p {
     text-align: center;
 }
 
-.mpwx p {
+#text-blog h1,
+#emoji h1,
+#tiku h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 2em;
+}
+
+.wx p {
     text-align: left;
 }
 
@@ -232,7 +241,7 @@ header p {
 
 #content {
     --padding: 1.25em;
-    /*padding-bottom: 220px;*/
+    padding-bottom: 200px;
     /*padding-bottom: 720px;*/
     /*margin-bottom: -220px;*/
     overflow: hidden;
@@ -241,22 +250,28 @@ header p {
 #globe,
 .globe {
     display: block;
-    margin: 20vh auto;
+    margin: 20vh auto 5vh;
     transform-origin: top;
 }
 
 @media (max-width: 36em) {
-    #content p {
-        text-align: left;
+    #content p,
+    #photography p,
+    #more p {
+        text-align: left!important;
+    }
+
+    #code {
+        width: 1500px;
     }
 
     #content br {
-        display: none;
+        /*display: none;*/
     }
 }
 
 #go_far {
-    margin-bottom: 200px;
+    margin-bottom: 120px;
 }
 
 #photography {
@@ -273,7 +288,7 @@ header p {
 
 #photography img,
 #design img {
-    width: 280px;
+    width: 270px;
     height: 193.33px;
     margin: 16px;
     border: 10px solid #fff;
@@ -282,19 +297,31 @@ header p {
     will-change: transform;
 }
 
+#design img {
+    box-shadow: 0 6px 7px 0 rgba(0,0,0,0.08), 0 2px 9px 0 rgba(0,0,0,0.1);
+}
+
 #group {
     width: 645px;
     transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
     will-change: transform;
 }
-
+#design {
+    width: 100vw;
+}
+#design #text-design {
+    padding: 1.25em;
+}
 #design .group {
     text-align: center;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 30px;
 }
 
 @media (max-width: 600px) {
     #photography {
-        margin: 100px 0;
+        /*margin: 100px 0;*/
     }
 
     #photography p:lang(en) {
@@ -406,7 +433,7 @@ header p {
 
 #go_far,
 #connect,
-#design {
+#photography_text {
     --padding: 1.25em;
     /*min-height: 68vh;*/
 }
@@ -420,6 +447,7 @@ header p {
 @media (max-width: 600px) {
     #go_far p,
     #connect p,
+    #photography_text p,
     #design p {
         text-align: left;
     }
