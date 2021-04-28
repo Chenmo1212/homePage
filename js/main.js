@@ -29,20 +29,20 @@ const switchLanguage = () => {
 
 class Globe {
     constructor() {
-        this.canvas = document.getElementById("globe")
-        this.planet = planetaryjs.planet()
+        this.canvas = document.getElementById("globe");
+        this.planet = planetaryjs.planet();
         this.diameter = 0
     }
 
     init() {
-        this.planet.loadPlugin(this.rotate(10))
+        this.planet.loadPlugin(this.rotate(10));
         this.planet.loadPlugin(
             planetaryjs.plugins.earth({
                 topojson: {file: "data/borderless-world.json"},
                 oceans: {fill: "#dddee0"},
                 land: {fill: "#f7f7f7"}
             })
-        )
+        );
         this.planet.loadPlugin(planetaryjs.plugins.drag({
             onDragStart() {
                 this.plugins.rotate.pause()
@@ -50,16 +50,16 @@ class Globe {
             onDragEnd() {
                 this.plugins.rotate.resume()
             }
-        }))
+        }));
 
         this.planet.loadPlugin(planetaryjs.plugins.pings({
             color: "#df5f5f", ttl: 2000, angle: 2
-        }))
+        }));
 
-        this.locations()
-        this.scale()
-        this.planet.draw(this.canvas)
-        this.planet.projection.rotate([0, -25, 0]) // Focus on the northern hemisphere
+        this.locations();
+        this.scale();
+        this.planet.draw(this.canvas);
+        this.planet.projection.rotate([0, -25, 0]); // Focus on the northern hemisphere
         window.addEventListener("resize", () => this.scale())
     }
 
@@ -85,21 +85,21 @@ class Globe {
                 resume() {
                     paused = false
                 }
-            }
+            };
 
             planet.onDraw(() => {
                 if (paused || !lastTick) {
                     lastTick = new Date()
                 } else {
-                    const now = new Date()
-                    const delta = now - lastTick
-                    const rotation = planet.projection.rotate()
-                    rotation[0] += dps * delta / 1000
+                    const now = new Date();
+                    const delta = now - lastTick;
+                    const rotation = planet.projection.rotate();
+                    rotation[0] += dps * delta / 1000;
 
                     if (rotation[0] >= 180)
-                        rotation[0] -= 360
+                        rotation[0] -= 360;
 
-                    planet.projection.rotate(rotation)
+                    planet.projection.rotate(rotation);
                     lastTick = now
                 }
             })
@@ -179,7 +179,7 @@ class Scene {
     }
 
     globe() {
-        const blur = d3.scale.linear().domain([375, 2560]).range([3, 6])
+        const blur = d3.scale.linear().domain([375, 2560]).range([3, 6]);
         const tween = new TimelineMax().add([
             TweenMax.fromTo("#globe-container", .8, {"-webkit-filter": `blur(${blur(window.innerWidth)}px)`}, {
                 "-webkit-filter": "blur(0)",
@@ -376,7 +376,7 @@ class Scene {
         const tween = new TimelineMax().add([
             TweenMax.fromTo("#text-blog", 1, {y: "-50vh"}, {y: 0, ease: Linear.easeNone}),
             TweenMax.fromTo("#backdrop", 1, {height: 0}, {height: "100%", ease: Linear.easeNone})
-        ])
+        ]);
 
         return new ScrollMagic.Scene({
             triggerElement: "#blog",
@@ -414,7 +414,7 @@ class Scene {
             TweenMax.from("#tiku-showcase-a", 1, {xPercent: 10, ease: Linear.easeNone}),
             TweenMax.from("#tiku-showcase-b", 1, {xPercent: 30, ease: Linear.easeNone}),
             TweenMax.from("#tiku-showcase-c", 1, {xPercent: 60, ease: Linear.easeNone}),
-        ])
+        ]);
 
         return new ScrollMagic.Scene({
             triggerElement: "#tiku",
@@ -435,18 +435,20 @@ class Node {
     }
 
     didScroll() {
-        const margin = 60
+        const margin = 60;
         const predicate = this.container.scrollWidth - this.container.scrollLeft <= window.innerWidth + margin;
         this.container.classList = predicate ? "reached" : ""
     }
 }
-
+/**
+ * 留言反馈
+ */
 class Guestbook {
     constructor() {
         this.messages = this.element("recent-messages");
         this.container = this.element("new-message");
         this.nextButton = this.element("next-step-button");
-        this.contentField = this.element("message-content")
+        this.contentField = this.element("message-content");
         this.nameField = this.element("message-name");
         this.emailField = this.element("message-email");
         this.URLField = this.element("message-url");
@@ -464,21 +466,21 @@ class Guestbook {
         // })
     }
 
-    render(items) {
-        items.forEach(item => this.messages.insertAdjacentHTML("beforeend", this.template(item)))
-    }
+    // render(items) {
+    //     items.forEach(item => this.messages.insertAdjacentHTML("beforeend", this.template(item)))
+    // }
 
-    template(item) {
-        return `<div class="message">
-					<header>
-						<img src="${item.avatar || "?"}" />
-						<h3>${item.name}</h3>
-					</header>
-					<div class="message-content">
-						<p>${item.content}</p>
-					</div>
-				</div>`
-    }
+    // template(item) {
+    //     return `<div class="message">
+	// 				<header>
+	// 					<img src="${item.avatar || "?"}" />
+	// 					<h3>${item.name}</h3>
+	// 				</header>
+	// 				<div class="message-content">
+	// 					<p>${item.content}</p>
+	// 				</div>
+	// 			</div>`
+    // }
 
     element(id) {
         return document.getElementById(id)
@@ -489,20 +491,22 @@ class Guestbook {
     }
 
     post(button) {
+        let author_content = this.contentField.value;
+        let UID = 'UID_pNfFHmlL26qUZuXmGkrS9CGNUSLD';
+        let appToken = 'AT_aGS8jqOTZDiEAwbZFH2WdEgV15tgIl7j';
+        let author_email = this.emailField.value;
         const data = {
-            title: '主页留言',
-            desp: {
-                post: 1008,
-                content: this.contentField.value,
-                author_name: this.nameField.value,
-                author_email: this.emailField.value,
-                author_url: this.URLField.value,
-                author_user_agent: navigator.userAgent + " DWAPI/7.0"
-            }
-        }
+            summary: "主页留言", //消息摘要，显示在微信聊天页面或者模版消息卡片上，限制长度100，可以不传，不传默认截取content前面的内容。
+            content: `#### 类型：\n\n${'主页留言'}\n\n---\n\n#### 内容：\n\n${author_content}\n\n---\n\n#### 称呼：\n\n
+            ${this.nameField.value}\n\n---\n\n#### 联系方式：\n\nEmail: ${author_email}\nUrl: ${this.URLField.value}\n
+            Agent:${navigator.userAgent + " DWAPI/7.0"}\n`,
+            contentType: 3,//内容类型 1表示文字  2表示html(只发送body标签内部的数据即可，不包括body标签) 3表示markdown
+            uids: [UID], //发送目标的UID，是一个数组。注意uids和topicIds可以同时填写，也可以只填写一个。
+            appToken: appToken
+        };
 
         const re = /\S+@\S+\.\S+/;
-        if (data.desp.author_email.length > 0 && !re.test(data.desp.author_email)) {
+        if (author_email.length > 0 && !re.test(author_email)) {
             console.info("Todo: handle invalid email address");
             return
         }
@@ -510,14 +514,13 @@ class Guestbook {
         button.className = "posting";
         button.innerHTML = "";
 
-        this.POST(data, xhr => {
-            if (xhr.status == 200 || xhr.status == 201)
+        this.POST(JSON.stringify(data), xhr => {
+            if (xhr.status === 200 || xhr.status === 201)
                 this.messageDidPost();
             else
                 alert("Please try again later")
         })
     }
-
     contentDidChange(e) {
         this.nextButton.className = e.value.length < 5 ? "inactive" : ""
     }
@@ -527,54 +530,61 @@ class Guestbook {
     }
 
     request(path, method, payload, callback) {
-        let SCKEY = 'SCT25268TK4j67c5FaUBd7RVWlNas3kcN';
-        let url = 'https://sctapi.ftqq.com/' + SCKEY + '.send';
-        const xhr = new XMLHttpRequest()
+        let url = 'https://wxpusher.zjiecode.com/api/send/message/';
+        const xhr = new XMLHttpRequest();
         xhr.onreadystatechange = () => {
             if (xhr.readyState === 4 && callback)
                 callback(xhr)
-        }
+        };
         xhr.open(method, url, true);
-        xhr.setRequestHeader("Content-Type", "application/json")
+        xhr.setRequestHeader("Content-Type", "application/json");
         xhr.send(payload)
     }
 
-    // GET(callback) {
-    // 	this.request("homepage-comment", "GET", null, callback)
-    // }
+    GET(callback) {
+    	this.request("get", "GET", null, callback)
+    }
     POST(payload, callback) {
-        this.request("comments", "POST", payload, callback)
+        this.request("", "POST", payload, callback)
     }
 }
 
+/**
+ *  ============================
+ *  暗黑模式
+ *  ============================
+ */
 let darkMode = localStorage.getItem("darkMode");
 let obj = document.querySelector('.mode');
 let obj_box = document.querySelector('.dark_mode');
+let code = document.querySelector('#code');
 
 function enableDarkMode() {
 	darkMode = 'enabled';
     localStorage.setItem("darkMode", "enabled");
 	document.documentElement.style.setProperty('--color-font', '#fdfdfd');
-	document.documentElement.style.setProperty('--color-background', '#404040')
+	document.documentElement.style.setProperty('--color-background', '#404040');
 	obj_box.classList.toggle('dark');
 	obj.classList.toggle('off');
 	obj.classList.add('scaling');
 	setTimeout(function() {
 		obj.classList.remove('scaling');
 	}, 520);
+	code.src = './images/code_dark.svg'
 }
 
 function disableDarkMode() {
 	darkMode = null;
     localStorage.setItem("darkMode", null);
 	document.documentElement.style.setProperty('--color-font', '#404040');
-	document.documentElement.style.setProperty('--color-background', '#fdfdfd')
+	document.documentElement.style.setProperty('--color-background', '#fdfdfd');
 	obj_box.classList.toggle('dark');
 	obj.classList.toggle('off');
 	obj.classList.add('scaling');
 	setTimeout(function() {
 		obj.classList.remove('scaling');
 	}, 520);
+	code.src = './images/code.svg'
 }
 
 if (darkMode === "enabled") {
@@ -582,8 +592,8 @@ if (darkMode === "enabled") {
 } else {
 	disableDarkMode();
 }
-// Listeners
 
+// Listeners
 const darkModeToggle = document.querySelector(".mode");
 darkModeToggle.addEventListener("click", () => {
 	if (darkMode === 'enabled'){

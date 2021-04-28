@@ -929,7 +929,7 @@ header p {
 #social-media .tag:hover,
 #program .tag:hover {
     padding-left: 1em;
-    background-color: #fff;
+    background-color: var(--color-background);
     box-shadow: 0 16px 60px 0 rgba(0, 0, 0, .08), 0 6px 12px 0 rgba(0, 0, 0, .1);
 }
 
