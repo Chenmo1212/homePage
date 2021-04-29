@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b4d0a86-6f54-4a38-a4a3-a793a3d13f0d" name="Default Changelist" comment="feedback done">
+    <list default="true" id="4b4d0a86-6f54-4a38-a4a3-a793a3d13f0d" name="Default Changelist" comment="lazyLoad img">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +74,8 @@
       <workItem from="1619357107663" duration="6890000" />
       <workItem from="1619433153826" duration="11638000" />
       <workItem from="1619518875545" duration="14653000" />
-      <workItem from="1619602324691" duration="12010000" />
+      <workItem from="1619602324691" duration="12743000" />
+      <workItem from="1619684197687" duration="6418000" />
     </task>
     <task id="LOCAL-00001" summary="change page style">
       <created>1619446809636</created>
@@ -110,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619615171544</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="lazyLoad img">
+      <created>1619621291835</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1619621291835</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,21 +131,22 @@
     <MESSAGE value="new loading" />
     <MESSAGE value="dark mode" />
     <MESSAGE value="feedback done" />
-    <option name="LAST_COMMIT_MESSAGE" value="feedback done" />
+    <MESSAGE value="lazyLoad img" />
+    <option name="LAST_COMMIT_MESSAGE" value="lazyLoad img" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1298" y="569" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619235343788">
       <screen x="-1920" y="247" width="1920" height="1040" />
     </state>
     <state x="-1298" y="569" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619235343788" />
-    <state x="-1714" y="359" width="800" height="818" key="CommitChangelistDialog2" timestamp="1619621268808">
+    <state x="-1714" y="359" width="800" height="818" key="CommitChangelistDialog2" timestamp="1619621290572">
       <screen x="-1920" y="247" width="1920" height="1040" />
     </state>
-    <state x="-1714" y="359" width="800" height="818" key="CommitChangelistDialog2/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619621268808" />
-    <state x="-1168" y="684" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619615044811">
+    <state x="-1714" y="359" width="800" height="818" key="CommitChangelistDialog2/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619621290572" />
+    <state x="-1168" y="684" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619684221659">
       <screen x="-1920" y="247" width="1920" height="1040" />
     </state>
-    <state x="-1168" y="684" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619615044811" />
+    <state x="-1168" y="684" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619684221659" />
     <state x="-1147" y="346" width="786" height="590" key="find.popup" timestamp="1619621274906">
       <screen x="-1920" y="247" width="1920" height="1040" />
     </state>

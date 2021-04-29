@@ -440,6 +440,7 @@ class Node {
         this.container.classList = predicate ? "reached" : ""
     }
 }
+
 /**
  * 留言反馈
  */
@@ -472,14 +473,14 @@ class Guestbook {
 
     // template(item) {
     //     return `<div class="message">
-	// 				<header>
-	// 					<img src="${item.avatar || "?"}" />
-	// 					<h3>${item.name}</h3>
-	// 				</header>
-	// 				<div class="message-content">
-	// 					<p>${item.content}</p>
-	// 				</div>
-	// 			</div>`
+    // 				<header>
+    // 					<img src="${item.avatar || "?"}" />
+    // 					<h3>${item.name}</h3>
+    // 				</header>
+    // 				<div class="message-content">
+    // 					<p>${item.content}</p>
+    // 				</div>
+    // 			</div>`
     // }
 
     element(id) {
@@ -521,6 +522,7 @@ class Guestbook {
                 alert("Please try again later")
         })
     }
+
     contentDidChange(e) {
         this.nextButton.className = e.value.length < 5 ? "inactive" : ""
     }
@@ -542,8 +544,9 @@ class Guestbook {
     }
 
     GET(callback) {
-    	this.request("get", "GET", null, callback)
+        this.request("get", "GET", null, callback)
     }
+
     POST(payload, callback) {
         this.request("", "POST", payload, callback)
     }
@@ -560,48 +563,48 @@ let obj_box = document.querySelector('.dark_mode');
 let code = document.querySelector('#code');
 
 function enableDarkMode() {
-	darkMode = 'enabled';
+    darkMode = 'enabled';
     localStorage.setItem("darkMode", "enabled");
-	document.documentElement.style.setProperty('--color-font', '#fdfdfd');
-	document.documentElement.style.setProperty('--color-background', '#404040');
-	obj_box.classList.toggle('dark');
-	obj.classList.toggle('off');
-	obj.classList.add('scaling');
-	setTimeout(function() {
-		obj.classList.remove('scaling');
-	}, 520);
-	code.src = './images/code_dark.svg'
+    document.documentElement.style.setProperty('--color-font', '#fdfdfd');
+    document.documentElement.style.setProperty('--color-background', '#404040');
+    obj_box.classList.toggle('dark');
+    obj.classList.toggle('off');
+    obj.classList.add('scaling');
+    setTimeout(function () {
+        obj.classList.remove('scaling');
+    }, 520);
+    code.src = './images/code_dark.svg'
 }
 
 function disableDarkMode() {
-	darkMode = null;
+    darkMode = null;
     localStorage.setItem("darkMode", null);
-	document.documentElement.style.setProperty('--color-font', '#404040');
-	document.documentElement.style.setProperty('--color-background', '#fdfdfd');
-	obj_box.classList.toggle('dark');
-	obj.classList.toggle('off');
-	obj.classList.add('scaling');
-	setTimeout(function() {
-		obj.classList.remove('scaling');
-	}, 520);
-	code.src = './images/code.svg'
+    document.documentElement.style.setProperty('--color-font', '#404040');
+    document.documentElement.style.setProperty('--color-background', '#fdfdfd');
+    obj_box.classList.toggle('dark');
+    obj.classList.toggle('off');
+    obj.classList.add('scaling');
+    setTimeout(function () {
+        obj.classList.remove('scaling');
+    }, 520);
+    code.src = './images/code.svg'
 }
 
 if (darkMode === "enabled") {
     enableDarkMode();
 } else {
-	disableDarkMode();
+    disableDarkMode();
 }
 
 // Listeners
-const darkModeToggle = document.querySelector(".mode");
-darkModeToggle.click(function () {
-    if (darkMode === 'enabled'){
+const darkModeToggle = document.querySelector("#darkMode");
+darkModeToggle.onclick = function () {
+    if (darkMode === 'enabled') {
         disableDarkMode();
     } else {
         enableDarkMode();
     }
-})
+}
 
 /**
  * 图片懒加载
@@ -613,25 +616,27 @@ var n = 0;
 // 页面载入完毕加载可视区域内的图片
 lazyLoad();
 window.onscroll = lazyLoad;
-// 监听页面滚动事件
+
+/**
+ * 监听页面滚动事件
+ */
 function lazyLoad() {
-    console.log(n)
-// 可见区域高度
-    var seeHeight = document.documentElement.clientHeight;
-// 滚动条距离顶部高度
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    // 可见区域高度
+    let seeHeight = document.documentElement.clientHeight;
+    // 滚动条距离顶部高度
+    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     for (let i = n; i < num; i++) {
 
         // 用于定位的图片(offset仅为相对父元素的距离，因此需要进行判断）
         let offsetTop = img[i].offsetTop;
         let par = img[i].offsetParent;
-        if (par.nodeName.toLowerCase() !== 'body'){
-            while (par){
+        if (par.nodeName.toLowerCase() !== 'body') {
+            while (par) {
                 offsetTop += par.offsetTop;
                 par = par.offsetParent;
             }
         }
-        if (offsetTop < seeHeight + scrollTop + 300) {  // 提前缓冲
+        if (offsetTop < seeHeight + scrollTop + 300) {  // 提前300px进行加载，用作缓冲
             console.log(i, '----', offsetTop)
             if (img[i].getAttribute("src") === "https://gitee.com/chenmo1212/img/raw/master/1.jpg") {
                 img[i].src = img[i].getAttribute("data-src");

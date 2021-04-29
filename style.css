@@ -106,7 +106,7 @@ header p {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.boxLoading {
+.loading-content {
     width: 50px;
     height: 50px;
     margin: auto;
@@ -116,7 +116,7 @@ header p {
     top: 0;
     bottom: 0;
 }
-.boxLoading:before {
+.loading-content:before {
     content: '';
     width: 50px;
     height: 5px;
@@ -128,7 +128,7 @@ header p {
     border-radius: 50%;
     animation: shadow 0.5s linear infinite;
 }
-.boxLoading:after {
+.loading-content:after {
     content: '';
     width: 50px;
     height: 50px;
