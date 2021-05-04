@@ -1,0 +1,33 @@
+<svg width="800" height="480">
+<g style="font-size:18;">
+<text x="10" y="20">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789.:,;(*!?}^)#${%^&-+@ </text>
+font-size:18;
+<text x="10" y="144">12</text>
+font-size:12;
+<text x="50" y="144">That which does not destroy me, only makes me stronger.</text>
+font-size:18;
+<text x="10" y="174">18</text>
+font-size:18;
+<text x="50" y="174">That which does not destroy me, only makes me stronger.</text>
+font-size:18;
+<text x="10" y="210">24</text>
+font-size:24;
+<text x="50" y="210">That which does not destroy me, only makes me stronger.</text>
+font-size:18;
+<text x="10" y="258">36</text>
+font-size:36;
+<text x="50" y="258">That which does not destroy me, only makes me stronger.</text>
+font-size:18;
+<text x="10" y="318">48</text>
+font-size:48;
+<text x="50" y="318">That which does not destroy me, only makes me stronger.</text>
+font-size:18;
+<text x="10" y="390">60</text>
+font-size:60;
+<text x="50" y="390">That which does not destroy me, only makes me stronger.</text>
+font-size:18;
+<text x="10" y="474">72</text>
+font-size:72;
+<text x="50" y="474">That which does not destroy me, only makes me stronger.</text>
+</g>
+</svg>
