@@ -39,7 +39,7 @@ body {
 }
 
 body:lang(zh) {
-    font-family: "plantc", "Source Han Serif", serif;
+    font-family: "plantc", "SemiBold", serif;
 }
 
 h1, h2, p {
@@ -53,6 +53,7 @@ h1, h2, p {
 
 #text-blog h1,
 #emoji h1,
+#book h1,
 #tiku h1 {
     color: #fff;
     margin-bottom: 20px;
@@ -118,6 +119,18 @@ header p {
     top: 0;
     bottom: 0;
 }
+
+#loading .text {
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 7em;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+}
+
 .loading-content:before {
     content: '';
     width: 50px;
@@ -193,7 +206,7 @@ header p {
     grid-template-columns: minmax(20%, 330px) 75px minmax(max-content, 1fr) 75px minmax(20%, 300px);
     grid-template-rows: 176px 55px minmax(max-content, 1fr) 35px 35px 175px;
     grid-template-areas: ". . . . rs" ".  . . . rs" "ls . h1 . rs" "ls . h2 . rs" "ls . h2 . ." "ls . h2 . .";
-    transform: translateY(-88px);
+    transform: translateY(-45px);
 }
 
 #intro h1 {
@@ -236,9 +249,9 @@ header p {
 @media (max-width: 900px) {
     #intro header {
         grid-template-columns: 30px 110px 1fr 150px;
-        grid-template-rows: 190px 16px 100px 180px 120px;
+        grid-template-rows: 190px 16px 120px 180px 100px;
         grid-template-areas: ". h1 h1 rs" ". . . rs" ". h2 h2 ." "ls ls . ." "ls ls . .";
-        transform: translateY(10vh);
+        transform: translateY(-4vh);
     }
 
     #intro h2 {
@@ -519,13 +532,19 @@ header p {
     width: 50%;
 }
 
-#blog p {
+#blog p,
+#emoji p,
+#tiku p,
+#book p {
     --size-p: calc(18px + (26 - 18) * var(--view-minmax));
     color: #fdfdfd;
     text-align: left;
 }
 
-#blog p span {
+#blog p span,
+#emoji p span,
+#tiku p span,
+#book p span {
     color: #aaa;
 }
 
@@ -569,13 +588,15 @@ header p {
 
 #blog .button,
 #tiku .button,
+#book .button,
 #emoji .button {
     background-image: linear-gradient(to right, #c04848 0%, #480048);
     transition: .5s ease-in;
 }
 
 #emoji .button:hover,
-#tiku .button:hover,
+#emoji .button:hover,
+#book .button:hover,
 #blog .button:hover {
     box-shadow: 0 6px 90px 0 #c04848, 0 8px 60px 0 #480048;
     transform: scale(1.1);
@@ -724,6 +745,36 @@ header p {
     right: 20%;
 }
 
+#book {
+    background-color: #3e3e3e;
+    overflow: hidden;
+}
+#book .showcase {
+    min-height: 660px;
+}
+
+#book .showcase img {
+    position: absolute;
+    max-width: 580px;
+    min-width: 230px;
+    width: 38.2vw;
+}
+
+#book-showcase-a {
+    top: 20%;
+    right: 30%;
+}
+
+#book-showcase-b {
+    top: 25%;
+    right: 15%;
+    z-index: 2;
+}
+
+#book-showcase-c {
+    top: 20%;
+    right: 0%;
+}
 @media (min-width: 2400px) {
     #blog .showcase img {
         right: -100px;
@@ -838,6 +889,21 @@ header p {
     #tiku-showcase-c {
         top: 100px;
         right: 30%;
+    }
+
+
+    #book-showcase-a {
+        right: 50%;
+        top: 5%;
+    }
+
+    #book-showcase-b {
+        top: 10%;
+    }
+
+    #book-showcase-c {
+        right: -16%;
+        top: 5%;
     }
 }
 
@@ -1158,7 +1224,7 @@ footer p.weak {
 #switch-language,
 .dark_mode {
     position: absolute;
-    background-color: var(--color-background);
+    /*background-color: var(--color-background);*/
     top: 1em;
     right: 1em;
     border: none;

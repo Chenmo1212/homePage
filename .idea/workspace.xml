@@ -1,167 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b4d0a86-6f54-4a38-a4a3-a793a3d13f0d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-    </list>
+    <list default="true" id="ab5e8104-a1ae-4c3e-923f-61be3186092e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectId" id="1rZd8qSorxs04SyHqlNktsUmnCT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1sQat8e3cyitKSxToiHpyhLpfhp" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\模板2\book" />
-      <recent name="C:\Users\Administrator\Desktop\模板2\images" />
-      <recent name="C:\Users\Administrator\Desktop\模板2\images\photograph" />
-      <recent name="C:\Users\Administrator\Desktop\模板2" />
-    </key>
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4b4d0a86-6f54-4a38-a4a3-a793a3d13f0d" name="Default Changelist" comment="" />
-      <created>1619187389091</created>
+      <changelist id="ab5e8104-a1ae-4c3e-923f-61be3186092e" name="Default Changelist" comment="" />
+      <created>1620807479196</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1619187389091</updated>
-      <workItem from="1619187392836" duration="28843000" />
-      <workItem from="1619267335904" duration="10429000" />
-      <workItem from="1619357107663" duration="6890000" />
-      <workItem from="1619433153826" duration="11638000" />
-      <workItem from="1619518875545" duration="14653000" />
-      <workItem from="1619602324691" duration="12743000" />
-      <workItem from="1620137337581" duration="3069000" />
+      <updated>1620807479196</updated>
+      <workItem from="1620807480264" duration="2740000" />
+      <workItem from="1622299226416" duration="10859000" />
     </task>
-    <task id="LOCAL-00001" summary="change page style">
-      <created>1619446809636</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1619446809636</updated>
-    </task>
-    <task id="LOCAL-00002" summary="adjust style">
-      <created>1619524882021</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1619524882021</updated>
-    </task>
-    <task id="LOCAL-00003" summary="new loading">
-      <created>1619533458665</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1619533458665</updated>
-    </task>
-    <task id="LOCAL-00004" summary="dark mode">
-      <created>1619537679663</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1619537679663</updated>
-    </task>
-    <task id="LOCAL-00005" summary="feedback done">
-      <created>1619615171544</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1619615171544</updated>
-    </task>
-    <task id="LOCAL-00006" summary="lazyLoad img">
-      <created>1619621291835</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1619621291835</updated>
-    </task>
-    <task id="LOCAL-00007" summary="change pic src">
-      <created>1620142092465</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1620142092465</updated>
-    </task>
-    <task id="LOCAL-00008" summary="change pic src">
-      <created>1620142229478</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1620142229478</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="change page style" />
-    <MESSAGE value="adjust style" />
-    <MESSAGE value="new loading" />
-    <MESSAGE value="dark mode" />
-    <MESSAGE value="feedback done" />
-    <MESSAGE value="lazyLoad img" />
-    <MESSAGE value="change pic src" />
-    <option name="LAST_COMMIT_MESSAGE" value="change pic src" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="-1298" y="569" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619235343788">
-      <screen x="-1920" y="247" width="1920" height="1040" />
-    </state>
-    <state x="-1298" y="569" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619235343788" />
-    <state x="206" y="143" width="800" height="818" key="CommitChangelistDialog2" timestamp="1620142226866">
-      <screen x="0" y="30" width="1920" height="1050" />
-    </state>
-    <state x="206" y="143" key="CommitChangelistDialog2/0.30.1920.1050@0.30.1920.1050" timestamp="1620142226866" />
-    <state x="-1714" y="359" width="800" height="818" key="CommitChangelistDialog2/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619621290572" />
-    <state x="554" y="289" key="Vcs.Push.Dialog.v2" timestamp="1620142237408">
-      <screen x="0" y="30" width="1920" height="1050" />
-    </state>
-    <state x="554" y="289" key="Vcs.Push.Dialog.v2/0.30.1920.1050@0.30.1920.1050" timestamp="1620142237408" />
-    <state x="-1168" y="684" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619615044811">
-      <screen x="-1920" y="247" width="1920" height="1040" />
-    </state>
-    <state x="-1168" y="684" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619615044811" />
-    <state x="-1147" y="346" width="786" height="590" key="find.popup" timestamp="1619621274906">
-      <screen x="-1920" y="247" width="1920" height="1040" />
-    </state>
-    <state x="-1147" y="346" width="786" height="590" key="find.popup/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619621274906" />
-    <state x="-1304" y="364" key="run.anything.popup" timestamp="1619608472813">
-      <screen x="-1920" y="247" width="1920" height="1040" />
-    </state>
-    <state x="-1304" y="364" key="run.anything.popup/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619608472813" />
-    <state x="-1304" y="420" width="672" height="676" key="search.everywhere.popup" timestamp="1619278569164">
-      <screen x="-1920" y="247" width="1920" height="1040" />
-    </state>
-    <state x="-1304" y="420" width="672" height="676" key="search.everywhere.popup/0.40.1920.1040/-1920.247.1920.1040@-1920.247.1920.1040" timestamp="1619278569164" />
   </component>
 </project>

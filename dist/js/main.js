@@ -9,6 +9,28 @@ function completeLoading() {
     }
 }
 
+// 页面加载完以后加载字体文件
+function getHomeFont() {
+    let xhr = new XMLHttpRequest(); // 定义一个异步对象
+    xhr.open('GET', './dist/fonts/SemiBold.ttf', true); // 异步GET方式加载字体
+    xhr.responseType = "arraybuffer"; //把异步获取类型改为arraybuffer二进制类型
+    xhr.onload = function () {
+        // 这里做了一个判断：如果浏览器支持FontFace方法执行
+        if (typeof FontFace != 'undefined') {
+            let buffer = this.response;  //获取字体文件二进制码
+            let myFonts = new FontFace('SemiBold', buffer);  // 通过二进制码实例化字体对象
+            document.fonts.add(myFonts); // 将字体对象添加到页面中
+        } else {
+            // 如果浏览器不支持FontFace方法，直接添加样式到页面
+            let styles = document.createElement('style');
+            styles.innerHTML = '@font-face{font-family:"SemiBold";src:url("./dist/fonts/SemiBold.ttf") format("truetype");font-display:swap;}';
+            console.log(document.getElementsByTagName('head'));
+            document.getElementsByTagName('head')[0].appendChild(styles);
+        }
+    }
+    xhr.send();
+}
+
 window.onload = () => {
     globe = new Globe();
     globe.init();
@@ -18,7 +40,9 @@ window.onload = () => {
 
     node = new Node();
     guestbook = new Guestbook();
-    guestbook.init()
+    guestbook.init();
+
+    getHomeFont()
 };
 
 const switchLanguage = () => {
@@ -140,6 +164,7 @@ class Scene {
             this.blogShowcase(),
             this.emoji(),
             this.tiku(),
+            this.book(),
         ])
     }
 
@@ -419,7 +444,33 @@ class Scene {
 
         return new ScrollMagic.Scene({
             triggerElement: "#tiku",
-            triggerHook: .9,
+            triggerHook: .8,
+            duration: "100%",
+        })
+            .setTween(tween)
+    }
+
+    book() {
+        const tween = new TimelineMax().add([
+            TweenMax.fromTo("#book-showcase-a", 1, {yPercent: "40%", xPercent: "25%"}, {
+                yPercent: "0%",
+                xPercent: "5%",
+                ease: Linear.easeNone
+            }),
+            TweenMax.fromTo("#book-showcase-b", 1, {yPercent: "40%", xPercent: "-5%"}, {
+                yPercent: "0%",
+                xPercent: "0%",
+                ease: Linear.easeNone}),
+            TweenMax.fromTo("#book-showcase-c", 1, {yPercent: "40%", xPercent: "-20%"}, {
+                yPercent: "0%",
+                xPercent: "-2%",
+                ease: Linear.easeNone
+            }),
+        ]);
+
+        return new ScrollMagic.Scene({
+            triggerElement: "#book",
+            triggerHook: 1,
             duration: "100%",
         })
             .setTween(tween)
