@@ -228,9 +228,8 @@ class Scene {
 
   experience() {
     const tween = new TimelineMax()
-    tween.add(TweenMax.set('#experience', { y: 200 }))
     tween.fromTo('#experience1', 1, { y: 0, autoAlpha: 0 }, { y: -100, autoAlpha: 1 })
-    tween.fromTo('#experience2', 1, { y: 0, autoAlpha: 0 }, { autoAlpha: 1 }, '+=2')
+    tween.fromTo('#experience2', 1, { y: 100, autoAlpha: 0 }, { y: 0, autoAlpha: 1 }, '+=2')
 
     return new ScrollMagic.Scene({
       triggerElement: '#experience',
