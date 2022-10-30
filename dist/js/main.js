@@ -151,9 +151,9 @@ class Scene {
   init() {
     this.controller.addScene([
       this.intro(),
-      this.autodidact(),
+      this.selfIntro(),
       this.globe(),
-      this.goFar(),
+      this.experience(),
       this.photography_text(),
       this.photo(),
       this.design(),
@@ -182,23 +182,20 @@ class Scene {
       .setTween(tween)
   }
 
-  autodidact() {
+  selfIntro() {
     const tween = new TimelineMax().add([
-      TweenMax.set('#content', { y: -200 }),
-      TweenMax.fromTo('#text-become-autodidact', 1, { y: 200 }, { y: 0, ease: Linear.easeNone }),
-      TweenMax.to('#text-become-autodidact', .5, { autoAlpha: 0, ease: Linear.easeNone }),
-      // TweenMax.fromTo("#text-learn-from", 1, {y: 200}, {y: 0, ease: Linear.easeNone}),
-      // TweenMax.fromTo("#text-learn-from", 1, {y: 200}, {y: 0, ease: Linear.easeNone}),
-      // TweenMax.to("#text-learn-from", .5, {autoAlpha: 0, ease: Linear.easeNone}),
+      TweenMax.set('#self_intro', { y: -200 }),
 
-      TweenMax.fromTo('#traveling1', 1, { y: 330 }, { y: 280, ease: Linear.easeNone }),
-      TweenMax.fromTo('#traveling1', .5, { autoAlpha: 0 }, { autoAlpha: 1, ease: Linear.easeNone })
+      TweenMax.fromTo('#intro_text1', 1, { y: 100 }, { y: 0, ease: Linear.easeInOut }),
+      TweenMax.to('#intro_text1', 1, { autoAlpha: 0, ease: Linear.easeInOut }),
+
+      TweenMax.fromTo('#intro_text2', .5, { y: 200, autoAlpha: 0 }, { y: 150, autoAlpha: 1 }),
+      TweenMax.fromTo('#intro_text3', 3, { autoAlpha: 0, y: 350 }, { y: 250, autoAlpha: 1 })
     ])
-
     return new ScrollMagic.Scene({
-      triggerElement: '#content',
-      offset: 500, // 距离触发元素距离为500时开始动画
-      duration: '61.8%', // 动画有效范围
+      triggerElement: '#self_intro',
+      offset: 200, // 距离触发元素距离为200时开始动画
+      duration: '61.8%', // 动画有效范围, 不是时间
     })
       .setTween(tween)
   }
@@ -206,11 +203,15 @@ class Scene {
   globe() {
     const blur = d3.scale.linear().domain([375, 2560]).range([3, 6])
     const tween = new TimelineMax().add([
+      TweenMax.fromTo('#intro_text2', 1, { autoAlpha: 1 }, { y: 0, autoAlpha: 0 }),
+      TweenMax.fromTo('#intro_text3', 1, { autoAlpha: 1 }, { y: 100, autoAlpha: 0 }),
+      TweenMax.fromTo('#globe1', .5, { autoAlpha: 0 }, { y: 150, autoAlpha: 1 }),
+
       TweenMax.fromTo('#globe-container', .8, { '-webkit-filter': `blur(${blur(window.innerWidth)}px)` }, {
         '-webkit-filter': 'blur(0)',
         ease: Linear.easeNone
       }),
-      TweenMax.fromTo('#globe', .5, { scale: Math.max(800, window.innerWidth) / globe.diameter }, {
+      TweenMax.fromTo('#globe', .5, { scale: Math.max(1000, window.innerWidth) / globe.diameter }, {
         scale: 1,
         y: 240,
         ease: Linear.easeNone
@@ -218,25 +219,21 @@ class Scene {
     ])
 
     return new ScrollMagic.Scene({
-      triggerElement: '#content',
-      offset: 380,
-      duration: '50%',
+      triggerElement: '#go_far',
+      offset: -100,
+      duration: '100%',
     })
       .setTween(tween)
   }
 
-  goFar() {
-    const tween = new TimelineMax().add([
-      TweenMax.to('#motto', 1, { yPercent: -30, autoAlpha: 0, ease: Linear.easeNone }),
-      TweenMax.fromTo('#look', 1, { yPercent: 30, autoAlpha: 0 }, {
-        yPercent: 0,
-        autoAlpha: 1,
-        ease: Linear.easeNone
-      }),
-    ])
+  experience() {
+    const tween = new TimelineMax()
+    tween.add(TweenMax.set('#experience', { y: 200 }))
+    tween.fromTo('#experience1', 1, { y: 0, autoAlpha: 0 }, { y: -100, autoAlpha: 1 })
+    tween.fromTo('#experience2', 1, { y: 0, autoAlpha: 0 }, { autoAlpha: 1 }, '+=2')
 
     return new ScrollMagic.Scene({
-      triggerElement: '#go_far',
+      triggerElement: '#experience',
       triggerHook: .5,
       duration: '38.2%',
     })
@@ -245,7 +242,7 @@ class Scene {
 
   photography_text() {
     const tween = new TimelineMax().add([
-      TweenMax.to('#look', 1, { yPercent: -30, autoAlpha: 0, ease: Linear.easeNone }),
+      TweenMax.to('#experience2', 1, { yPercent: -30, autoAlpha: 0, ease: Linear.easeNone }),
       TweenMax.fromTo('#photo', 1, { yPercent: 30, autoAlpha: 0 }, {
         yPercent: 0,
         autoAlpha: 1,
@@ -254,9 +251,9 @@ class Scene {
     ])
 
     return new ScrollMagic.Scene({
-      triggerElement: '#go_far',
+      triggerElement: '#photography_text',
       triggerHook: .5,
-      offset: 300,
+      offset: -100,
       duration: '38.2%',
     })
       .setTween(tween)
@@ -319,18 +316,14 @@ class Scene {
   }
 
   programming() {
-    const tween = new TimelineMax().add([
-      TweenMax.fromTo('.text-programming', 1, { autoAlpha: 0 }, {
-        yPercent: -30,
-        autoAlpha: 1,
-        ease: Linear.easeNone
-      }),
-    ])
+    const tween = new TimelineMax()
+    tween.add(TweenMax.fromTo('.programming1', 1, { autoAlpha: 0 }, { autoAlpha: 1 }))
+    tween.add(TweenMax.fromTo('.programming2', 1, { y: 150, autoAlpha: 0 }, { y: 100, autoAlpha: 1 }, '+=2'))
+    tween.add(TweenMax.fromTo('.programming3', 1, { y: 250, autoAlpha: 0 }, { y: 200, autoAlpha: 1 }, '+=2'))
 
     return new ScrollMagic.Scene({
       triggerElement: '#programming',
-      triggerHook: .5,
-      duration: '38.2%',
+      duration: '100%',
     })
       .setTween(tween)
   }
@@ -372,7 +365,7 @@ class Scene {
     ])
 
     return new ScrollMagic.Scene({
-      triggerElement: '#nodes',
+      triggerElement: '#learned',
       triggerHook: .5,
       duration: '80%',
     })
@@ -820,7 +813,6 @@ function lazyLoad() {
       }
     }
     if (offsetTop < seeHeight + scrollTop + 300) {  // 提前300px进行加载，用作缓冲
-      // console.log(i, '----', offsetTop)
       if (img[i].getAttribute('src') === 'https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg') {
         img[i].src = img[i].getAttribute('data-src')
       }
