@@ -1,8 +1,8 @@
 @charset "utf-8";
 @font-face {
     font-family: "plantc";
-    src: url("../dist/fonts/abel.woff2") format("woff2"),
-    url("../dist/fonts/abel.ttf") format("truetype"),
+    src: url("../dist/fonts/plantc.woff") format("woff"),
+    url("../dist/fonts/plantc.ttf") format("truetype"),
     url('../dist/fonts/abel.svg') format('svg');
     font-weight: normal;
     font-style: normal;
@@ -35,8 +35,13 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+body:lang(en) {
+    font-family: "plantc", serif;
+}
+
 body:lang(zh) {
-    font-family: "plantc", "SemiBold", serif;
+    /*font-family: "SemiBold", serif;*/
+    font-family: "plantc", serif;
 }
 
 h1, h2, p {
