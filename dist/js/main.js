@@ -591,11 +591,10 @@ class Guestbook {
       return
     }
 
-    this.postWx(content, name, email, website)
+    // this.postWx(content, name, email, website)
     this.postBackend(button, content, name, email, website)
   }
 
-  // 发送到微信通知。源码参考请务必修改此处数据，否则会发送到我的微信
   postWx(content, name, email, website) {
     const data = {
       'corpid': 'ww09de43a6da48f6a4',
@@ -619,16 +618,7 @@ class Guestbook {
   }
 
   postBackend(button, content, name, email, website) {
-    let UID = 'UID_pNfFHmlL26qUZuXmGkrS9CGNUSLD'
-    let appToken = 'AT_aGS8jqOTZDiEAwbZFH2WdEgV15tgIl7j'
     const data = {
-      // summary: "主页留言", //消息摘要，显示在微信聊天页面或者模版消息卡片上，限制长度100，可以不传，不传默认截取content前面的内容。
-      // content: `#### 类型：\n\n${'主页留言'}\n\n---\n\n#### 内容：\n\n${author_content}\n\n---\n\n#### 称呼：\n\n
-      // ${author_name}\n\n---\n\n#### 联系方式：\n\nEmail: ${author_email}\nUrl: ${this.URLField.value}\n
-      // Agent:${navigator.userAgent + " DWAPI/7.0"}\n`,
-      // 'contentType': 3,  # 内容类型 1表示文字  2表示html(只发送body标签内部的数据即可，不包括body标签) 3表示markdown
-      // 'uids': [UID], # 发送目标的UID，是一个数组。注意uids和topicIds可以同时填写，也可以只填写一个。
-      // appToken: appToken
       name: name,
       content: content,
       email: email,
