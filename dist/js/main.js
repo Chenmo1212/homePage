@@ -505,13 +505,11 @@ class Guestbook {
 
     this.GET(xhr => {
       if (xhr.status === 200 || xhr.status == 201) {
-        console.log(JSON.parse(xhr.responseText).data)
         let data = JSON.parse(xhr.responseText).data
         for (let i = 0; i < data.length; i++) {
           data[i].date = this.changeTimeStyle(data[i])
           data[i].sex = 'female'
         }
-        console.log(data)
         this.render(data)
         this.messages.parentNode.classList += ' fetched'
       } else
