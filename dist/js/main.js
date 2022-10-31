@@ -205,7 +205,7 @@ class Scene {
     const tween = new TimelineMax().add([
       TweenMax.fromTo('#intro_text2', 1, { autoAlpha: 1 }, { y: 0, autoAlpha: 0 }),
       TweenMax.fromTo('#intro_text3', 1, { autoAlpha: 1 }, { y: 100, autoAlpha: 0 }),
-      TweenMax.fromTo('#globe1', .5, { autoAlpha: 0 }, { y: 150, autoAlpha: 1 }),
+      TweenMax.fromTo('#globe1', .5, { autoAlpha: 0 }, { y: 100, autoAlpha: 1 }),
 
       TweenMax.fromTo('#globe-container', .8, { '-webkit-filter': `blur(${blur(window.innerWidth)}px)` }, {
         '-webkit-filter': 'blur(0)',
