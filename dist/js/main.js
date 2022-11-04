@@ -800,7 +800,7 @@ function lazyLoad() {
       }
     }
     if (offsetTop < seeHeight + scrollTop + 300) {  // 提前300px进行加载，用作缓冲
-      if (img[i].getAttribute('src') === 'https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg') {
+      if (img[i].getAttribute('src') === 'https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/home_me.jpg') {
         img[i].src = img[i].getAttribute('data-src')
       }
       n = i + 1
