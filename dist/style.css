@@ -267,7 +267,7 @@ header p {
 
 #self_intro {
     --padding: 1.25em;
-    padding-bottom: 170px;
+    padding-bottom: 340px;
 }
 #self_intro .intro_text2,
 #self_intro .intro_text3 {
@@ -298,7 +298,7 @@ header p {
 }
 
 #experience {
-    padding: 17vh 1.25em 7vh;
+    padding: 17vh 1.25em 37vh;
     margin-top: 200px;
 }
 

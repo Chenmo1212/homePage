@@ -170,6 +170,8 @@ class Scene {
 
   intro() {
     const tween = new TimelineMax().add([
+      TweenMax.set('#intro_text2', { autoAlpha: 0, opacity: 0 }),
+
       TweenMax.fromTo('#heading', 1, { zIndex: 1, z: 1 }, { yPercent: -23.6, autoAlpha: 0, ease: Linear.easeNone }),
       TweenMax.fromTo('#subheading', 1, { zIndex: 1 }, { yPercent: -14.5, autoAlpha: 0, ease: Linear.easeNone }),
       TweenMax.to('#slice-left', 1, { yPercent: -38.2, autoAlpha: 0, ease: Linear.easeNone }),
@@ -184,17 +186,17 @@ class Scene {
 
   selfIntro() {
     const tween = new TimelineMax().add([
-      TweenMax.set('#self_intro', { y: -200 }),
+      // TweenMax.set('#self_intro', { y: -200 }),
 
-      TweenMax.fromTo('#intro_text1', 1, { y: 100 }, { y: 0, ease: Linear.easeInOut }),
-      TweenMax.to('#intro_text1', 1, { autoAlpha: 0, ease: Linear.easeInOut }),
+      TweenMax.fromTo('#intro_text1', 3, { y: 0 }, { y: -100, ease: Linear.easeInOut }),
+      TweenMax.to('#intro_text1', 3, { autoAlpha: 0, ease: Linear.easeInOut }),
 
-      TweenMax.fromTo('#intro_text2', .5, { y: 200, autoAlpha: 0 }, { y: 150, autoAlpha: 1 }),
-      TweenMax.fromTo('#intro_text3', 3, { autoAlpha: 0, y: 350 }, { y: 250, autoAlpha: 1 })
+      TweenMax.fromTo('#intro_text2', 2, { y: 400, autoAlpha: 0 }, { y: 100, autoAlpha: 1 }),
+      TweenMax.fromTo('#intro_text3', 4, { autoAlpha: 0, y: 350 }, { y: 250, autoAlpha: 1 })
     ])
     return new ScrollMagic.Scene({
       triggerElement: '#self_intro',
-      offset: 200, // 距离触发元素距离为200时开始动画
+      offset: 100, // 距离触发元素距离为200时开始动画
       duration: '61.8%', // 动画有效范围, 不是时间
     })
       .setTween(tween)
@@ -205,7 +207,7 @@ class Scene {
     const tween = new TimelineMax().add([
       TweenMax.fromTo('#intro_text2', 1, { autoAlpha: 1 }, { y: 0, autoAlpha: 0 }),
       TweenMax.fromTo('#intro_text3', 1, { autoAlpha: 1 }, { y: 100, autoAlpha: 0 }),
-      TweenMax.fromTo('#globe1', .5, { autoAlpha: 0 }, { y: 100, autoAlpha: 1 }),
+      TweenMax.fromTo('#globe1', 0.6, { autoAlpha: 0 }, { y: 100, autoAlpha: 1 }),
 
       TweenMax.fromTo('#globe-container', .8, { '-webkit-filter': `blur(${blur(window.innerWidth)}px)` }, {
         '-webkit-filter': 'blur(0)',
@@ -228,8 +230,8 @@ class Scene {
 
   experience() {
     const tween = new TimelineMax()
-    tween.fromTo('#experience1', 1, { y: 0, autoAlpha: 0 }, { y: -100, autoAlpha: 1 })
-    tween.fromTo('#experience2', 1, { y: 100, autoAlpha: 0 }, { y: 0, autoAlpha: 1 }, '+=2')
+    tween.fromTo('#experience1', 3, { y: 0, autoAlpha: 0 }, { y: -50, autoAlpha: 1 })
+    tween.fromTo('#experience2', 3, { y: 100, autoAlpha: 0 }, { y: 50, autoAlpha: 1 }, '+=2')
 
     return new ScrollMagic.Scene({
       triggerElement: '#experience',
