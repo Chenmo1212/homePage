@@ -544,7 +544,7 @@ class Guestbook {
     let avatar = 'https://api.prodless.com/avatar.png?color=' + Math.floor(Math.random() * 0xffffff).toString(16)
     return `<div class="message">
     				<header>
-    					<img src="./dist/images/default.png" />
+    					<img title="" src="./dist/images/default.png" />
     					<h3>${item.name || '匿名'}</h3>
     					<span class="message-date">${item.date}</span>
     				</header>
@@ -790,8 +790,9 @@ function lazyLoad() {
   let seeHeight = document.documentElement.clientHeight
   // 滚动条距离顶部高度
   let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-  for (let i = n; i < num; i++) {
+  let defaultUrl = 'https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/home_me.jpg'
 
+  for (let i = n; i < num; i++) {
     // 用于定位的图片(offset仅为相对父元素的距离，因此需要进行判断）
     let offsetTop = img[i].offsetTop
     let par = img[i].offsetParent
@@ -801,11 +802,13 @@ function lazyLoad() {
         par = par.offsetParent
       }
     }
-    if (offsetTop < seeHeight + scrollTop + 300) {  // 提前300px进行加载，用作缓冲
-      if (img[i].getAttribute('src') === 'https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/home_me.jpg') {
+
+    if (offsetTop < seeHeight + scrollTop + 1000) {  // 提前500px进行加载，用作缓冲
+      if (img[i].getAttribute('src') === defaultUrl) {
         img[i].src = img[i].getAttribute('data-src')
+        console.log(n)
+        n = i + 1
       }
-      n = i + 1
     }
   }
 }
