@@ -42,7 +42,7 @@ window.onload = () => {
   guestbook = new Guestbook()
   guestbook.init()
 
-  getHomeFont()
+  // getHomeFont()
 }
 
 const switchLanguage = () => {
@@ -790,7 +790,7 @@ function lazyLoad() {
   let seeHeight = document.documentElement.clientHeight
   // 滚动条距离顶部高度
   let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-  let defaultUrl = 'https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/home_me.jpg'
+  let defaultUrl = 'https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
 
   for (let i = n; i < num; i++) {
     // 用于定位的图片(offset仅为相对父元素的距离，因此需要进行判断）
