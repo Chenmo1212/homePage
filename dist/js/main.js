@@ -806,7 +806,6 @@ function lazyLoad() {
     if (offsetTop < seeHeight + scrollTop + 1000) {  // 提前500px进行加载，用作缓冲
       if (img[i].getAttribute('src') === defaultUrl) {
         img[i].src = img[i].getAttribute('data-src')
-        console.log(n)
         n = i + 1
       }
     }
