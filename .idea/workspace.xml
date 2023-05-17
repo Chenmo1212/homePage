@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab5e8104-a1ae-4c3e-923f-61be3186092e" name="Default Changelist" comment="change some texts and styles">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ab5e8104-a1ae-4c3e-923f-61be3186092e" name="Default Changelist" comment="minimize images">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/en.html" beforeDir="false" afterPath="$PROJECT_DIR$/en.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zh.html" beforeDir="false" afterPath="$PROJECT_DIR$/zh.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -21,6 +29,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1sQat8e3cyitKSxToiHpyhLpfhp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -28,21 +39,28 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="ToolWindowMessages.ShowToolbar" value="false" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dist/fonts" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "true",
+    "last_opened_file_path": "D:/Project/01_Frontend/03_HomePage/frontend",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Project\01_Frontend\03_HomePage\frontend\dist\fonts" />
       <recent name="D:\Project\01_Frontend\03_HomePage\frontend" />
+      <recent name="D:\Project\01_Frontend\03_HomePage\frontend\dist\fonts" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/frontend/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -56,9 +74,13 @@
       </list>
     </option>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value=",HTML5_OUTLINE_MODE" />
+  </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\chenmo\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -70,7 +92,16 @@
       <workItem from="1620807480264" duration="2740000" />
       <workItem from="1622299226416" duration="10859000" />
       <workItem from="1667069724902" duration="57000" />
-      <workItem from="1667069791787" duration="41067000" />
+      <workItem from="1667069791787" duration="46553000" />
+      <workItem from="1667319179673" duration="1013000" />
+      <workItem from="1667323983742" duration="62000" />
+      <workItem from="1667587733761" duration="2315000" />
+      <workItem from="1667600759726" duration="7690000" />
+      <workItem from="1667675474438" duration="5896000" />
+      <workItem from="1667686991806" duration="1198000" />
+      <workItem from="1667753580483" duration="1531000" />
+      <workItem from="1668338784163" duration="955000" />
+      <workItem from="1684283121835" duration="5571000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/Chenmo1212/homePage&#10;&#10;# Conflicts:&#10;#&#9;dist/fonts/.font-spider/SemiBold.otf&#10;#&#9;dist/fonts/.font-spider/SemiBold.ttf&#10;#&#9;dist/fonts/SemiBold.otf&#10;#&#9;dist/images/photograph/1.jpg&#10;#&#9;dist/images/photograph/3.jpg&#10;#&#9;dist/images/photograph/4.jpg&#10;#&#9;dist/images/photograph/5.jpg&#10;#&#9;dist/images/photograph/7.jpg&#10;#&#9;dist/js/main.js&#10;#&#9;dist/style.css&#10;#&#9;index.html">
       <created>1667069901848</created>
@@ -107,11 +138,88 @@
       <option name="project" value="LOCAL" />
       <updated>1667160201688</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixed some grammar mistakes">
+      <created>1667166363148</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667166363148</updated>
+    </task>
+    <task id="LOCAL-00007" summary="deleted useless wxpost">
+      <created>1667173211065</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667173211065</updated>
+    </task>
+    <task id="LOCAL-00008" summary="change text position">
+      <created>1667175065848</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667175065848</updated>
+    </task>
+    <task id="LOCAL-00009" summary="minimize images">
+      <created>1667601249534</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667601249534</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add alt attr">
+      <created>1667601560947</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667601560947</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixed some image warnings">
+      <created>1667679900715</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1667679900715</updated>
+    </task>
+    <task id="LOCAL-00012" summary="adjust style of some texts">
+      <created>1667680127410</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667680127410</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fixed bugs of lazy load images">
+      <created>1667680160600</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667680160600</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update skill code">
+      <created>1667753600073</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667753600073</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fixed book's images bugs">
+      <created>1668338963406</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1668338963406</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add statistics">
+      <created>1684283190466</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1684283190466</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'master' of https://github.com/Chenmo1212/homePage&#10;&#10;# Conflicts:&#10;#&#9;dist/fonts/.font-spider/SemiBold.otf&#10;#&#9;dist/fonts/.font-spider/SemiBold.ttf&#10;#&#9;dist/fonts/SemiBold.otf&#10;#&#9;dist/images/photograph/1.jpg&#10;#&#9;dist/images/photograph/3.jpg&#10;#&#9;dist/images/photograph/4.jpg&#10;#&#9;dist/images/photograph/5.jpg&#10;#&#9;dist/images/photograph/7.jpg&#10;#&#9;dist/js/main.js&#10;#&#9;dist/style.css&#10;#&#9;index.html" />
@@ -119,32 +227,19 @@
     <MESSAGE value="change some texts and styles" />
     <MESSAGE value="add English and Chinese version" />
     <MESSAGE value="add english fonts" />
-    <option name="LAST_COMMIT_MESSAGE" value="add english fonts" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="434" y="0" key="CommitChangelistDialog2" timestamp="1667166344317">
-      <screen x="0" y="0" width="1680" height="1072" />
-    </state>
-    <state x="434" y="0" key="CommitChangelistDialog2/0.0.1680.1072@0.0.1680.1072" timestamp="1667166344317" />
-    <state x="143" y="0" width="1537" height="892" key="DiffContextDialog" timestamp="1667156722937">
-      <screen x="0" y="0" width="1680" height="1072" />
-    </state>
-    <state x="143" y="0" width="1537" height="892" key="DiffContextDialog/0.0.1680.1072@0.0.1680.1072" timestamp="1667156722937" />
-    <state x="551" y="252" key="MultipleFileMergeDialog" timestamp="1667069760976">
-      <screen x="0" y="0" width="1680" height="1072" />
-    </state>
-    <state x="551" y="252" key="MultipleFileMergeDialog/0.0.1680.1072@0.0.1680.1072" timestamp="1667069760976" />
-    <state x="433" y="270" key="Vcs.Push.Dialog.v2" timestamp="1667166356543">
-      <screen x="0" y="0" width="1680" height="1072" />
-    </state>
-    <state x="433" y="270" key="Vcs.Push.Dialog.v2/0.0.1680.1072@0.0.1680.1072" timestamp="1667166356543" />
-    <state x="497" y="249" key="run.anything.popup" timestamp="1667158546837">
-      <screen x="0" y="0" width="1680" height="1072" />
-    </state>
-    <state x="497" y="249" key="run.anything.popup/0.0.1680.1072@0.0.1680.1072" timestamp="1667158546837" />
-    <state x="503" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1667081191996">
-      <screen x="0" y="0" width="1680" height="1072" />
-    </state>
-    <state x="503" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1680.1072@0.0.1680.1072" timestamp="1667081191996" />
+    <MESSAGE value="fixed some grammar mistakes" />
+    <MESSAGE value="delete useless wxpost" />
+    <MESSAGE value="deleted useless wxpost" />
+    <MESSAGE value="change text position" />
+    <MESSAGE value="minimize images" />
+    <MESSAGE value="add alt attr" />
+    <MESSAGE value="fixed some image warnings" />
+    <MESSAGE value="adjust some texts style" />
+    <MESSAGE value="adjust style of some texts" />
+    <MESSAGE value="fixed bugs of lazy load images" />
+    <MESSAGE value="update skill code" />
+    <MESSAGE value="fixed book's images bugs" />
+    <MESSAGE value="add statistics" />
+    <option name="LAST_COMMIT_MESSAGE" value="add statistics" />
   </component>
 </project>
