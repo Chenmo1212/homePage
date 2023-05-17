@@ -667,17 +667,17 @@ class Guestbook {
       const resTime = this.add_0(d.getHours()) - 8 + ':' + this.add_0(d.getMinutes()) + ':' + this.add_0(d.getSeconds())
       return resDate + ' ' + resTime
     } else if (monthC >= 1) {
-      result = '' + parseInt(monthC) + '月前'
+      result = '' + parseInt(monthC) + ' month' + (monthC === 1 ? '' : 's') + ' ago'
     } else if (weekC >= 1) {
-      result = '' + parseInt(weekC) + '周前'
+      result = '' + parseInt(weekC) + ' week' + (weekC === 1 ? '' : 's') + ' ago'
     } else if (dayC >= 1) {
-      result = '' + parseInt(dayC) + '天前'
+      result = '' + parseInt(dayC) + ' day' + (dayC === 1 ? '' : 's') + ' ago'
     } else if (hourC >= 1) {
-      result = '' + parseInt(hourC) + '小时前'
+      result = '' + parseInt(hourC) + ' hour' + (hourC === 1 ? '' : 's') + ' ago'
     } else if (minC >= 1) {
-      result = '' + parseInt(minC) + '分钟前'
+      result = '' + parseInt(minC) + ' min' + (minC === 1 ? '' : 's') + ' ago'
     } else
-      result = '刚刚'
+      result = 'Just'
     return result
   }
 

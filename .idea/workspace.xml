@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab5e8104-a1ae-4c3e-923f-61be3186092e" name="Default Changelist" comment="minimize images">
+    <list default="true" id="ab5e8104-a1ae-4c3e-923f-61be3186092e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/en.html" beforeDir="false" afterPath="$PROJECT_DIR$/en.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zh.html" beforeDir="false" afterPath="$PROJECT_DIR$/zh.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +42,10 @@
   "keyToString": {
     "WebServerToolWindowFactoryState": "true",
     "last_opened_file_path": "D:/Project/01_Frontend/03_HomePage/frontend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -101,7 +104,7 @@
       <workItem from="1667686991806" duration="1198000" />
       <workItem from="1667753580483" duration="1531000" />
       <workItem from="1668338784163" duration="955000" />
-      <workItem from="1684283121835" duration="5571000" />
+      <workItem from="1684283121835" duration="7255000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/Chenmo1212/homePage&#10;&#10;# Conflicts:&#10;#&#9;dist/fonts/.font-spider/SemiBold.otf&#10;#&#9;dist/fonts/.font-spider/SemiBold.ttf&#10;#&#9;dist/fonts/SemiBold.otf&#10;#&#9;dist/images/photograph/1.jpg&#10;#&#9;dist/images/photograph/3.jpg&#10;#&#9;dist/images/photograph/4.jpg&#10;#&#9;dist/images/photograph/5.jpg&#10;#&#9;dist/images/photograph/7.jpg&#10;#&#9;dist/js/main.js&#10;#&#9;dist/style.css&#10;#&#9;index.html">
       <created>1667069901848</created>
@@ -215,7 +218,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684283190466</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="update english translation">
+      <created>1684288816257</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1684288816257</updated>
+    </task>
+    <task id="LOCAL-00018" summary="update default image and font">
+      <created>1684288838728</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1684288838728</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +257,8 @@
     <MESSAGE value="update skill code" />
     <MESSAGE value="fixed book's images bugs" />
     <MESSAGE value="add statistics" />
-    <option name="LAST_COMMIT_MESSAGE" value="add statistics" />
+    <MESSAGE value="update english translation" />
+    <MESSAGE value="update default image and font" />
+    <option name="LAST_COMMIT_MESSAGE" value="update default image and font" />
   </component>
 </project>
