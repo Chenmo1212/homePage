@@ -1300,6 +1300,22 @@ footer p.weak {
     text-decoration: underline;
 }
 
+@keyframes fade-transition {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-transition {
+    animation: fade-transition 1s ease;
+    opacity: 1;
+}
 
 body.dark {
     background-color: #606578;

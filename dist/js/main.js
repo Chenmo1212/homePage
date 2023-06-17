@@ -44,29 +44,41 @@ function getJSONFile(url, callback) {
 }
 
 // Functions to replace HTML text content
-function replaceTextContent(currentLang) {
+function replaceTextContent(language) {
   const url = "./dist/lang/lang.json";
   getJSONFile(url, function(data) {
     // Process the obtained JSON data
     const translations = data;
-
     const elements = document.querySelectorAll('[data-i18n]');
-    const language = currentLang; // 获取用户选择的语言
 
     elements.forEach(element => {
-      const translationKey = element.getAttribute('data-i18n');
-      const translationKeys = translationKey.split('.');
-      let translationText = translations;
+      element.classList.add('fade-transition');
 
-      translationKeys.forEach(key => {
-        translationText = translationText[key];
-        if (!translationText) return '';
-      });
+      setTimeout(function () {
+        const translationKey = element.getAttribute('data-i18n');
+        const translationKeys = translationKey.split('.');
+        let translationText = translations;
 
-      if (translationText && translationText[language]) {
-        element.innerHTML = translationText[language];
-      }
+        translationKeys.forEach(key => {
+          translationText = translationText[key];
+          if (!translationText) return '';
+        });
+
+        if (translationText && translationText[language]) {
+          element.innerHTML = translationText[language];
+        }
+      }, 500)
     });
+
+    setTimeout(function () {
+      document.getElementsByTagName('html')[0].setAttribute('lang', language)
+    }, 500)
+
+    setTimeout(function() {
+      elements.forEach(element => {
+        element.classList.remove('fade-transition');
+      });
+    }, 1000); // 延时时间根据过渡效果的持续时间进行调整
   });
 }
 
@@ -88,7 +100,6 @@ const switchLanguage = () => {
   let current = document.getElementsByTagName('html')[0].getAttribute('lang').substr(0, 2)
   current = current === 'en' ? 'zh' : 'en'
   document.cookie = 'lang=' + current
-  document.getElementsByTagName('html')[0].setAttribute('lang', current)
   replaceTextContent(current)
 }
 
