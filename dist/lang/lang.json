@@ -238,6 +238,10 @@
       "zh": "保存",
       "en": "Save"
     },
+    "submitButton": {
+      "zh": "提交",
+      "en": "Submit"
+    },
     "messageSentHeading": {
       "zh": " 🎉 你的留言已经发送 ~",
       "en": " 🎉 Your message has been sent ~"
