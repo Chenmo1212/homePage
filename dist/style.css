@@ -79,7 +79,8 @@ section {
 
 section > p,
 section .content p,
-#more h2 {
+#more h2,
+.guestbook h2 {
     --size-p: calc(22px + (32 - 22) * var(--view-minmax));
     line-height: calc(var(--size-p) + 12px);
     font-size: var(--size-p);
@@ -1058,6 +1059,20 @@ header p {
     margin-bottom: 2em;
 }
 
+.guestbook {
+    max-width: 960px;
+    margin: 0 auto 5em;
+}
+
+.guestbook h2 {
+    --size-p: 26px;
+    text-align: left;
+    margin-bottom: .35em;
+}
+#messages {
+    margin-bottom: 5em;
+}
+
 #messages > a {
     display: block;
     text-align: center;
@@ -1128,9 +1143,7 @@ header p {
     line-height: 30px;
     font-size: 12px;
     float: right;
-
 }
-
 
 #messages .message-content {
     font-size: 14px;
@@ -1138,8 +1151,13 @@ header p {
     letter-spacing: .5px;
 }
 
+#messages .message-content p {
+    text-align: left;
+}
+
 #guestbook {
-    flex-basis: 640px !important;
+    width: 640px;
+    margin: 0 auto;
     border-left: none !important;
 }
 
