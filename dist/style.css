@@ -210,7 +210,7 @@ header p {
 
 #intro header {
     display: grid;
-    grid-template-columns: minmax(20%, 330px) 75px minmax(max-content, 1fr) 75px minmax(20%, 300px);
+    grid-template-columns: minmax(20%, 330px) 75px minmax(400px, 400px) 75px minmax(20%, 300px);
     grid-template-rows: 176px 55px minmax(max-content, 1fr) 35px 35px 175px;
     grid-template-areas: ". . . . rs" ".  . . . rs" "ls . h1 . rs" "ls . h2 . rs" "ls . h2 . ." "ls . h2 . .";
     transform: translateY(-45px);
@@ -1069,8 +1069,10 @@ header p {
     text-align: left;
     margin-bottom: .35em;
 }
+
 #messages {
     margin-bottom: 5em;
+    padding: 0 5em;
 }
 
 #messages > a {
