@@ -210,6 +210,10 @@
       "zh": "写新留言",
       "en": "Write New Message"
     },
+    "emailText": {
+      "zh": "如果您不想公开显示您的消息，请发送电子邮件至 <a href=\"mailto:chenmo991212@gmail.com\">chenmo991212@gmail.com</a> 给我。",
+      "en": "If you don't want your message to be displayed publicly, email me at <a href=\"mailto:chenmo991212@gmail.com\">chenmo991212@gmail.com</a> instead."
+    },
     "nicknameLabel": {
       "zh": "昵称",
       "en": "Nickname"
