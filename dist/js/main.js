@@ -632,14 +632,14 @@ class Guestbook {
 
     const re = /\S+@\S+\.\S+/
     if (name.length <= 0) {
-      alert('请输入您的昵称。')
+      alert('Please enter your nickname.')
       return
     }
     if (email.length <= 0) {
-      alert('提示：请输入邮箱。')
+      alert('Tip: Please enter your email address.')
       return
     } else if (!re.test(email)) {
-      alert('提示：您的邮箱格式不对。')
+      alert('Tip: Your email format is incorrect.')
       return
     }
 
@@ -659,7 +659,7 @@ class Guestbook {
       'url': '' // 需要跳转的链接
     }
 
-    // 将留言信息发送给微信提醒
+    // Send message to WeChat reminder
     let wxUrl = 'https://api.htm.fun/api/Wechat/text_card/'
     this.POST(wxUrl, JSON.stringify(data), xhr => {
       if (xhr.status === 200 || xhr.status === 201)
@@ -681,7 +681,7 @@ class Guestbook {
     button.className = 'posting'
     button.innerHTML = ''
 
-    // 将留言信息发送给后端（可能会失败）
+    // Send the message to the backend (may fail)
     let backendUrl = 'https://api.chenmo1212.cn/message/post'
     this.POST(backendUrl, JSON.stringify(data), xhr => {
       if (xhr.status === 200 || xhr.status === 201)
@@ -691,14 +691,14 @@ class Guestbook {
     })
   }
 
-  // 更改时间格式
+  // change time format
   changeTimeStyle(item) {
     const d = new Date(item.create_time)
     let timeStamp = d.getTime() / 1000 - 28800
     return this.getDateDiff(timeStamp, new Date(item.create_time))
   }
 
-  // 更改时间格式的函数，改成几天前
+  // A function to change the time format to a few days ago
   getDateDiff(dateTimeStamp, d) {
     let minute = 60
     let hour = minute * 60
@@ -769,7 +769,7 @@ class Guestbook {
 
 /**
  *  ============================
- *  暗黑模式
+ *  dark mode
  *  ============================
  */
 let darkMode = localStorage.getItem('darkMode')
@@ -821,21 +821,26 @@ darkModeToggle.onclick = function () {
   } else {
     enableDarkMode()
   }
+  document.documentElement.classList.add('transition')
+
+  setTimeout(function () {
+    document.documentElement.classList.remove('transition')
+  }, 600)
 }
 
 /**
- * 图片懒加载
+ * Image lazy loading
  */
-var num = document.getElementsByTagName('img').length
-var img = document.getElementsByTagName('img')
-// 存储图片加载到的位置，避免每次都从第一张图片开始遍历
-var n = 0
-// 页面载入完毕加载可视区域内的图片
+let num = document.getElementsByTagName('img').length
+let img = document.getElementsByTagName('img')
+// Store the location where the image is loaded to avoid traversing from the first image every time
+let n = 0
+// After the page is loaded, load the pictures in the visible area
 lazyLoad()
 window.onscroll = lazyLoad
 
 /**
- * 监听页面滚动事件
+ * Listen for page scroll events
  */
 function lazyLoad() {
   // 可见区域高度
@@ -845,7 +850,7 @@ function lazyLoad() {
   let defaultUrl = 'https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
 
   for (let i = n; i < num; i++) {
-    // 用于定位的图片(offset仅为相对父元素的距离，因此需要进行判断）
+    // The image used for positioning (offset is only the distance relative to the parent element, so it needs to be judged)
     let offsetTop = img[i].offsetTop
     let par = img[i].offsetParent
     if (par.nodeName.toLowerCase() !== 'body') {
@@ -855,7 +860,7 @@ function lazyLoad() {
       }
     }
 
-    if (offsetTop < seeHeight + scrollTop + 1000) {  // 提前500px进行加载，用作缓冲
+    if (offsetTop < seeHeight + scrollTop + 1000) {  // Load 1000px ahead of time as a buffer
       if (img[i].getAttribute('src') === defaultUrl) {
         img[i].src = img[i].getAttribute('data-src')
         n = i + 1

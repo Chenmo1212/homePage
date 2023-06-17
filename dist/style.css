@@ -31,6 +31,7 @@ body {
     color: var(--color-font);
     margin: 0;
     overflow-x: hidden;
+    transition: background-color 0.5s, color 0.5s; /* Add transition properties */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -1300,6 +1301,11 @@ footer p.weak {
     top: 1.6em;
     font-weight: 700;
     text-decoration: underline;
+}
+
+.transition {
+    transition: opacity 0.5s ease;
+    opacity: 1;
 }
 
 @keyframes fade-transition {
