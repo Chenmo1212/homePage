@@ -1,4 +1,10 @@
 {
+  "language": {
+    "switchText": {
+      "zh": "View in English",
+      "en": "切换中文"
+    }
+  },
   "loading": {
     "text": {
       "zh": "第一次加载时间可能较长，请稍等...",
@@ -8,11 +14,11 @@
   "intro": {
     "heading": {
       "zh": "你好，<br />我是PL",
-      "en": "Hello,<br />I am PL"
+      "en": "Hello,<br />I am LONG"
     },
     "subheading": {
-      "zh": "昵称：陈默 <br /> 喜欢尝试不同的东西，<br />最爱音乐、阅读、摄影、旅游和编程。",
-      "en": "Nickname: Chen Mo <br /> English Name: Chandler(Based on <i>FRIENDS</i>) <br />Like to try different things,<br />interests music, reading, photography, traveling and programming."
+      "zh": "昵称：陈默 <br /> 喜欢音乐、阅读、摄影和旅游。",
+      "en": "Nickname: Chen Mo <br /> English Name: Chandler <br />Like music, reading, photography and traveling."
     }
   },
   "self_intro": {
@@ -42,7 +48,7 @@
     },
     "experience2": {
       "zh": "我不愿轻易听信他人 <br /> 总想通过自己的所见所闻所感得出对世界的定义",
-      "en": "Reluctant to easily believe others, <br /> always defining the world through personal observations, experiences, and emotions. "
+      "en": "Reluctant to easily believe others, <br /> always defining the world through  <br /> personal observations, experiences, and emotions. "
     }
   },
   "photography_text": {
@@ -60,15 +66,15 @@
   "programming": {
     "programming1": {
       "zh": "大学参加设计比赛，获奖后进入了 <a href=\"https://www.jianshu.com/p/bb0e62d4e7dc?from=ChenMo\" class=\"underline\" target=\"_blank\">吐司工作室</a><br />从此，正式踏进计算机的大门，进入了程序员的世界",
-      "en": "Participated in the design competition during college, won awards and joined\n    <a href=\"https://www.jianshu.com/p/bb0e62d4e7dc?from=ChenMo\" class=\"underline\" target=\"_blank\">Toast Studio</a>.\n    <br />\n    Since then, stepped into the realm of computers, entering the world of programming."
+      "en": "Participated in the design competition during college, <br /> won awards and joined\n    <a href=\"https://www.jianshu.com/p/bb0e62d4e7dc?from=ChenMo\" class=\"underline\" target=\"_blank\">Toast Studio</a>.\n    <br />\n    Since then, stepped into the realm of computers, <br />entering the world of programming."
     },
     "programming2": {
       "zh": "毕业后在 <a href=\"https://www.fscut.com/ch/\" target=\"_blank\" class=\"underline\">上海柏楚电子</a> 工作<br />认识了许多有趣的人，也确信了自己还需更多沉淀",
-      "en": "Worked for <a href=\"https://www.fscut.com/ch/\" target=\"_blank\" class=\"underline\">Friendess Electronic</a> after graduation.<br />\n    Met many interesting people and realized the need for further personal growth and accumulation."
+      "en": "Worked for <a href=\"https://www.fscut.com/ch/\" target=\"_blank\" class=\"underline\">Friendess Electronic</a> after graduation.<br />\n    Met many interesting people and realized <br /> the need for further personal growth and accumulation."
     },
     "programming3": {
       "zh": "一意孤行来到离家9000公里的 <a href=\"https://www.tcd.ie/\" target=\"_blank\" class=\"underline\">Trinity大学</a>读研<br />虽然很菜，但也一直在努力地拓宽自己的知识面",
-      "en": "Determined to come to <a href=\"https://www.tcd.ie/\" target=\"_blank\" class=\"underline\">Trinity</a> 9000 kilometers away from home.<br />\n    Although my ability is far from enough, I have been trying to broaden my horizon."
+      "en": "Determined to come to <a href=\"https://www.tcd.ie/\" target=\"_blank\" class=\"underline\">Trinity</a> 9000 kilometers away from home.<br />\n    Although my ability is far from enough, <br />I have been trying to broaden my horizon."
     }
   },
   "connect": {

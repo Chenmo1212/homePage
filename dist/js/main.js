@@ -2,26 +2,26 @@ var globe, scene, node, guestbook
 
 document.onreadystatechange = completeLoading
 
-//加载状态为complete时移除loading效果
+//Remove the loading effect when the loading status is complete
 function completeLoading() {
   if (document.readyState === 'complete') {
     document.getElementById('loading').style.display = 'none'
   }
 }
 
-// 页面加载完以后加载字体文件
+// Load the font file after the page is loaded
 function getHomeFont() {
-  let xhr = new XMLHttpRequest() // 定义一个异步对象
-  xhr.open('GET', './dist/fonts/SemiBold.ttf', true) // 异步GET方式加载字体
-  xhr.responseType = 'arraybuffer' //把异步获取类型改为arraybuffer二进制类型
+  let xhr = new XMLHttpRequest() // define an asynchronous object
+  xhr.open('GET', './dist/fonts/SemiBold.ttf', true) // Asynchronous GET way to load fonts
+  xhr.responseType = 'arraybuffer' //Change the asynchronous acquisition type to arraybuffer binary type
   xhr.onload = function () {
-    // 这里做了一个判断：如果浏览器支持FontFace方法执行
+    //Here is a judgment: if the browser supports FontFace method execution
     if (typeof FontFace != 'undefined') {
-      let buffer = this.response  //获取字体文件二进制码
-      let myFonts = new FontFace('SemiBold', buffer)  // 通过二进制码实例化字体对象
-      document.fonts.add(myFonts) // 将字体对象添加到页面中
+      let buffer = this.response  //Get font file binary code
+      let myFonts = new FontFace('SemiBold', buffer)  // Instantiate font object by binary code
+      document.fonts.add(myFonts) // Add the font object to the page
     } else {
-      // 如果浏览器不支持FontFace方法，直接添加样式到页面
+      // If the browser does not support the FontFace method, add styles directly to the page
       let styles = document.createElement('style')
       styles.innerHTML = '@font-face{font-family:"SemiBold";src:url("./dist/fonts/SemiBold.ttf") format("truetype");font-display:swap;}'
       console.log(document.getElementsByTagName('head'))
@@ -29,6 +29,45 @@ function getHomeFont() {
     }
   }
   xhr.send()
+}
+
+function getJSONFile(url, callback) {
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      const jsonData = JSON.parse(xhr.responseText);
+      callback(jsonData);
+    }
+  };
+  xhr.open("GET", url, true);
+  xhr.send();
+}
+
+// Functions to replace HTML text content
+function replaceTextContent(currentLang) {
+  const url = "./dist/lang/lang.json";
+  getJSONFile(url, function(data) {
+    // Process the obtained JSON data
+    const translations = data;
+
+    const elements = document.querySelectorAll('[data-i18n]');
+    const language = currentLang; // 获取用户选择的语言
+
+    elements.forEach(element => {
+      const translationKey = element.getAttribute('data-i18n');
+      const translationKeys = translationKey.split('.');
+      let translationText = translations;
+
+      translationKeys.forEach(key => {
+        translationText = translationText[key];
+        if (!translationText) return '';
+      });
+
+      if (translationText && translationText[language]) {
+        element.innerHTML = translationText[language];
+      }
+    });
+  });
 }
 
 window.onload = () => {
@@ -46,9 +85,11 @@ window.onload = () => {
 }
 
 const switchLanguage = () => {
-  const current = document.getElementsByTagName('html')[0].getAttribute('lang').substr(0, 2)
-  document.cookie = 'lang=' + (current === 'en' ? 'zh' : 'en')
-  location.reload()
+  let current = document.getElementsByTagName('html')[0].getAttribute('lang').substr(0, 2)
+  current = current === 'en' ? 'zh' : 'en'
+  document.cookie = 'lang=' + current
+  document.getElementsByTagName('html')[0].setAttribute('lang', current)
+  replaceTextContent(current)
 }
 
 class Globe {
