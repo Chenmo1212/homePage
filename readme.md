@@ -462,9 +462,9 @@ font-spider ./demo/*.html
 ```html
 <!-- index.html -->
 
-<img id="blog-c" data-src="1.png" src="default.png" alt=""/>
-<img id="blog-b" data-src="2.png" src="default.png" alt=""/>
-<img id="blog-a" data-src="3.png" src="default.png" alt=""/>
+<img title="" id="blog-c" data-src="1.png" src="default.png" alt=""/>
+<img title="" id="blog-b" data-src="2.png" src="default.png" alt=""/>
+<img title="" id="blog-a" data-src="3.png" src="default.png" alt=""/>
 ```
 
 ```js

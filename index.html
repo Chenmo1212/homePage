@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans-CN">
+<html lang="en">
 <head>
   <title>陈默 · ChenMo 的个人网站主页</title>
   <meta charset="utf-8" />
   <meta name="description" content="陈默（ChenMo1212）的个人网站主页。爱好音乐、阅读、摄影、旅游和编程。" />
   <meta property="og:title" content="陈默 · ChenMo 的个人网站主页">
   <meta property="og:description" content="陈默（ChenMo1212）的个人网站主页。爱好音乐、阅读、摄影、旅游和编程。">
-  <meta property="og:image" content="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg">
+  <meta property="og:image" content="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
   <meta property="og:url" content="https://www.chenmo1212.com">
   <meta property="og:type" content="webpage" />
-  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
-    <link rel="stylesheet" href="dist/style.css?v=2.0.1030.0" type="text/css" />
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover, width=device-width" />
+  <link rel="stylesheet" href="dist/style.css?v=2.1.1031.0" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cn-fontsource-source-han-serif-sc-vf-regular/font.css">
   <!--    <link rel="prefetch" href="dist/fonts/SemiBold.woff">-->
-  <!--    <link rel="prefetch" href="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg">-->
+  <!--    <link rel="prefetch" href="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">-->
   <script>
-  // var _hmt = _hmt || [];
-  // (function () {
-  //   var hm = document.createElement('script')
-  //   hm.src = 'https://hm.baidu.com/hm.js?70542db3a51e4ef7ad9a32296f1582d3'
-  //   var s = document.getElementsByTagName('script')[0]
-  //   s.parentNode.insertBefore(hm, s)
-  // })()
+  var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?70542db3a51e4ef7ad9a32296f1582d3'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
   </script>
 </head>
 <body>
@@ -29,206 +30,204 @@
 <section id="loading">
   <div class="loader">
     <div class="loading-content"></div>
-    <!--        <div class="text">第一次加载时间可能较长，请稍等...</div>-->
+    <!--        <div class="text"  data-i18n="loading.text">It may take a while to load the first time, please wait...</div>-->
   </div>
 </section>
 
 <section id="intro">
   <header>
-    <h1 id="heading" class="text-1">你好，<br />我是PL<br /></h1>
-    <h2 id="subheading">昵称：陈默 <br /> 喜欢尝试不同的东西，<br />最爱音乐、阅读、摄影、旅游和编程。</h2>
+    <h1 id="heading" class="text-1" data-i18n="intro.heading">Hello,<br>I am LONG</h1>
+    <h2 id="subheading" data-i18n="intro.subheading">Nickname: Chen Mo <br> English Name: Chandler <br>Like music, reading, photography and traveling.</h2>
     <div id="slice-left" class="slice left"></div>
     <div id="slice-right" class="slice right"></div>
   </header>
 </section>
 
 <section id="self_intro">
-  <p id="intro_text1">我不善言语，不擅温言宽慰<br /> 时常偏执，学不会伪装 <br /> 性子很傲，慢热但是重感情</p>
-
-  <p id="intro_text2"> 因为生活简单，见识比谁都少 <br /> 学不会勾心斗角，心眼都没发育太大 <br /> 没有开挂人生，只是个平凡无奇的人</p>
-
-  <p id="intro_text3"> 经常被生活锤得心灰意冷 <br /> 但也总能鼓起勇气缓慢前行 </p>
-
+  <p id="intro_text1" data-i18n="self_intro.intro_text1">I am not eloquent or skilled in comforting, <br> sometimes paranoid, never disguise, <br> slow to warm up, yet emotionally intense.</p>
+  <p id="intro_text2" data-i18n="self_intro.intro_text2">With a simple life and limited knowledge, <br> not skilled in manipulation, straightforward in nature. <br> No extraordinary life, just an ordinary person.</p>
+  <p id="intro_text3" data-i18n="self_intro.intro_text3">Often battered by life,  <br> yet always finding the courage to move forward slowly.</p>
 </section>
 
 <section id="go_far">
-  <p id="globe1">我喜欢旅行，去不同的地方<br />领略不同的风景、不同的建筑、不同的风土人情</p>
+  <p id="globe1" data-i18n="go_far.globe1">I enjoy traveling, exploring diverse landscapes,  <br> architectures, and local customs of different places.</p>
 
   <div id="globe-container">
-    <canvas id="globe"></canvas>
+    <canvas id="globe" width="412" height="412"></canvas>
   </div>
 </section>
 
 <section id="experience">
-  <p id="experience1">当浑浊成为了一种常态 <br /> 清白便是一种罪过</p>
-
-  <p id="experience2">我不愿轻易听信他人 <br /> 总想通过自己的所见所闻所感得出对世界的定义 </p>
+  <p id="experience1" data-i18n="experience.experience1">When turbidity becomes the norm, purity is a sin.</p>
+  <p id="experience2" data-i18n="experience.experience2">Reluctant to easily believe others, <br> always defining the world through  <br> personal observations, experiences, and emotions. </p>
 </section>
 
 <section id="photography_text">
-  <p id="photo">偶尔也会打开相机<br />记录着这一刻独一无二的经历</p>
+  <p id="photo" data-i18n="photography_text.photo">I seize the opportunity to capture <br> the essence of some extraordinary moments with my camera sometimes.</p>
 </section>
 
 <section id="photography">
   <div id="group">
-    <img id="photo-a" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg'
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" alt="scene" />
-    <img id="photo-b" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/2_.jpg'
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" alt="scene" />
-    <img id="photo-c" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/3.jpg'
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" alt="scene" />
-    <img id="photo-d" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/4.jpg'
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" alt="scene" />
-    <img id="photo-e" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/5.jpg'
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" alt="scene" />
-    <img id="photo-f" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/6.jpg'
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" alt="scene" />
-    <img id="photo-g" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/7.jpg'
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" alt="scene" />
-    <img id="photo-h" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/8.jpg'
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" alt="scene" />
+    <a href="https://chenmo1212.cn/gallery?f=home" target="_blank">
+      <img title="" id="photo-a" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/home_photo_1.jpg'
+           src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="scene" /></a>
+    <a href="https://chenmo1212.cn/gallery?f=home" target="_blank">
+      <img title="" id="photo-b" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/home_photo_2.jpg'
+           src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="scene" /></a>
+    <a href="https://chenmo1212.cn/gallery?f=home" target="_blank">
+      <img title="" id="photo-c" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/home_photo_3.jpg'
+           src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="scene" /></a>
+    <a href="https://chenmo1212.cn/gallery?f=home" target="_blank">
+      <img title="" id="photo-d" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/home_photo_4.jpg'
+           src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="scene" /></a>
+    <a href="https://chenmo1212.cn/gallery?f=home" target="_blank">
+      <img title="" id="photo-e" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/home_photo_5.jpg'
+           src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="scene" /></a>
+    <a href="https://chenmo1212.cn/gallery?f=home" target="_blank">
+      <img title="" id="photo-f" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/home_photo_6.jpg'
+           src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="scene" /></a>
+    <a href="https://chenmo1212.cn/gallery?f=home" target="_blank">
+      <img title="" id="photo-g" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/home_photo_7.jpg'
+           src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="scene" /></a>
+    <a href="https://chenmo1212.cn/gallery?f=home" target="_blank">
+      <img title="" id="photo-h" data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/home_photo_8.jpg'
+           src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="scene" /></a>
   </div>
 </section>
 
 <section id="design">
-  <p id="text-design">大学里自己捣鼓学了很多东西 <br /> 从PPT到平面、UI、网页、用户体验等等</p>
+  <p id="text-design" data-i18n="design.text-design">I self-taught a wide range of skills in college,  <br> from PPT, Graphic design, UI to Web engineer, Interaction design etc.</p>
   <div class="group">
-    <img class="design-pic design-pic-left design-a"
+    <img title="" class="design-pic design-pic-left design-a"
          data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/ppt.gif'
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" alt="PPT" />
-    <img class="design-pic design-pic-left design-b"
+         src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="PPT" />
+    <img title="" class="design-pic design-pic-left design-b"
          data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/UI.png'
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" alt="UI" />
-    <img class="design-pic design-pic-right design-c"
+         src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="UI" />
+    <img title="" class="design-pic design-pic-right design-c"
          data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/web.png'
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" alt="design" />
-    <img class="design-pic design-pic-right design-d"
+         src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="design" />
+    <img title="" class="design-pic design-pic-right design-d"
          data-src='https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/user.jpg'
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" alt="design" />
+         src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="design" />
   </div>
 </section>
 
 <section id="programming">
-  <p class="programming1">大学参加设计比赛，获奖后进入了
-    <a href="https://www.jianshu.com/p/bb0e62d4e7dc?from=ChenMo" class="underline" target="_blank">吐司工作室</a>
-    <br />
-    从此，正式踏进计算机的大门，进入了程序员的世界
-  </p>
+  <p class="programming1" data-i18n="programming.programming1">Participated in the design competition during college, <br> won awards and joined
+    <a href="https://www.jianshu.com/p/bb0e62d4e7dc?from=ChenMo" class="underline" target="_blank">Toast Studio</a>.
+    <br>
+    Since then, stepped into the realm of computers, <br>entering the world of programming.</p>
 
-  <p class="programming2">
-    毕业后在 <a href="https://www.fscut.com/ch/" target="_blank" class="underline">上海柏楚电子</a> 工作<br />
-    认识了许多有趣的人，也确信了自己还需更多沉淀
-  </p>
+  <p class="programming2" data-i18n="programming.programming2">Worked for <a href="https://www.fscut.com/ch/" target="_blank" class="underline">Friendess Electronic</a> after graduation.<br>
+    Met many interesting people and realized <br> the need for further personal growth and accumulation.</p>
 
-  <p class="programming3">
-    一意孤行来到离家9000公里的 <a href="https://www.tcd.ie/" target="_blank" class="underline">Trinity大学</a>读研<br />
-    虽然很菜，但也一直在努力地拓宽自己的知识面
-  </p>
+  <p class="programming3" data-i18n="programming.programming3">Determined to come to <a href="https://www.tcd.ie/" target="_blank" class="underline">Trinity</a> 9000 kilometers away from home.<br>
+    Although my ability is far from enough, <br>I have been trying to broaden my horizon.</p>
 </section>
 
 <section id="learned">
   <div id="nodes" onscroll="node.didScroll()">
-    <img id="node-scroll-button" src="dist/images/arrow.svg" onclick="node.increment()" alt="">
-    <img id="code" src="./dist/images/code.svg" alt="" width="1920" height="800">
-    <!--        <img id="code" src="images/code_dark.svg" alt="" width="1920" height="800">-->
+    <img title="" id="node-scroll-button" src="dist/images/arrow.svg" onclick="node.increment()" alt="">
+    <img title="" id="code" src="./dist/images/code.svg" alt="" width="1920" height="800">
+    <!--        <img title="" id="code" src="images/code_dark.svg" alt="" width="1920" height="800">-->
   </div>
 </section>
 
 <section id="connect">
-  <p id="text-dot-connecting">当不断尝试把自己的所想所爱结合在一起<br />创造些有意思的东西时, 真的会感到莫大的满足</p>
+  <p id="text-dot-connecting" data-i18n="connect.text-dot-connecting">When combining my thoughts and passions together,
+    <br>and creating something intriguing,
+    <br>it truly brings a tremendous sense of fulfillment.</p>
 </section>
 
 <section id="blog" class="products">
   <div id="backdrop"></div>
   <div id="text-blog" class="content">
-    <h1>个人博客</h1>
-    <p>2019年基于阿里云服务器，使用WordPress搭建的个人博客。新拟态风格的博客网站，用来发布在平时学习编程，过程中遇到的问题，记录了许多编程笔记。</p>
-    <p>后来，也会在里面加入一些心情杂记，给我杂乱的脑子来一个缓冲。</p>
-    <a href="https://blog.chenmo1212.cn?from=home" target="_blank" class="button">浏览我的博客</a>
+    <h1 data-i18n="blog.heading">Personal Blog</h1>
+    <p data-i18n="blog.paragraph1">A personal blog built in 2019 using WordPress on an Alibaba Cloud server. It features a new neumorphic design style and is used to publish programming-related content, documenting programming notes and the problems encountered during the learning process.</p>
+    <p data-i18n="blog.paragraph2">Later on, I also started including some miscellaneous personal thoughts in the blog, serving as a buffer for my cluttered mind.</p>
+    <a href="https://blog.chenmo1212.cn?from=home" target="_blank" class="button" data-i18n="blog.button">Visit</a>
   </div>
   <div class="showcase">
     <div class="container">
-      <img id="blog-showcase-c" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/blog1@1x.png"
+      <img title="" id="blog-showcase-c" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/blog1@1x.png"
            src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/blog3@1x.png" alt="" />
-      <img id="blog-showcase-b" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/blog2@1x.png"
+      <img title="" id="blog-showcase-b" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/blog2@1x.png"
            src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/blog2@1x.png" alt="" />
-      <img id="blog-showcase-a" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/blog3@1x.png"
-           src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" alt="" />
+      <img title="" id="blog-showcase-a" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/blog3@1x.png"
+           src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
     </div>
   </div>
 </section>
 
 <section id="emoji" class="products">
   <div class="content">
-    <h1>My Emoji</h1>
-    <p>写博客和敲代码时，总喜欢加入一些emoji图标，增加趣味性。手机上还好说，电脑上获取emoji就不是很方便。正好利用2020年流行起来的玻璃拟态制作一个emoji网站。</p>
-    <a href="https://chenmo1212.cn/myemoji?from=home" target="_blank" class="button">浏览 MyEmoji</a>
+    <h1 data-i18n="emoji.heading">My Emoji</h1>
+    <p data-i18n="emoji.paragraph1">When writing blog posts or coding, I always like to add emoji icons to make things more interesting. It's easy to do on a phone, but not as convenient on a computer. So, I decided to create an emoji website using the trendy glassmorphism design style that became popular in 2020.</p>
+    <a href="https://chenmo1212.cn/myemoji?from=home" target="_blank" class="button" data-i18n="emoji.button">Visit</a>
   </div>
   <div class="showcase">
-    <img id="emoji-showcase-a" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/myEmoji-b@1x.png"
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" />
-    <img id="emoji-showcase-b" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/myEmoji-a@1x.png"
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" alt="" />
+    <img title="" id="emoji-showcase-a" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/myEmoji-b@1x.png"
+         src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+    <img title="" id="emoji-showcase-b" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/myEmoji-a@1x.png"
+         src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
   </div>
 </section>
 
 <section id="tiku" class="products">
   <div class="content">
-    <h1>Little Cookies</h1>
-    <p>自己开发的东西能被别人所用，算是最大的满足。 <br /> 基于新拟态UI风格，使用Vue框架开发的大学Web端题库，另有音乐播放器，与炫酷音效的待办事项。</p>
-    <a href="https://tiku.chenmo1212.cn?from=home" target="_blank" class="button">浏览 Little Cookies</a>
+    <h1 data-i18n="tiku.heading">Little Cookies</h1>
+    <p data-i18n="tiku.paragraph">One of the greatest satisfactions is when something I developed can be used by others.<br>Little Cookies is a university web-based question bank developed using the neumorphic UI design style and Vue framework. It also includes a music player and a stylish task manager with cool sound effects.</p>
+    <a href="https://tiku.chenmo1212.cn?from=home" target="_blank" class="button" data-i18n="tiku.button">Visit</a>
   </div>
   <div class="showcase">
-    <img id="tiku-showcase-c" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/tiku_c.png"
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/tiku_c@1x.png" />
-    <img id="tiku-showcase-b" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/tiku_b.png"
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/tiku_b@1x.png" />
-    <img id="tiku-showcase-a" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/tiku_a.png"
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" />
+    <img title="" id="tiku-showcase-a" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/tiku_a.png"
+         src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt=""/>
+    <img title="" id="tiku-showcase-b" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/tiku_b@1x.png"
+         src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt=""/>
+    <img title="" id="tiku-showcase-c" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/tiku_c@1x.png"
+         src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt=""/>
   </div>
 </section>
 
 <section id="book" class="products">
   <div class="content">
-    <h1>FIKA READING</h1>
-    <p>“一个人如果不读书，那他的三观只能由周围人决定”。<br />
-      快节奏的社会下，似乎催生了人的戾气，社交软件下满是戾气的文字无疑让人心生厌恶。而读一些大作家的短篇文章总让人远离心浮气躁，进而修身养性。</p>
-    <a href="https://www.chenmo1212.cn/book?from=home" target="_blank" class="button">浏览 FIKA READING</a>
+    <h1 data-i18n="book.heading">FIKA READING</h1>
+    <p data-i18n="book.paragraph">If a person doesn't read, their perspective will be determined solely by those around them. <br>In today's fast-paced society, it seems to breed people's hostility. The negative content on social media is undoubtedly off-putting. Reading short stories by great writers helps to distance oneself from restlessness and cultivate one's character.</p>
+    <a href="https://www.chenmo1212.cn/book?from=home" target="_blank" class="button" data-i18n="book.button">Visit</a>
   </div>
   <div class="showcase">
-    <img id="book-showcase-a" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/book_b.png"
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" />
-    <img id="book-showcase-b" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/book_a.png"
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/book_a.png" />
-    <img id="book-showcase-c" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/book_c.png"
-         src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg" />
+    <img title="" id="book-showcase-c" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/home_book_c.png"
+         src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+    <img title="" id="book-showcase-a" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/home_book_b.png"
+         src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+    <img title="" id="book-showcase-b" data-src="https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/home_book_a.png"
+         src="https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
   </div>
 </section>
 
 <section id="more">
-  <p>想了解更多？<br />你需要的都在这里。</p>
+  <p data-i18n="more.paragraph">Want to know more?<br>Everything you need is here.</p>
   <div class="container">
     <div id="social-media" class="item">
-      <h2>社交网络</h2>
+      <h2 data-i18n="more.socialMediaHeading">Social Media</h2>
       <div class="item-content">
-        <a class="tag" target="_blank" rel="external" href="https://github.com/chenmo1212">Github
-          @chenmo1212</a>
-        <a class="tag" target="_blank" rel="external" href="https://weibo.com/u/7796507396">微博
-          @暮冬十二1212</a>
-        <a class="tag" target="_blank" rel="external" href="https://www.instagram.com/chenmo.1212/">Ins
-          @chenmo.1212</a>
-        <a class="tag" target="_blank" rel="external"
-           href="https://weixin.sogou.com/weixin?type=2&query=%E9%99%8C%E5%B0%98%E4%BC%97%E4%BA%AB">微信 @陌尘众享
-        </a>
+        <a class="tag" target="_blank" rel="external" href="mailto: chenmo991212@gmail.com">Email: chenmo991212@gmail.com</a>
+        <a class="tag" target="_blank" rel="external" href="https://github.com/chenmo1212" data-i18n="more.githubLink">Github @chenmo1212</a>
+        <a class="tag" target="_blank" rel="external" href="https://weibo.com/u/7796507396" data-i18n="more.weiboLink">Weibo @暮冬十二1212</a>
+        <a class="tag" target="_blank" rel="external" href="https://space.bilibili.com/440249215" data-i18n="more.bilibiliLink">Bilibili @陈默_1212</a>
+        <a class="tag" target="_blank" rel="external" href="https://www.instagram.com/chenmo.1212/" data-i18n="more.instagramLink">Ins @chenmo.1212</a>
+        <a class="tag" target="_blank" rel="external" href="https://weixin.sogou.com/weixin?type=2&amp;query=%E9%99%8C%E5%B0%98%E4%BC%97%E4%BA%AB" data-i18n="more.weixinLink">WeChat @陌尘众享</a>
       </div>
     </div>
     <div id="program" class="item">
-      <h2>其它项目</h2>
+      <h2 data-i18n="more.otherProjectsHeading">Other Projects</h2>
       <div class="item-content">
-        <a class="tag" target="_blank" rel="external" href="https://game.chenmo1212.cn?from=home">陈默游戏库</a>
-        <a class="tag" target="_blank" rel="external" href="https://study.chenmo1212.cn?from=home">青年大学习</a>
-        <a class="tag" target="_blank" rel="external" href="https://dwz.chenmo1212.cn?from=home">陈默短网址</a>
-        <a class="tag" target="_blank" rel="external" href="https://baidu.chenmo1212.cn?from=home">帮你百度</a>
+        <a class="tag" target="_blank" rel="external" href="https://game.chenmo1212.cn?from=home" data-i18n="more.gameLibraryLink">ChenMo Game Library</a>
+        <a class="tag" target="_blank" rel="external" href="https://chenmo1212.cn/gallery?from=home" data-i18n="more.photoAlbumLink">ChenMo's Gallery</a>
+        <a class="tag" target="_blank" rel="external" href="https://study.chenmo1212.cn?from=home" data-i18n="more.youthLearningLink">Youth Study</a>
+        <a class="tag" target="_blank" rel="external" href="https://dwz.chenmo1212.cn?from=home" data-i18n="more.shortURLLink">ChenMo Short URL</a>
+        <a class="tag" target="_blank" rel="external" href="https://baidu.chenmo1212.cn?from=home" data-i18n="more.baiduLink">Help you Baidu</a>
       </div>
     </div>
 
@@ -236,50 +235,51 @@
     <!--            <h2>微信订阅</h2>-->
     <!--            <div class="item-content">-->
     <!--                <div>-->
-    <!--                    <img src="images/qr-mpwx-dw.jpg" alt=""/>-->
+    <!--                    <img title="" src="images/qr-mpwx-dw.jpg" alt=""/>-->
     <!--                    <p>最新动态与交流互动</p>-->
     <!--                </div>-->
     <!--                <div>-->
-    <!--                    <img src="images/qr-mpwx-dw.jpg" alt=""/>-->
+    <!--                    <img title="" src="images/qr-mpwx-dw.jpg" alt=""/>-->
     <!--                    <p>摄影作品和旅行游记</p>-->
     <!--                </div>-->
     <!--            </div>-->
     <!--        </div>-->
+  </div>
+</section>
 
-    <div id="messages" class="item">
-      <h2>留言板</h2>
-      <div id="recent-messages" class="item-content"></div>
-      <!--            <a href="https://chenmo1212.cn/messages/" target="_blank">查看更多留言 &rsaquo;</a>-->
-    </div>
+<section class="guestbook">
+  <div id="messages">
+    <h2 data-i18n="guestbook.messagesHeading">Message Board</h2>
+    <div id="recent-messages" class="item-content"></div>
+    <!-- <a href="https://chenmo1212.cn/messages/" target="_blank" data-i18n="guestbook.viewMoreMessages">查看更多留言 &rsaquo;</a> -->
+  </div>
 
-    <div id="guestbook" class="item">
-      <h2>写新留言</h2>
-      <div class="item-content">
-        <div id="new-message">
-          <div id="step-1" class="inner-container">
-                        <textarea id="message-content" placeholder="有什么想对我说的？畅所欲言吧"
-                                  oninput="guestbook.contentDidChange(this)"></textarea>
-            <button id="next-step-button" class="inactive" onclick="guestbook.next()">完成</button>
-          </div>
-          <div id="step-2" class="inner-container">
-            <label for="message-name">昵称</label>
-            <input type="text" id="message-name" />
-            <p>留下你的昵称吧，会公开显示。</p>
+  <div id="guestbook">
+    <h2 data-i18n="guestbook.writeNewMessage">Write New Message</h2>
+    <div class="item-content">
+      <div id="new-message">
+        <div id="step-1" class="inner-container">
+          <textarea id="message-content" placeholder="What do you want to say to me? speak freely!" oninput="guestbook.contentDidChange(this)"></textarea>
+          <button id="next-step-button" class="inactive" onclick="guestbook.next()" data-i18n="guestbook.submitButton">Submit</button>
+        </div>
+        <div id="step-2" class="inner-container">
+          <label for="message-name" data-i18n="guestbook.nicknameLabel">Nickname</label>
+          <input type="text" id="message-name">
+          <p data-i18n="guestbook.nicknameDescription">Leave your nickname, it will be displayed publicly.</p>
 
-            <label for="message-email">邮件</label>
-            <input type="email" id="message-email" placeholder="john@example.com" />
-            <p>当这条留言收到回复时会发送邮件通知你，不会公开显示。</p>
+          <label for="message-email" data-i18n="guestbook.emailLabel">Email</label>
+          <input type="email" id="message-email" placeholder="john@example.com">
+          <p data-i18n="guestbook.emailDescription">You will receive an email notification when this message receives a reply. It will not be displayed publicly.</p>
 
-            <label for="message-url">网站</label>
-            <input type="url" id="message-url" placeholder="https://example.com" />
-            <p>（选填）个人网站或社交网站主页均可。</p>
+          <label for="message-url" data-i18n="guestbook.websiteLabel">Website</label>
+          <input type="url" id="message-url" placeholder="https://example.com">
+          <p data-i18n="guestbook.websiteDescription">(Optional) Personal website or social media profile.</p>
 
-            <button onclick="guestbook.submit(this)">保存</button>
-          </div>
-          <div id="step-3" class="inner-container">
-            <h3> 🎉 你的留言已经发送 ~</h3>
-            <p>为防止广告信息，所有留言都会在审核之后才会公开显示。</p>
-          </div>
+          <button onclick="guestbook.submit(this)" data-i18n="guestbook.saveButton">Save</button>
+        </div>
+        <div id="step-3" class="inner-container">
+          <h3 data-i18n="guestbook.messageSentHeading"> 🎉 Your message has been sent ~</h3>
+          <p data-i18n="guestbook.messageSentDescription">To prevent spam, all messages will be displayed publicly after review.</p>
         </div>
       </div>
     </div>
@@ -287,16 +287,23 @@
 </section>
 
 <footer>
-  <p class="weak"><a href="https://beian.miit.gov.cn" target="_blank" rel="external nofollow">鄂ICP备19020558号</a></p>
-  <p>Developed by ChenMo based on Dandy Weng</p>
-  <p>Copyright © 2018-2022 ChenMo1212.cn</p>
+  <p class="weak"><a href="https://beian.miit.gov.cn" target="_blank" rel="external nofollow" data-i18n="footer.icpLink">Hubei ICP No. 19020558</a></p>
+  <p class="weak" data-i18n="footer.copyright">All rights reserved © 2018-2023 ChenMo1212.cn</p>
 </footer>
 
+<!--<div class="curzr arrow" hidden>-->
+<!--  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">-->
+<!--    <path class="inner" d="M25,30a5.82,5.82,0,0,1-1.09-.17l-.2-.07-7.36-3.48a.72.72,0,0,0-.35-.08.78.78,0,0,0-.33.07L8.24,29.54a.66.66,0,0,1-.2.06,5.17,5.17,0,0,1-1,.15,3.6,3.6,0,0,1-3.29-5L12.68,4.2a3.59,3.59,0,0,1,6.58,0l9,20.74A3.6,3.6,0,0,1,25,30Z" fill="#F2F5F8" />-->
+<!--    <path class="outer" d="M16,3A2.59,2.59,0,0,1,18.34,4.6l9,20.74A2.59,2.59,0,0,1,25,29a5.42,5.42,0,0,1-.86-.15l-7.37-3.48a1.84,1.84,0,0,0-.77-.17,1.69,1.69,0,0,0-.73.16l-7.4,3.31a5.89,5.89,0,0,1-.79.12,2.59,2.59,0,0,1-2.37-3.62L13.6,4.6A2.58,2.58,0,0,1,16,3m0-2h0A4.58,4.58,0,0,0,11.76,3.8L2.84,24.33A4.58,4.58,0,0,0,7,30.75a6.08,6.08,0,0,0,1.21-.17,1.87,1.87,0,0,0,.4-.13L16,27.18l7.29,3.44a1.64,1.64,0,0,0,.39.14A6.37,6.37,0,0,0,25,31a4.59,4.59,0,0,0,4.21-6.41l-9-20.75A4.62,4.62,0,0,0,16,1Z" fill="#111920" />-->
+<!--  </svg>-->
+<!--</div>-->
+
 <div class="dark-light dark_mode">
-  <div class="mode" id="darkMode"></div>
+  <div class="mode off" id="darkMode"></div>
 </div>
-<p id="switch-language" onclick="switchLanguage()">View in English</p>
-<script src="dist/js/vendors.js" defer></script>
-<script src="dist/js/main.js?v=2.0.1030.0" defer></script>
+<p id="switch-language" onclick="switchLanguage()" data-i18n="language.switchText">切换中文</p>
+<script src="dist/js/vendors.js" defer=""></script>
+<script src="dist/js/main.js?v=2.23.0517.0" defer=""></script>
+<!--<script src="dist/js/arrow.js?v=2.1.1031.0" defer></script>-->
 </body>
 </html>

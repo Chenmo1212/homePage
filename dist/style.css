@@ -8,14 +8,14 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: "Source Han Serif";
-    src: url("../dist/fonts/SemiBold.woff") format("woff"),
-    url("../dist/fonts/SemiBold.ttf") format("truetype"),
-    url('../dist/fonts/SemiBold.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+/*@font-face {*/
+/*    font-family: "Source Han Serif";*/
+/*    src: url("../dist/fonts/SemiBold.woff") format("woff"),*/
+/*    url("../dist/fonts/SemiBold.ttf") format("truetype"),*/
+/*    url('../dist/fonts/SemiBold.svg') format('svg');*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+/*}*/
 
 
 :root {
@@ -31,6 +31,7 @@ body {
     color: var(--color-font);
     margin: 0;
     overflow-x: hidden;
+    transition: background-color 0.5s, color 0.5s; /* Add transition properties */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -79,7 +80,8 @@ section {
 
 section > p,
 section .content p,
-#more h2 {
+#more h2,
+.guestbook h2 {
     --size-p: calc(22px + (32 - 22) * var(--view-minmax));
     line-height: calc(var(--size-p) + 12px);
     font-size: var(--size-p);
@@ -209,7 +211,7 @@ header p {
 
 #intro header {
     display: grid;
-    grid-template-columns: minmax(20%, 330px) 75px minmax(max-content, 1fr) 75px minmax(20%, 300px);
+    grid-template-columns: minmax(20%, 330px) 75px minmax(400px, 400px) 75px minmax(20%, 300px);
     grid-template-rows: 176px 55px minmax(max-content, 1fr) 35px 35px 175px;
     grid-template-areas: ". . . . rs" ".  . . . rs" "ls . h1 . rs" "ls . h2 . rs" "ls . h2 . ." "ls . h2 . .";
     transform: translateY(-45px);
@@ -237,7 +239,7 @@ header p {
 .slice {
     width: 100%;
     height: 100%;
-    background-image: url("https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg");
+    background-image: url("https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
     background-size: cover;
     box-shadow: 0 20px 90px 0 rgba(0, 0, 0, .08), 0 9px 30px 0 rgba(0, 0, 0, .1);
 }
@@ -267,7 +269,7 @@ header p {
 
 #self_intro {
     --padding: 1.25em;
-    padding-bottom: 170px;
+    padding-bottom: 340px;
 }
 #self_intro .intro_text2,
 #self_intro .intro_text3 {
@@ -298,7 +300,8 @@ header p {
 }
 
 #experience {
-    padding: 20% 0;
+    padding: 17vh 1.25em 37vh;
+    margin-top: 200px;
 }
 
 #photography {
@@ -762,16 +765,19 @@ header p {
 #tiku-showcase-a {
     top: 5%;
     right: 0;
+    z-index: 3;
 }
 
 #tiku-showcase-b {
     top: 10%;
     right: 10%;
+    z-index: 2;
 }
 
 #tiku-showcase-c {
     top: 15%;
     right: 20%;
+    z-index: 1;
 }
 
 #book {
@@ -793,6 +799,7 @@ header p {
 #book-showcase-a {
     top: 20%;
     right: 25%;
+    z-index: 1;
 }
 
 #book-showcase-b {
@@ -804,6 +811,7 @@ header p {
 #book-showcase-c {
     top: 20%;
     right:-5%;
+    z-index: 1;
 }
 
 @media (min-width: 2400px) {
@@ -889,14 +897,17 @@ header p {
 
     #blog-showcase-a {
         top: 0;
+        z-index: 3;
     }
 
     #blog-showcase-b {
         top: 19%;
+        z-index: 2;
     }
 
     #blog-showcase-c {
         top: 38%;
+        z-index: 1;
     }
 
     #emoji-showcase-a {
@@ -1049,6 +1060,22 @@ header p {
     margin-bottom: 2em;
 }
 
+.guestbook {
+    max-width: 960px;
+    margin: 0 auto 5em;
+}
+
+.guestbook h2 {
+    --size-p: 26px;
+    text-align: left;
+    margin-bottom: .35em;
+}
+
+#messages {
+    margin-bottom: 5em;
+    padding: 0 5em;
+}
+
 #messages > a {
     display: block;
     text-align: center;
@@ -1119,9 +1146,7 @@ header p {
     line-height: 30px;
     font-size: 12px;
     float: right;
-
 }
-
 
 #messages .message-content {
     font-size: 14px;
@@ -1129,8 +1154,13 @@ header p {
     letter-spacing: .5px;
 }
 
+#messages .message-content p {
+    text-align: left;
+}
+
 #guestbook {
-    flex-basis: 640px !important;
+    width: 640px;
+    margin: 0 auto;
     border-left: none !important;
 }
 
@@ -1273,6 +1303,27 @@ footer p.weak {
     text-decoration: underline;
 }
 
+.transition {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+@keyframes fade-transition {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-transition {
+    animation: fade-transition 1s ease;
+    opacity: 1;
+}
 
 body.dark {
     background-color: #606578;

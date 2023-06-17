@@ -2,26 +2,26 @@ var globe, scene, node, guestbook
 
 document.onreadystatechange = completeLoading
 
-//加载状态为complete时移除loading效果
+//Remove the loading effect when the loading status is complete
 function completeLoading() {
   if (document.readyState === 'complete') {
     document.getElementById('loading').style.display = 'none'
   }
 }
 
-// 页面加载完以后加载字体文件
+// Load the font file after the page is loaded
 function getHomeFont() {
-  let xhr = new XMLHttpRequest() // 定义一个异步对象
-  xhr.open('GET', './dist/fonts/SemiBold.ttf', true) // 异步GET方式加载字体
-  xhr.responseType = 'arraybuffer' //把异步获取类型改为arraybuffer二进制类型
+  let xhr = new XMLHttpRequest() // define an asynchronous object
+  xhr.open('GET', './dist/fonts/SemiBold.ttf', true) // Asynchronous GET way to load fonts
+  xhr.responseType = 'arraybuffer' //Change the asynchronous acquisition type to arraybuffer binary type
   xhr.onload = function () {
-    // 这里做了一个判断：如果浏览器支持FontFace方法执行
+    //Here is a judgment: if the browser supports FontFace method execution
     if (typeof FontFace != 'undefined') {
-      let buffer = this.response  //获取字体文件二进制码
-      let myFonts = new FontFace('SemiBold', buffer)  // 通过二进制码实例化字体对象
-      document.fonts.add(myFonts) // 将字体对象添加到页面中
+      let buffer = this.response  //Get font file binary code
+      let myFonts = new FontFace('SemiBold', buffer)  // Instantiate font object by binary code
+      document.fonts.add(myFonts) // Add the font object to the page
     } else {
-      // 如果浏览器不支持FontFace方法，直接添加样式到页面
+      // If the browser does not support the FontFace method, add styles directly to the page
       let styles = document.createElement('style')
       styles.innerHTML = '@font-face{font-family:"SemiBold";src:url("./dist/fonts/SemiBold.ttf") format("truetype");font-display:swap;}'
       console.log(document.getElementsByTagName('head'))
@@ -29,6 +29,57 @@ function getHomeFont() {
     }
   }
   xhr.send()
+}
+
+function getJSONFile(url, callback) {
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      const jsonData = JSON.parse(xhr.responseText);
+      callback(jsonData);
+    }
+  };
+  xhr.open("GET", url, true);
+  xhr.send();
+}
+
+// Functions to replace HTML text content
+function replaceTextContent(language) {
+  const url = "./dist/lang/lang.json";
+  getJSONFile(url, function(data) {
+    // Process the obtained JSON data
+    const translations = data;
+    const elements = document.querySelectorAll('[data-i18n]');
+
+    elements.forEach(element => {
+      element.classList.add('fade-transition');
+
+      setTimeout(function () {
+        const translationKey = element.getAttribute('data-i18n');
+        const translationKeys = translationKey.split('.');
+        let translationText = translations;
+
+        translationKeys.forEach(key => {
+          translationText = translationText[key];
+          if (!translationText) return '';
+        });
+
+        if (translationText && translationText[language]) {
+          element.innerHTML = translationText[language];
+        }
+      }, 500)
+    });
+
+    setTimeout(function () {
+      document.getElementsByTagName('html')[0].setAttribute('lang', language)
+    }, 500)
+
+    setTimeout(function() {
+      elements.forEach(element => {
+        element.classList.remove('fade-transition');
+      });
+    }, 1000); // 延时时间根据过渡效果的持续时间进行调整
+  });
 }
 
 window.onload = () => {
@@ -42,13 +93,14 @@ window.onload = () => {
   guestbook = new Guestbook()
   guestbook.init()
 
-  getHomeFont()
+  // getHomeFont()
 }
 
 const switchLanguage = () => {
-  const current = document.getElementsByTagName('html')[0].getAttribute('lang').substr(0, 2)
-  document.cookie = 'lang=' + (current === 'en' ? 'zh' : 'en')
-  location.reload()
+  let current = document.getElementsByTagName('html')[0].getAttribute('lang').substr(0, 2)
+  current = current === 'en' ? 'zh' : 'en'
+  document.cookie = 'lang=' + current
+  replaceTextContent(current)
 }
 
 class Globe {
@@ -170,6 +222,8 @@ class Scene {
 
   intro() {
     const tween = new TimelineMax().add([
+      TweenMax.set('#intro_text2', { autoAlpha: 0, opacity: 0 }),
+
       TweenMax.fromTo('#heading', 1, { zIndex: 1, z: 1 }, { yPercent: -23.6, autoAlpha: 0, ease: Linear.easeNone }),
       TweenMax.fromTo('#subheading', 1, { zIndex: 1 }, { yPercent: -14.5, autoAlpha: 0, ease: Linear.easeNone }),
       TweenMax.to('#slice-left', 1, { yPercent: -38.2, autoAlpha: 0, ease: Linear.easeNone }),
@@ -184,17 +238,17 @@ class Scene {
 
   selfIntro() {
     const tween = new TimelineMax().add([
-      TweenMax.set('#self_intro', { y: -200 }),
+      // TweenMax.set('#self_intro', { y: -200 }),
 
-      TweenMax.fromTo('#intro_text1', 1, { y: 100 }, { y: 0, ease: Linear.easeInOut }),
-      TweenMax.to('#intro_text1', 1, { autoAlpha: 0, ease: Linear.easeInOut }),
+      TweenMax.fromTo('#intro_text1', 3, { y: 0 }, { y: -100, ease: Linear.easeInOut }),
+      TweenMax.to('#intro_text1', 3, { autoAlpha: 0, ease: Linear.easeInOut }),
 
-      TweenMax.fromTo('#intro_text2', .5, { y: 200, autoAlpha: 0 }, { y: 150, autoAlpha: 1 }),
-      TweenMax.fromTo('#intro_text3', 3, { autoAlpha: 0, y: 350 }, { y: 250, autoAlpha: 1 })
+      TweenMax.fromTo('#intro_text2', 2, { y: 400, autoAlpha: 0 }, { y: 100, autoAlpha: 1 }),
+      TweenMax.fromTo('#intro_text3', 4, { autoAlpha: 0, y: 350 }, { y: 250, autoAlpha: 1 })
     ])
     return new ScrollMagic.Scene({
       triggerElement: '#self_intro',
-      offset: 200, // 距离触发元素距离为200时开始动画
+      offset: 100, // 距离触发元素距离为200时开始动画
       duration: '61.8%', // 动画有效范围, 不是时间
     })
       .setTween(tween)
@@ -205,7 +259,7 @@ class Scene {
     const tween = new TimelineMax().add([
       TweenMax.fromTo('#intro_text2', 1, { autoAlpha: 1 }, { y: 0, autoAlpha: 0 }),
       TweenMax.fromTo('#intro_text3', 1, { autoAlpha: 1 }, { y: 100, autoAlpha: 0 }),
-      TweenMax.fromTo('#globe1', .5, { autoAlpha: 0 }, { y: 150, autoAlpha: 1 }),
+      TweenMax.fromTo('#globe1', 0.6, { autoAlpha: 0 }, { y: 100, autoAlpha: 1 }),
 
       TweenMax.fromTo('#globe-container', .8, { '-webkit-filter': `blur(${blur(window.innerWidth)}px)` }, {
         '-webkit-filter': 'blur(0)',
@@ -228,9 +282,8 @@ class Scene {
 
   experience() {
     const tween = new TimelineMax()
-    tween.add(TweenMax.set('#experience', { y: 200 }))
-    tween.fromTo('#experience1', 1, { y: 0, autoAlpha: 0 }, { y: -100, autoAlpha: 1 })
-    tween.fromTo('#experience2', 1, { y: 0, autoAlpha: 0 }, { autoAlpha: 1 }, '+=2')
+    tween.fromTo('#experience1', 3, { y: 0, autoAlpha: 0 }, { y: -50, autoAlpha: 1 })
+    tween.fromTo('#experience2', 3, { y: 100, autoAlpha: 0 }, { y: 50, autoAlpha: 1 }, '+=2')
 
     return new ScrollMagic.Scene({
       triggerElement: '#experience',
@@ -506,13 +559,11 @@ class Guestbook {
 
     this.GET(xhr => {
       if (xhr.status === 200 || xhr.status == 201) {
-        console.log(JSON.parse(xhr.responseText).data)
         let data = JSON.parse(xhr.responseText).data
         for (let i = 0; i < data.length; i++) {
           data[i].date = this.changeTimeStyle(data[i])
           data[i].sex = 'female'
         }
-        console.log(data)
         this.render(data)
         this.messages.parentNode.classList += ' fetched'
       } else
@@ -545,7 +596,7 @@ class Guestbook {
     let avatar = 'https://api.prodless.com/avatar.png?color=' + Math.floor(Math.random() * 0xffffff).toString(16)
     return `<div class="message">
     				<header>
-    					<img src="./dist/images/default.png" />
+    					<img title="" src="./dist/images/default.png" />
     					<h3>${item.name || '匿名'}</h3>
     					<span class="message-date">${item.date}</span>
     				</header>
@@ -581,22 +632,21 @@ class Guestbook {
 
     const re = /\S+@\S+\.\S+/
     if (name.length <= 0) {
-      alert('请输入您的昵称。')
+      alert('Please enter your nickname.')
       return
     }
     if (email.length <= 0) {
-      alert('提示：请输入邮箱。')
+      alert('Tip: Please enter your email address.')
       return
     } else if (!re.test(email)) {
-      alert('提示：您的邮箱格式不对。')
+      alert('Tip: Your email format is incorrect.')
       return
     }
 
-    this.postWx(content, name, email, website)
+    // this.postWx(content, name, email, website)
     this.postBackend(button, content, name, email, website)
   }
 
-  // 发送到微信通知。源码参考请务必修改此处数据，否则会发送到我的微信
   postWx(content, name, email, website) {
     const data = {
       'corpid': 'ww09de43a6da48f6a4',
@@ -609,7 +659,7 @@ class Guestbook {
       'url': '' // 需要跳转的链接
     }
 
-    // 将留言信息发送给微信提醒
+    // Send message to WeChat reminder
     let wxUrl = 'https://api.htm.fun/api/Wechat/text_card/'
     this.POST(wxUrl, JSON.stringify(data), xhr => {
       if (xhr.status === 200 || xhr.status === 201)
@@ -620,16 +670,7 @@ class Guestbook {
   }
 
   postBackend(button, content, name, email, website) {
-    let UID = 'UID_pNfFHmlL26qUZuXmGkrS9CGNUSLD'
-    let appToken = 'AT_aGS8jqOTZDiEAwbZFH2WdEgV15tgIl7j'
     const data = {
-      // summary: "主页留言", //消息摘要，显示在微信聊天页面或者模版消息卡片上，限制长度100，可以不传，不传默认截取content前面的内容。
-      // content: `#### 类型：\n\n${'主页留言'}\n\n---\n\n#### 内容：\n\n${author_content}\n\n---\n\n#### 称呼：\n\n
-      // ${author_name}\n\n---\n\n#### 联系方式：\n\nEmail: ${author_email}\nUrl: ${this.URLField.value}\n
-      // Agent:${navigator.userAgent + " DWAPI/7.0"}\n`,
-      // 'contentType': 3,  # 内容类型 1表示文字  2表示html(只发送body标签内部的数据即可，不包括body标签) 3表示markdown
-      // 'uids': [UID], # 发送目标的UID，是一个数组。注意uids和topicIds可以同时填写，也可以只填写一个。
-      // appToken: appToken
       name: name,
       content: content,
       email: email,
@@ -640,7 +681,7 @@ class Guestbook {
     button.className = 'posting'
     button.innerHTML = ''
 
-    // 将留言信息发送给后端（可能会失败）
+    // Send the message to the backend (may fail)
     let backendUrl = 'https://api.chenmo1212.cn/message/post'
     this.POST(backendUrl, JSON.stringify(data), xhr => {
       if (xhr.status === 200 || xhr.status === 201)
@@ -650,14 +691,14 @@ class Guestbook {
     })
   }
 
-  // 更改时间格式
+  // change time format
   changeTimeStyle(item) {
     const d = new Date(item.create_time)
     let timeStamp = d.getTime() / 1000 - 28800
     return this.getDateDiff(timeStamp, new Date(item.create_time))
   }
 
-  // 更改时间格式的函数，改成几天前
+  // A function to change the time format to a few days ago
   getDateDiff(dateTimeStamp, d) {
     let minute = 60
     let hour = minute * 60
@@ -678,17 +719,17 @@ class Guestbook {
       const resTime = this.add_0(d.getHours()) - 8 + ':' + this.add_0(d.getMinutes()) + ':' + this.add_0(d.getSeconds())
       return resDate + ' ' + resTime
     } else if (monthC >= 1) {
-      result = '' + parseInt(monthC) + '月前'
+      result = '' + parseInt(monthC) + ' month' + (monthC === 1 ? '' : 's') + ' ago'
     } else if (weekC >= 1) {
-      result = '' + parseInt(weekC) + '周前'
+      result = '' + parseInt(weekC) + ' week' + (weekC === 1 ? '' : 's') + ' ago'
     } else if (dayC >= 1) {
-      result = '' + parseInt(dayC) + '天前'
+      result = '' + parseInt(dayC) + ' day' + (dayC === 1 ? '' : 's') + ' ago'
     } else if (hourC >= 1) {
-      result = '' + parseInt(hourC) + '小时前'
+      result = '' + parseInt(hourC) + ' hour' + (hourC === 1 ? '' : 's') + ' ago'
     } else if (minC >= 1) {
-      result = '' + parseInt(minC) + '分钟前'
+      result = '' + parseInt(minC) + ' min' + (minC === 1 ? '' : 's') + ' ago'
     } else
-      result = '刚刚'
+      result = 'Just'
     return result
   }
 
@@ -728,7 +769,7 @@ class Guestbook {
 
 /**
  *  ============================
- *  暗黑模式
+ *  dark mode
  *  ============================
  */
 let darkMode = localStorage.getItem('darkMode')
@@ -780,30 +821,36 @@ darkModeToggle.onclick = function () {
   } else {
     enableDarkMode()
   }
+  document.documentElement.classList.add('transition')
+
+  setTimeout(function () {
+    document.documentElement.classList.remove('transition')
+  }, 600)
 }
 
 /**
- * 图片懒加载
+ * Image lazy loading
  */
-var num = document.getElementsByTagName('img').length
-var img = document.getElementsByTagName('img')
-// 存储图片加载到的位置，避免每次都从第一张图片开始遍历
-var n = 0
-// 页面载入完毕加载可视区域内的图片
+let num = document.getElementsByTagName('img').length
+let img = document.getElementsByTagName('img')
+// Store the location where the image is loaded to avoid traversing from the first image every time
+let n = 0
+// After the page is loaded, load the pictures in the visible area
 lazyLoad()
 window.onscroll = lazyLoad
 
 /**
- * 监听页面滚动事件
+ * Listen for page scroll events
  */
 function lazyLoad() {
   // 可见区域高度
   let seeHeight = document.documentElement.clientHeight
   // 滚动条距离顶部高度
   let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-  for (let i = n; i < num; i++) {
+  let defaultUrl = 'https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
 
-    // 用于定位的图片(offset仅为相对父元素的距离，因此需要进行判断）
+  for (let i = n; i < num; i++) {
+    // The image used for positioning (offset is only the distance relative to the parent element, so it needs to be judged)
     let offsetTop = img[i].offsetTop
     let par = img[i].offsetParent
     if (par.nodeName.toLowerCase() !== 'body') {
@@ -812,11 +859,12 @@ function lazyLoad() {
         par = par.offsetParent
       }
     }
-    if (offsetTop < seeHeight + scrollTop + 300) {  // 提前300px进行加载，用作缓冲
-      if (img[i].getAttribute('src') === 'https://blog-img-1300024309.cos.ap-nanjing.myqcloud.com/img/me.jpg') {
+
+    if (offsetTop < seeHeight + scrollTop + 1000) {  // Load 1000px ahead of time as a buffer
+      if (img[i].getAttribute('src') === defaultUrl) {
         img[i].src = img[i].getAttribute('data-src')
+        n = i + 1
       }
-      n = i + 1
     }
   }
 }
