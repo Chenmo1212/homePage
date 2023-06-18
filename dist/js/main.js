@@ -558,7 +558,7 @@ class Guestbook {
     if (!this.messages) return
 
     this.GET(xhr => {
-      if (xhr.status === 200 || xhr.status == 201) {
+      if (xhr.status === 200 || xhr.status === 201) {
         let data = JSON.parse(xhr.responseText).data
         for (let i = 0; i < data.length; i++) {
           data[i].date = this.changeTimeStyle(data[i])
@@ -591,12 +591,12 @@ class Guestbook {
 
   template(item) {
     // 随机头像api： https://blog.csdn.net/ipython100/article/details/106719482
-    let sex = item.sex === 'female' ? 'c2' : 'c3'
-//        let avatar = 'http://api.btstu.cn/sjtx/api.php?lx=' + sex + '&format=images?' + new Date().getTime();
-    let avatar = 'https://api.prodless.com/avatar.png?color=' + Math.floor(Math.random() * 0xffffff).toString(16)
+    // let sex = item.sex === 'female' ? 'c2' : 'c3'
+    // let avatar = 'http://api.btstu.cn/sjtx/api.php?lx=' + sex + '&format=images?' + new Date().getTime();
+    // let avatar = 'https://api.prodless.com/avatar.png?color=' + Math.floor(Math.random() * 0xffffff).toString(16)
     return `<div class="message">
     				<header>
-    					<img title="" src="./dist/images/default.png" />
+    					<img title="" src="./dist/images/default.png" alt="user-avatar"/>
     					<h3>${item.name || '匿名'}</h3>
     					<span class="message-date">${item.date}</span>
     				</header>
@@ -703,7 +703,7 @@ class Guestbook {
     let minute = 60
     let hour = minute * 60
     let day = hour * 24
-    let halfamonth = day * 15
+    // let halfamonth = day * 15
     let month = day * 30
     let now = new Date().getTime() / 1000
     let diffValue = now - dateTimeStamp
@@ -752,13 +752,12 @@ class Guestbook {
         callback(xhr)
     }
     xhr.open(method, url, true)
-    // xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(payload)
   }
 
   GET(callback) {
     let url = 'https://api.chenmo1212.cn/message/get'
-    // let url = './dist/data/guestMsg.json';
     this.request(url, 'GET', null, callback)
   }
 
