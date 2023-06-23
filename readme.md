@@ -1,4 +1,14 @@
+---
+category: ['编程']
+tag: ["编程"]
+status: publish
+thumbnail: https://blog.chenmo1212.cn/wp-content/uploads/2023/06/Snipaste_2023-06-19_00-52-18.png
+---
+
+![Snipaste_2023-06-19_00-52-18](https://blog.chenmo1212.cn/wp-content/uploads/2023/06/Snipaste_2023-06-19_00-52-18.png)
+
  ## 陈默的主页
+
 春招快结束了，打算在结束之前换一个自己的个人主页，之前是使用的landingPage登录页做的个人主页。后来觉得实在不妥，便决定重新再设计一个。
 
 当然想法有很多，执行起来总是会遇到各种各样的问题，比如样式设计，开发框架，响应式等等问题。因此尽管自己设计了很多版本，也有开始开发，但最后都选择了放弃。
@@ -199,7 +209,6 @@ tl.pause();
 tl.resume();
 tl.seek(1.5);
 tl.reverse();
-...
 ```
 
 #### ScrollMagic
@@ -336,8 +345,8 @@ document.documentElement.style.setProperty('--color-background', '#fdfdfd');
 /* style.css */
 @font-face {
     font-family: "Source Han Serif";
-    src: url("fonts/SemiBold.woff") format("woff"),
-    url("fonts/SemiBold.ttf") format("truetype");
+    src: url("./dist/fonts/SemiBold.woff") format("woff"),
+    url("./dist/fonts/SemiBold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -355,11 +364,11 @@ document.documentElement.style.setProperty('--color-background', '#fdfdfd');
 
 @font-face {
     font-family: 'HansHandItalic';
-    src: url('fonts/hanshand-webfont.eot');
-    src: url('fonts/hanshand-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/hanshand-webfont.woff') format('woff'),
-         url('fonts/hanshand-webfont.ttf') format('truetype'),
-         url('fonts/hanshand-webfont.svg#webfont34M5alKg') format('svg');
+    src: url('./dist/fonts/hanshand-webfont.eot');
+    src: url('./dist/fonts/hanshand-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./dist/fonts/hanshand-webfont.woff') format('woff'),
+         url('./dist/fonts/hanshand-webfont.ttf') format('truetype'),
+         url('./dist/fonts/hanshand-webfont.svg#webfont34M5alKg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -388,8 +397,8 @@ npm install font-spider -g
 /* style.css */
 @font-face {
     font-family: "Source Han Serif";
-    src: url("fonts/SemiBold.woff") format("woff"),
-    url("fonts/SemiBold.ttf") format("truetype");
+    src: url("./dist/fonts/SemiBold.woff") format("woff"),
+    url("./dist/fonts/SemiBold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
