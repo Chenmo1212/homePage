@@ -10,8 +10,8 @@ class Guestbook {
         this.nameField = this.element('message-name')
         this.emailField = this.element('message-email')
         this.URLField = this.element('message-url')
-        this.baseURL = "https://api.chenmo1212.cn/"
-        this.avatarURL = "https://api.dicebear.com/6.x/adventurer-neutral/svg"
+        this.baseURL = "https://api.chenmo1212.cn"
+        this.avatarURL = "https://api.dicebear.com/6.x/initials/svg"
     }
 
     init() {
@@ -44,16 +44,16 @@ class Guestbook {
     render(items) {
         items.forEach(item => {
                 this.messages.insertAdjacentHTML('beforeend', this.template(item))
-                this.sleep(200)
+                this.sleep(10)
             }
         )
     }
 
     template(item) {
-        let avatar = `${this.avatarURL}?seed=${item.id}`
+        // let avatar = `${this.avatarURL}?seed=${item.name}&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf`
         return `<div class="message">
     				<header>
-    					<img title="" src="${avatar}" alt="user-avatar"/>
+    					<img title="" src="./dist/images/default.png" alt="user-avatar"/>
     					<h3>${item.name || '匿名'}</h3>
     					<span class="message-date">${item.date}</span>
     				</header>
@@ -106,7 +106,7 @@ class Guestbook {
         button.className = 'posting'
         button.innerHTML = ''
 
-        let backendUrl = this.baseURL + 'messages'
+        let backendUrl = this.baseURL + '/messages'
         this.POST(backendUrl, JSON.stringify(data))
             .then(res => {
                 if (res.status === 200 || res.status === 201) {
@@ -187,7 +187,7 @@ class Guestbook {
     }
 
     GET() {
-        let url = this.baseURL + 'messages';
+        let url = this.baseURL + '/messages';
         return fetch(url, {
             method: 'GET',
             headers: {
