@@ -93,6 +93,8 @@ window.onload = () => {
   guestbook = new Guestbook()
   guestbook.init()
 
+  lazyLoad()
+
   // getHomeFont()
 }
 
@@ -604,40 +606,22 @@ darkModeToggle.onclick = function () {
 /**
  * Image lazy loading
  */
-let num = document.getElementsByTagName('img').length
-let img = document.getElementsByTagName('img')
-// Store the location where the image is loaded to avoid traversing from the first image every time
-let n = 0
-// After the page is loaded, load the pictures in the visible area
-lazyLoad()
-window.onscroll = lazyLoad
+const images = document.getElementsByTagName('img');
+const defaultUrl = 'https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+
+// Load images in the visible area when the page is loaded or scrolled
+window.onscroll = lazyLoad;
 
 /**
- * Listen for page scroll events
+ * Lazy load images
  */
 function lazyLoad() {
-  // 可见区域高度
-  let seeHeight = document.documentElement.clientHeight
-  // 滚动条距离顶部高度
-  let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-  let defaultUrl = 'https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+  for (let i = 0; i < images.length; i++) {
+    const image = images[i];
+    const imageRect = image.getBoundingClientRect();
 
-  for (let i = n; i < num; i++) {
-    // The image used for positioning (offset is only the distance relative to the parent element, so it needs to be judged)
-    let offsetTop = img[i].offsetTop
-    let par = img[i].offsetParent
-    if (par.nodeName.toLowerCase() !== 'body') {
-      while (par) {
-        offsetTop += par.offsetTop
-        par = par.offsetParent
-      }
-    }
-
-    if (offsetTop < seeHeight + scrollTop + 1000) {  // Load 1000px ahead of time as a buffer
-      if (img[i].getAttribute('src') === defaultUrl) {
-        img[i].src = img[i].getAttribute('data-src')
-        n = i + 1
-      }
+    if ((imageRect.top < 1000 && imageRect.bottom > -1000) && image.getAttribute('src') === defaultUrl) {
+      image.src = image.getAttribute('data-src');
     }
   }
 }
