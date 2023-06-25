@@ -345,8 +345,8 @@ document.documentElement.style.setProperty('--color-background', '#fdfdfd');
 /* style.css */
 @font-face {
     font-family: "Source Han Serif";
-    src: url("./dist/fonts/SemiBold.woff") format("woff"),
-    url("./dist/fonts/SemiBold.ttf") format("truetype");
+    src: url("../dist/fonts/SemiBold.woff") format("woff"),
+    url("../dist/fonts/SemiBold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
