@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is deploying ${{ github.repository }} 🚀
 on:
   pull_request:
     branches:
-      - main
+      - master
     types:
       - closed
 jobs:
