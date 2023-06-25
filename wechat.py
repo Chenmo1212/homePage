@@ -38,18 +38,23 @@ def copy_files_to_parent_directory():
     current_directory = os.getcwd()
     parent_directory = os.path.dirname(current_directory)
 
-    # Specify a list of files not to be copied
-    files_to_exclude = ['READE.md', '.gitignore', 'doc/note.md', 'doc/Snipaste_2023-06-19_00-52-18.png']
+    # Specify a list of folders not to be copied
+    directories_to_exclude = ['doc', '.github', '.git', '.idea']
+    items_to_exclude = ['.gitignore', 'requirements.txt', 'wechat.py', 'README.md']
 
-    for file_name in os.listdir(current_directory):
-        if file_name not in files_to_exclude:
-            source_path = os.path.join(current_directory, file_name)
-            destination_path = os.path.join(parent_directory, file_name)
+    for item in os.listdir(current_directory):
+        item_path = os.path.join(current_directory, item)
+        destination_path = os.path.join(parent_directory, item)
 
-            # File copying using the shutil library
-            shutil.copy2(source_path, destination_path)
-
-            print(f"Copying file {file_name} to {parent_directory} succeeded!")
+        if item not in directories_to_exclude and item not in items_to_exclude:
+            if os.path.isfile(item_path):
+                # copy files
+                shutil.copy2(item_path, destination_path)
+                print(f"Copying file {item} to {parent_directory} succeeded!")
+            elif os.path.isdir(item_path):
+                # Copy a folder and its contents
+                shutil.copytree(item_path, destination_path)
+                print(f"Copy folder {item} to {parent_directory} SUCCESSFUL!")
 
 
 if __name__ == '__main__':
