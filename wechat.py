@@ -1,6 +1,8 @@
 import requests
 import sys
 import json
+import os
+import shutil
 
 
 def post_wx():
@@ -32,6 +34,29 @@ def post_wx():
         print('error: Failed to post wechat notification.' + str(e) + ' status: 500')
 
 
+def copy_files_to_parent_directory():
+    current_directory = os.getcwd()
+    parent_directory = os.path.dirname(current_directory)
+
+    # Specify a list of folders not to be copied
+    directories_to_exclude = ['doc', '.github', '.git', '.idea']
+    items_to_exclude = ['.gitignore', 'requirements.txt', 'wechat.py', 'README.md']
+
+    for item in os.listdir(current_directory):
+        item_path = os.path.join(current_directory, item)
+        destination_path = os.path.join(parent_directory, item)
+
+        if item not in directories_to_exclude and item not in items_to_exclude:
+            if os.path.isfile(item_path):
+                # copy files
+                shutil.copy2(item_path, destination_path)
+                print(f"Copying file {item} to {parent_directory} succeeded!")
+            elif os.path.isdir(item_path):
+                # Copy a folder and its contents
+                shutil.copytree(item_path, destination_path)
+                print(f"Copy folder {item} to {parent_directory} SUCCESSFUL!")
+
+
 if __name__ == '__main__':
     try:
         repository = sys.argv[1]
@@ -39,6 +64,8 @@ if __name__ == '__main__':
         AGENTID = sys.argv[3]  # application id
         CORPID = sys.argv[4]  # enterprise id
         CORPSECRET = sys.argv[5]  # application secret
+
+        copy_files_to_parent_directory()
         post_wx()
     except IndexError:
         print('Please specify five params: repository, job_status, AGENTID, CORPID, CORPSECRET')
