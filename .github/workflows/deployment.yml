@@ -1,0 +1,36 @@
+name: Portfolio Deployment
+run-name: ${{ github.actor }} is deploying ${{ github.repository }} 🚀
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1 - Check_out-code 🔎
+        uses: actions/checkout@v2
+
+      - name: Step 2 - Deploy to Server 🖥️
+        uses: easingthemes/ssh-deploy@v2.2.11
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          ARGS: "-rltgoDzvO"
+          SOURCE: "/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: 'root'
+          TARGET: ${{ secrets.TARGET }}
+
+      - name: Step 3 - Install Python 🐧
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip' # caching pip dependencies
+
+      - name: Step 4 - Install required dependencies 💡
+        run: pip install requests==2.27.1
+
+      - name: Step 5 - Send Wechat Notification 🐣
+        run: python wechat.py ${{ github.repository }} ${{ job.status }} ${{ secrets.AGENTID }} ${{ secrets.CORPID }} ${{ secrets.CORPSECRET }}
