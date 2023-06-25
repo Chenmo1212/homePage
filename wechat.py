@@ -1,6 +1,8 @@
 import requests
 import sys
 import json
+import os
+import shutil
 
 
 def post_wx():
@@ -32,6 +34,24 @@ def post_wx():
         print('error: Failed to post wechat notification.' + str(e) + ' status: 500')
 
 
+def copy_files_to_parent_directory():
+    current_directory = os.getcwd()
+    parent_directory = os.path.dirname(current_directory)
+
+    # Specify a list of files not to be copied
+    files_to_exclude = ['READE.md', '.gitignore', 'doc/note.md', 'doc/Snipaste_2023-06-19_00-52-18.png']
+
+    for file_name in os.listdir(current_directory):
+        if file_name not in files_to_exclude:
+            source_path = os.path.join(current_directory, file_name)
+            destination_path = os.path.join(parent_directory, file_name)
+
+            # File copying using the shutil library
+            shutil.copy2(source_path, destination_path)
+
+            print(f"Copying file {file_name} to {parent_directory} succeeded!")
+
+
 if __name__ == '__main__':
     try:
         repository = sys.argv[1]
@@ -39,6 +59,8 @@ if __name__ == '__main__':
         AGENTID = sys.argv[3]  # application id
         CORPID = sys.argv[4]  # enterprise id
         CORPSECRET = sys.argv[5]  # application secret
+
+        copy_files_to_parent_directory()
         post_wx()
     except IndexError:
         print('Please specify five params: repository, job_status, AGENTID, CORPID, CORPSECRET')

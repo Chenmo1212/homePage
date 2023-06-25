@@ -1,11 +1,6 @@
 name: Portfolio Deployment
 run-name: ${{ github.actor }} is deploying ${{ github.repository }} 🚀
-on:
-  pull_request:
-    branches:
-      - master
-    types:
-      - closed
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
