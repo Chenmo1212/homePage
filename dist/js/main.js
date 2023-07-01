@@ -9,28 +9,6 @@ function completeLoading() {
   }
 }
 
-// Load the font file after the page is loaded
-function getHomeFont() {
-  let xhr = new XMLHttpRequest() // define an asynchronous object
-  xhr.open('GET', './dist/fonts/SemiBold.ttf', true) // Asynchronous GET way to load fonts
-  xhr.responseType = 'arraybuffer' //Change the asynchronous acquisition type to arraybuffer binary type
-  xhr.onload = function () {
-    //Here is a judgment: if the browser supports FontFace method execution
-    if (typeof FontFace != 'undefined') {
-      let buffer = this.response  //Get font file binary code
-      let myFonts = new FontFace('SemiBold', buffer)  // Instantiate font object by binary code
-      document.fonts.add(myFonts) // Add the font object to the page
-    } else {
-      // If the browser does not support the FontFace method, add styles directly to the page
-      let styles = document.createElement('style')
-      styles.innerHTML = '@font-face{font-family:"SemiBold";src:url("./dist/fonts/SemiBold.ttf") format("truetype");font-display:swap;}'
-      console.log(document.getElementsByTagName('head'))
-      document.getElementsByTagName('head')[0].appendChild(styles)
-    }
-  }
-  xhr.send()
-}
-
 function getJSONFile(url, callback) {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
@@ -93,7 +71,7 @@ window.onload = () => {
   guestbook = new Guestbook()
   guestbook.init()
 
-  lazyLoad()
+  // lazyLoad()
 
   // getHomeFont()
 }
@@ -601,27 +579,4 @@ darkModeToggle.onclick = function () {
   setTimeout(function () {
     document.documentElement.classList.remove('transition')
   }, 600)
-}
-
-/**
- * Image lazy loading
- */
-const images = document.getElementsByTagName('img');
-const defaultUrl = 'https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
-
-// Load images in the visible area when the page is loaded or scrolled
-window.onscroll = lazyLoad;
-
-/**
- * Lazy load images
- */
-function lazyLoad() {
-  for (let i = 0; i < images.length; i++) {
-    const image = images[i];
-    const imageRect = image.getBoundingClientRect();
-
-    if ((imageRect.top < 1000 && imageRect.bottom > -1000) && image.getAttribute('src') === defaultUrl) {
-      image.src = image.getAttribute('data-src');
-    }
-  }
 }
