@@ -47,7 +47,7 @@
       "en": "When turbidity becomes the norm, purity is a sin."
     },
     "experience2": {
-      "zh": "我不愿轻易听信他人 <br /> 总想通过自己的所见所闻所感得出对世界的定义",
+      "zh": "我不愿轻易听信他人 <br /> 总想通过自己所见所闻所感得出对世界的定义",
       "en": "Reluctant to easily believe others, <br /> always defining the world through  <br /> personal observations, experiences, and emotions. "
     }
   },
@@ -195,6 +195,10 @@
     "baiduLink": {
       "zh": "帮你百度",
       "en": "Help you Baidu"
+    },
+    "fireworks": {
+      "zh": "烟花",
+      "en": "Fireworks"
     }
   },
   "guestbook": {
