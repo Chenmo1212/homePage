@@ -9,6 +9,64 @@ function completeLoading() {
   }
 }
 
+window.onload = () => {
+  globe = new Globe()
+  globe.init()
+
+  scene = new Scene()
+  scene.init()
+
+  node = new Node()
+  guestbook = new Guestbook()
+  guestbook.init()
+
+  if (cookieLanguage !== htmlLanguage) {
+    applyLanguage(cookieLanguage)
+  }
+  
+  if (getLanguageFromURL()) {
+    applyLanguage(getLanguageFromURL())
+  }
+}
+
+/**
+ *  ============================
+ *  language
+ *  ============================
+ */
+
+const cookieLanguage = getLanguageFromCookie()
+const htmlLanguage = document.getElementsByTagName('html')[0].getAttribute('lang').substr(0, 2)
+
+const switchLanguage = () => {
+  let currentLanguage = document.getElementsByTagName('html')[0].getAttribute('lang').substr(0, 2)
+  let res = currentLanguage === 'en' ? 'zh' : 'en'
+  applyLanguage(res)
+}
+
+const applyLanguage = (lang) => {
+  if (!lang) lang = cookieLanguage
+  document.cookie = 'lang=' + lang
+  replaceTextContent(lang)
+}
+
+function getLanguageFromCookie() {
+  let cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    let cookie = cookies[i].trim();
+    if (cookie.indexOf('lang=') === 0) {
+      return cookie.substring(5);
+    }
+  }
+  return 'en';
+}
+
+function getLanguageFromURL() {
+  let urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get('lang');
+}
+
+
 function getJSONFile(url, callback) {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
@@ -60,28 +118,11 @@ function replaceTextContent(language) {
   });
 }
 
-window.onload = () => {
-  globe = new Globe()
-  globe.init()
-
-  scene = new Scene()
-  scene.init()
-
-  node = new Node()
-  guestbook = new Guestbook()
-  guestbook.init()
-
-  // lazyLoad()
-
-  // getHomeFont()
-}
-
-const switchLanguage = () => {
-  let current = document.getElementsByTagName('html')[0].getAttribute('lang').substr(0, 2)
-  current = current === 'en' ? 'zh' : 'en'
-  document.cookie = 'lang=' + current
-  replaceTextContent(current)
-}
+/**
+ *  ============================
+ *  Globe
+ *  ============================
+ */
 
 class Globe {
   constructor() {
@@ -294,7 +335,7 @@ class Scene {
 
   photo() {
     const tween = new TimelineMax().add([
-      TweenMax.to('#group', 1, { rotationX: 6, rotationY: 0, rotationZ: 4.5, ease: Linear.easeNone }),
+      TweenMax.to('#group', 1, { rotationX: 6, rotationY: 0, rotationZ: 4.5, xPercent: 18.2, ease: Linear.easeNone }),
       TweenMax.fromTo('#photo-a', 1, { '-webkit-filter': 'blur(0)' }, {
         '-webkit-filter': `blur(3px)`,
         scale: 1.3,
@@ -304,7 +345,7 @@ class Scene {
       }),
       TweenMax.to('#photo-b', 1, { xPercent: -18.2, yPercent: -18.2, ease: Linear.easeIn }),
       TweenMax.fromTo('#photo-c', 1, { '-webkit-filter': 'blur(0)' }, {
-        '-webkit-filter': `blur(6px)`,
+        '-webkit-filter': `blur(3px)`,
         scale: 1.6,
         xPercent: -61.8,
         yPercent: -61.8,
@@ -312,19 +353,19 @@ class Scene {
       }),
       TweenMax.to('#photo-d', 1, { xPercent: -1.8, yPercent: -1.8, ease: Linear.easeIn }),
       TweenMax.fromTo('#photo-e', 1, { '-webkit-filter': 'blur(0)' }, {
-        '-webkit-filter': `blur(8px)`,
+        '-webkit-filter': `blur(2px)`,
         xPercent: -38.2,
         yPercent: -38.2,
         ease: Linear.easeIn
       }),
       TweenMax.fromTo('#photo-f', 1, { '-webkit-filter': 'blur(0)' }, {
-        '-webkit-filter': `blur(6px)`,
+        '-webkit-filter': `blur(3px)`,
         xPercent: -21.8,
         yPercent: -21.8,
         ease: Linear.easeIn
       }),
       TweenMax.fromTo('#photo-g', 1, { '-webkit-filter': 'blur(0)' }, {
-        '-webkit-filter': `blur(3px)`,
+        '-webkit-filter': `blur(1px)`,
         scale: 1.1,
         xPercent: -68.8,
         yPercent: -88.8,
@@ -425,9 +466,9 @@ class Scene {
 
   blog() {
     const tween = new TimelineMax().add([
-      TweenMax.fromTo('#text-blog', 1, { y: '-50vh' }, { y: 0, ease: Linear.easeNone }),
+      TweenMax.fromTo('#blog-text', 1, { y: '-50vh' }, { y: 0, ease: Linear.easeNone }),
       TweenMax.fromTo('#backdrop', 1, { height: 0 }, { height: '100%', ease: Linear.easeNone }),
-      TweenMax.fromTo('#text-blog', 1, { color: '#404040' }, { color: '#fff', ease: Linear.easeNone }),
+      TweenMax.fromTo('#blog-text', 1, { color: '#404040' }, { color: '#fff', ease: Linear.easeNone }),
     ])
 
     return new ScrollMagic.Scene({
@@ -580,3 +621,30 @@ darkModeToggle.onclick = function () {
     document.documentElement.classList.remove('transition')
   }, 600)
 }
+
+/**
+ *  ============================
+ *  Back to top
+ *  ============================
+ */
+
+// Simple elevator usage.
+let elementButton = document.querySelector('.elevator');
+let elevator = new Elevator({
+  element: elementButton,
+  mainAudio: 'https://tholman.com/elevator.js/music/elevator.mp3', // Music from http://www.bensound.com/
+  endAudio:  'https://tholman.com/elevator.js/music/ding.mp3'
+});
+
+document.addEventListener('scroll', function() {
+  let elevator = document.querySelector('.elevator');
+  let threshold = 100; // 设置阈值，当滚动位置超过100px时，显示 "elevator" 元素
+
+  if (window.pageYOffset > threshold) {
+    elevator.style.opacity = 1;
+    elevator.style.visibility = 'visible';
+  } else {
+    elevator.style.opacity = 0;
+    elevator.style.visibility = 'hidden';
+  }
+});
