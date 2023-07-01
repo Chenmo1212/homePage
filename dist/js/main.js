@@ -9,6 +9,64 @@ function completeLoading() {
   }
 }
 
+window.onload = () => {
+  globe = new Globe()
+  globe.init()
+
+  scene = new Scene()
+  scene.init()
+
+  node = new Node()
+  guestbook = new Guestbook()
+  guestbook.init()
+
+  if (cookieLanguage !== htmlLanguage) {
+    applyLanguage(cookieLanguage)
+  }
+  
+  if (getLanguageFromURL()) {
+    applyLanguage(getLanguageFromURL())
+  }
+}
+
+/**
+ *  ============================
+ *  language
+ *  ============================
+ */
+
+const cookieLanguage = getLanguageFromCookie()
+const htmlLanguage = document.getElementsByTagName('html')[0].getAttribute('lang').substr(0, 2)
+
+const switchLanguage = () => {
+  let currentLanguage = document.getElementsByTagName('html')[0].getAttribute('lang').substr(0, 2)
+  let res = currentLanguage === 'en' ? 'zh' : 'en'
+  applyLanguage(res)
+}
+
+const applyLanguage = (lang) => {
+  if (!lang) lang = cookieLanguage
+  document.cookie = 'lang=' + lang
+  replaceTextContent(lang)
+}
+
+function getLanguageFromCookie() {
+  let cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    let cookie = cookies[i].trim();
+    if (cookie.indexOf('lang=') === 0) {
+      return cookie.substring(5);
+    }
+  }
+  return 'en';
+}
+
+function getLanguageFromURL() {
+  let urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get('lang');
+}
+
+
 function getJSONFile(url, callback) {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
@@ -60,28 +118,11 @@ function replaceTextContent(language) {
   });
 }
 
-window.onload = () => {
-  globe = new Globe()
-  globe.init()
-
-  scene = new Scene()
-  scene.init()
-
-  node = new Node()
-  guestbook = new Guestbook()
-  guestbook.init()
-
-  // lazyLoad()
-
-  // getHomeFont()
-}
-
-const switchLanguage = () => {
-  let current = document.getElementsByTagName('html')[0].getAttribute('lang').substr(0, 2)
-  current = current === 'en' ? 'zh' : 'en'
-  document.cookie = 'lang=' + current
-  replaceTextContent(current)
-}
+/**
+ *  ============================
+ *  Globe
+ *  ============================
+ */
 
 class Globe {
   constructor() {
