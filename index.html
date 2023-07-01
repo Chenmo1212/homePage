@@ -140,9 +140,9 @@
     <br>it truly brings a tremendous sense of fulfillment.</p>
 </section>
 
-<section id="blog" class="products">
+<section id="blog" class="project">
   <div id="backdrop"></div>
-  <div id="text-blog" class="content">
+  <div id="blog-text" class="content">
     <h1 data-i18n="blog.heading">Personal Blog</h1>
     <p data-i18n="blog.paragraph1">A personal blog built in 2019 using WordPress on an Alibaba Cloud server. It features a new neumorphic design style and is used to publish programming-related content, documenting programming notes and the problems encountered during the learning process.</p>
     <p data-i18n="blog.paragraph2">Later on, I also started including some miscellaneous personal thoughts in the blog, serving as a buffer for my cluttered mind.</p>
@@ -160,7 +160,7 @@
   </div>
 </section>
 
-<section id="emoji" class="products">
+<section id="emoji" class="project">
   <div class="content">
     <h1 data-i18n="emoji.heading">My Emoji</h1>
     <p data-i18n="emoji.paragraph1">When writing blog posts or coding, I always like to add emoji icons to make things more interesting. It's easy to do on a phone, but not as convenient on a computer. So, I decided to create an emoji website using the trendy glassmorphism design style that became popular in 2020.</p>
@@ -174,7 +174,7 @@
   </div>
 </section>
 
-<section id="tiku" class="products">
+<section id="tiku" class="project">
   <div class="content">
     <h1 data-i18n="tiku.heading">Little Cookies</h1>
     <p data-i18n="tiku.paragraph">One of the greatest satisfactions is when something I developed can be used by others.<br>Little Cookies is a university web-based question bank developed using the neumorphic UI design style and Vue framework. It also includes a music player and a stylish task manager with cool sound effects.</p>
@@ -190,7 +190,7 @@
   </div>
 </section>
 
-<section id="book" class="products">
+<section id="book" class="project">
   <div class="content">
     <h1 data-i18n="book.heading">FIKA READING</h1>
     <p data-i18n="book.paragraph">If a person doesn't read, their perspective will be determined solely by those around them. <br>In today's fast-paced society, it seems to breed people's hostility. The negative content on social media is undoubtedly off-putting. Reading short stories by great writers helps to distance oneself from restlessness and cultivate one's character.</p>
@@ -228,47 +228,46 @@
         <a class="tag" target="_blank" rel="external" href="https://study.chenmo1212.cn?from=home" data-i18n="more.youthLearningLink">Youth Study</a>
         <a class="tag" target="_blank" rel="external" href="https://dwz.chenmo1212.cn?from=home" data-i18n="more.shortURLLink">ChenMo Short URL</a>
         <a class="tag" target="_blank" rel="external" href="https://baidu.chenmo1212.cn?from=home" data-i18n="more.baiduLink">Help you Baidu</a>
+        <a class="tag" target="_blank" rel="external" href="https://www.chenmo1212.cn/fireworks?from=home" data-i18n="more.fireworks">Fireworks</a>
       </div>
     </div>
 
   </div>
 </section>
 
-<section class="guestbook">
-  <div id="messages">
-    <h2 data-i18n="guestbook.messagesHeading">Message Board</h2>
-    <div id="recent-messages" class="item-content"></div>
-    <!-- <a href="https://chenmo1212.cn/" target="_blank" data-i18n="guestbook.viewMoreMessages">查看更多留言 &rsaquo;</a> -->
-  </div>
+<section id="messages">
+  <h2 data-i18n="guestbook.messagesHeading">Message Board</h2>
+  <div id="recent-messages" class="item-content"></div>
+  <!-- <a href="https://chenmo1212.cn/" target="_blank" data-i18n="guestbook.viewMoreMessages">查看更多留言 &rsaquo;</a> -->
+</section>
 
-  <div id="guestbook">
-    <h2 data-i18n="guestbook.writeNewMessage">Write New Message</h2>
-    <div class="item-content">
-      <div id="new-message">
-        <div id="step-1" class="inner-container">
-          <textarea id="message-content" placeholder="What do you want to say to me? speak freely!" oninput="guestbook.contentDidChange(this)"></textarea>
-          <p data-i18n="guestbook.emailText">If you don't want your message to be displayed publicly, email me at <a href="mailto:chenmo991212@gmail.com">chenmo991212@gmail.com</a> instead.</p>
-          <button id="next-step-button" class="inactive" onclick="guestbook.next()" data-i18n="guestbook.submitButton">Submit</button>
-        </div>
-        <div id="step-2" class="inner-container">
-          <label for="message-name" data-i18n="guestbook.nicknameLabel">Nickname</label>
-          <input type="text" id="message-name">
-          <p data-i18n="guestbook.nicknameDescription">Leave your nickname, it will be displayed publicly.</p>
+<section id="guestbook">
+  <h2 data-i18n="guestbook.writeNewMessage">Write New Message</h2>
+  <div class="item-content">
+    <div id="new-message">
+      <div id="step-1" class="inner-container">
+        <textarea id="message-content" placeholder="What do you want to say to me? speak freely!" oninput="guestbook.contentDidChange(this)"></textarea>
+        <p data-i18n="guestbook.emailText">If you don't want your message to be displayed publicly, email me at <a href="mailto:chenmo991212@gmail.com">chenmo991212@gmail.com</a> instead.</p>
+        <button id="next-step-button" class="inactive" onclick="guestbook.next()" data-i18n="guestbook.submitButton">Submit</button>
+      </div>
+      <div id="step-2" class="inner-container">
+        <label for="message-name" data-i18n="guestbook.nicknameLabel">Nickname</label>
+        <input type="text" id="message-name">
+        <p data-i18n="guestbook.nicknameDescription">Leave your nickname, it will be displayed publicly.</p>
 
-          <label for="message-email" data-i18n="guestbook.emailLabel">Email</label>
-          <input type="email" id="message-email" placeholder="john@example.com">
-          <p data-i18n="guestbook.emailDescription">You will receive an email notification when this message receives a reply. It will not be displayed publicly.</p>
+        <label for="message-email" data-i18n="guestbook.emailLabel">Email</label>
+        <input type="email" id="message-email" placeholder="john@example.com">
+        <p data-i18n="guestbook.emailDescription">You will receive an email notification when this message receives a reply. It will not be displayed publicly.</p>
 
-          <label for="message-url" data-i18n="guestbook.websiteLabel">Website</label>
-          <input type="url" id="message-url" placeholder="https://example.com">
-          <p data-i18n="guestbook.websiteDescription">(Optional) Personal website or social media profile.</p>
+        <label for="message-url" data-i18n="guestbook.websiteLabel">Website</label>
+        <input type="url" id="message-url" placeholder="https://example.com">
+        <p data-i18n="guestbook.websiteDescription">(Optional) Personal website or social media profile.</p>
 
-          <button onclick="guestbook.submit(this)" data-i18n="guestbook.saveButton">Save</button>
-        </div>
-        <div id="step-3" class="inner-container">
-          <h3 data-i18n="guestbook.messageSentHeading"> 🎉 Your message has been sent ~</h3>
-          <p data-i18n="guestbook.messageSentDescription">To prevent spam, all messages will be displayed publicly after review.</p>
-        </div>
+        <button onclick="guestbook.submit(this)" data-i18n="guestbook.saveButton">Save</button>
+      </div>
+      <div id="step-3" class="inner-container">
+        <h3 data-i18n="guestbook.messageSentHeading"> 🎉 Your message has been sent ~</h3>
+        <p data-i18n="guestbook.messageSentDescription">To prevent spam, all messages will be displayed publicly after review.</p>
       </div>
     </div>
   </div>

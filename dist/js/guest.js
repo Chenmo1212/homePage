@@ -24,7 +24,7 @@ class Guestbook {
                     resData[i].date = this.changeTimeStyle(resData[i])
                 }
                 this.render(resData)
-                this.messages.parentNode.classList += ' fetched'
+                this.messages.parentNode.classList += 'fetched'
             })
             .catch(error => {
                 console.error('Failed to load messages', error);
