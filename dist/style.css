@@ -1,8 +1,8 @@
 @charset "utf-8";
 @font-face {
     font-family: "plantc";
-    src: url("../dist/fonts/plantc.woff") format("woff"),
-    url("../dist/fonts/plantc.ttf") format("truetype"),
+    src: url("https://cdn.chenmo1212.cn/files/font/plantc.woff") format("woff"),
+    url("https://cdn.chenmo1212.cn/files/font/plantc.ttf") format("truetype"),
     url('../dist/fonts/abel.svg') format('svg');
     font-weight: normal;
     font-style: normal;

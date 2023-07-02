@@ -81,7 +81,7 @@ function getJSONFile(url, callback) {
 
 // Functions to replace HTML text content
 function replaceTextContent(language) {
-  const url = "./dist/lang/lang.json";
+  const url = "https://cdn.chenmo1212.cn/files/json/lang.json";
   getJSONFile(url, function(data) {
     // Process the obtained JSON data
     const translations = data;
@@ -135,7 +135,7 @@ class Globe {
     this.planet.loadPlugin(this.rotate(10))
     this.planet.loadPlugin(
       planetaryjs.plugins.earth({
-        topojson: { file: './dist/data/borderless-world.json' },
+        topojson: { file: 'https://cdn.chenmo1212.cn/files/json/borderless-world.json' },
         oceans: { fill: '#dddee0' },
         land: { fill: '#f7f7f7' }
       })
@@ -204,7 +204,7 @@ class Globe {
   }
 
   locations() {
-    d3.json('./dist/data/coordinates.json', (error, data) => {
+    d3.json('https://cdn.chenmo1212.cn/files/json/coordinates.json', (error, data) => {
       if (error) return console.error(error)
 
       for (const c of data.coordinates) {

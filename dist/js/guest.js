@@ -53,7 +53,7 @@ class Guestbook {
         // let avatar = `${this.avatarURL}?seed=${item.name}&backgroundColor=b6e3f4,c0aede,d1d4f9,ffd5dc,ffdfbf`
         return `<div class="message">
     				<header>
-    					<img title="" src="./dist/images/default.png" alt="user-avatar"/>
+    					<img title="" src="https://cdn.chenmo1212.cn/img/default.png" alt="user-avatar"/>
     					<h3>${item.name || '匿名'}</h3>
     					<span class="message-date">${item.date}</span>
     				</header>
