@@ -10,7 +10,7 @@ class Guestbook {
         this.nameField = this.element('message-name')
         this.emailField = this.element('message-email')
         this.URLField = this.element('message-url')
-        this.baseURL = "https://api.chenmo1212.cn"
+        this.baseURL = "https://api.chenmo1212.cn/message"
         this.avatarURL = "https://api.dicebear.com/6.x/initials/svg"
     }
 
