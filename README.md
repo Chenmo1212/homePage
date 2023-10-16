@@ -39,7 +39,7 @@
 
 This is my Portfolio's front-end repository, using the most basic web front-end technologies: `html`, `css` and `javascript`.
 
-The reason why I don't use any framework is because I adhere to the principle of **"Be good at the basics and widen the tools"(精于基础，广于工具)**.
+The reason why I don't use any framework is because I adhere to the principle of **"Mastery in fundamentals, diversity in tools"(精于基础，广于工具)**.
 
 You can check my Portfolio [here](https://www.chenmo1212.cn?f=github-backend).
 
