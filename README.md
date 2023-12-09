@@ -13,7 +13,7 @@
     <a href="https://github.com/Chenmo1212/homepage/pulls" target="_blank">
         <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/Chenmo1212/homepage" />
     </a>
-    <a href="/"><img src="https://komarev.com/ghpvc/?username=chenmo1212.homepage&label=Visitors&base=200" alt="Visitor" /></a>
+    <a href="/"><img src="https://komarev.com/ghpvc/?username=chenmo1212-homepage&label=Visitors&base=200" alt="Visitor" /></a>
     <a href="https://github.com/Chenmo1212/homepage" target="_blank">
         <img alt="GitHub" src="https://img.shields.io/github/license/Chenmo1212/homepage">
     </a>
