@@ -43,7 +43,7 @@ The reason why I don't use any framework is because I adhere to the principle of
 
 You can check my Portfolio [here](https://www.chenmo1212.cn?f=github-backend).
 
-And you can find the back-end repository [here](https://www.chenmo1212.cn?f=github-backend)
+And you can find the back-end repository [here](https://github.com/Chenmo1212/homepage_backend)
 
 ## Installation
 
