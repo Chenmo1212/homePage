@@ -515,7 +515,8 @@ section > p {
 
 .project .button::after {
     content: " ";
-    background-image: url("../dist/images/chevron.svg");
+    /*background-image: url("../dist/images/chevron.svg");*/
+    background-image: url("https://cdn.chenmo1212.cn/img/portfolio/chevron.svg");
     position: absolute;
     width: 12px;
     height: 22px;
