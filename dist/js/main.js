@@ -400,10 +400,11 @@ class Scene {
         tween.add(TweenMax.fromTo('.programming1', 1, {autoAlpha: 0}, {autoAlpha: 1}))
         tween.add(TweenMax.fromTo('.programming2', 1, {y: 150, autoAlpha: 0}, {y: 100, autoAlpha: 1}, '+=2'))
         tween.add(TweenMax.fromTo('.programming3', 1, {y: 250, autoAlpha: 0}, {y: 200, autoAlpha: 1}, '+=2'))
+        tween.add(TweenMax.fromTo('.programming4', 1, {y: 350, autoAlpha: 0}, {y: 300, autoAlpha: 1}, '+=2'))
 
         return new ScrollMagic.Scene({
             triggerElement: '#programming',
-            duration: '100%',
+            duration: '70%',
         })
             .setTween(tween)
     }

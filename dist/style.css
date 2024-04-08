@@ -417,7 +417,6 @@ section > p {
   #programming p {
     text-align: left;
     padding: 1.25em;
-    word-break: break-all;
     -webkit-hyphens: auto;
     hyphens: auto;
   }
