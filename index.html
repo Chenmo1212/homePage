@@ -161,15 +161,27 @@
 </section>
 
 <section id="connect">
-    <p id="text-dot-connecting" data-i18n="connect.text-dot-connecting">When combining my thoughts and passions
-        together,
-        <br>and creating something intriguing,
-        <br>it truly brings a tremendous sense of fulfillment.
-    </p>
+    <div id="backdrop"></div>
+    <div class="line-gradient-title">
+        <div class="js-sticky">
+            <div class="js-animation">
+                <img src="./learnScollMagic/StartBuilding_001_BG.png" alt="Line background"
+                     class="absolute top-1/2 left-0 -translate-y-1/2 w-full"/>
+                <lottie-player id="lottieAnimation" src="./learnScollMagic/StartBuilding_001.json"
+                               background="transparent"></lottie-player>
+            </div>
+            <div class="js-content">
+                <p id="text-dot-connecting" data-i18n="connect.text-dot-connecting">
+                    When combining my thoughts and passions together,
+                    <br>and creating something intriguing,
+                    <br>it truly brings a tremendous sense of fulfillment.
+                </p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="blog" class="project">
-    <div id="backdrop"></div>
     <div id="blog-text" class="content">
         <h1 data-i18n="blog.heading">Personal Blog</h1>
         <p data-i18n="blog.paragraph1">A personal blog using WordPress on a cloud server. It
@@ -373,6 +385,7 @@
 
 <!--Plugins-->
 <script src="https://cdn.chenmo1212.cn/files/js/vendors.js" defer=""></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
 <script src="https://cdn.chenmo1212.cn/files/js/elevator.min.js"></script>
 <script src="dist/js/main.js?v=2.23.0517.0" defer=""></script>

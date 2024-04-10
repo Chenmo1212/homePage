@@ -78,7 +78,7 @@ section {
   text-align: left;
 }
 
-section > p {
+section p {
   line-height: calc(var(--size-p) + 12px);
   font-size: var(--size-p);
   margin-bottom: 1em;
@@ -219,7 +219,7 @@ section > p {
 */
 
 #intro {
-    min-height: 110vh;
+  min-height: 110vh;
 }
 
 #intro header {
@@ -427,7 +427,7 @@ section > p {
 }
 
 #nodes {
-  margin: 20vh 0;
+  margin: 30px 0;
   overflow-x: auto;
   scrollbar-width: none;
   scroll-behavior: smooth;
@@ -439,10 +439,6 @@ section > p {
 }
 
 @media (max-width: 600px) {
-  #nodes {
-    margin: 10vh 0;
-  }
-
   #code {
     width: 1500px;
   }
@@ -478,6 +474,67 @@ section > p {
   60% {
     transform: translateX(-15px);
   }
+}
+
+/*
+* ----------------------------------------------------------------
+* Connect
+* ----------------------------------------------------------------
+*/
+#connect {
+  position: relative;
+  height: 200%;
+  padding: 0;
+}
+
+.line-gradient-title {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 300vh;
+}
+
+.js-sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.js-animation {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 105px;
+  pointer-events: none;
+}
+
+.js-animation > #lottieAnimation, .js-animation > img {
+  position: absolute;
+  top: 50%;
+  left: -150px;
+  width: calc(100% + 300px);
+  max-width: initial;
+  height: auto;
+  transform: translate3d(0, -50%, 0);
+}
+
+.js-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  margin: 0 24px;
+  z-index: 3;
 }
 
 /*
@@ -611,6 +668,11 @@ section > p {
   transform: scale(1.1);
 }
 
+#blog {
+  background-color: #000;
+  width: 100vw;
+}
+
 #blog .showcase {
   width: 0;
   transition: width .6s ease-out;
@@ -662,6 +724,7 @@ section > p {
   width: 100vw;
   height: 100%;
   bottom: 0;
+  left: 0;
   z-index: -1;
 }
 
@@ -813,7 +876,6 @@ section > p {
   }
 
   #blog .content {
-    padding-top: 38.2vh;
     padding-bottom: 3.75em;
     width: 100%;
   }

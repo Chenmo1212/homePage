@@ -9,6 +9,18 @@ function completeLoading() {
   }
 }
 
+function debounce(func, wait) {
+  let timeout;
+  return function(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func.apply(this, args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
 window.onload = () => {
   globe = new Globe()
   globe.init()
@@ -458,9 +470,11 @@ class Scene {
 
   connectProgram() {
     const tween = new TimelineMax().add([
-      TweenMax.fromTo('#text-dot-connecting', 1, {yPercent: 30, autoAlpha: 0}, {
-        yPercent: 0,
+      TweenMax.fromTo('#backdrop', 1, {height: '70%'}, {height: '100%', ease: Linear.easeNone}),
+      TweenMax.fromTo('#text-dot-connecting', 1, {y: '-40vh', autoAlpha: 0, color: "#000"}, {
+        yPercent: '20vh',
         autoAlpha: 1,
+        color: "#fff",
         ease: Linear.easeNone
       })
     ])
@@ -468,24 +482,65 @@ class Scene {
     return new ScrollMagic.Scene({
       triggerElement: '#connect',
       triggerHook: .8,
-      duration: '38.2%',
+      duration: '80%',
     })
       .setTween(tween)
   }
 
-  blog() {
-    const tween = new TimelineMax().add([
-      TweenMax.fromTo('#blog-text', 1, {y: '-50vh'}, {y: 0, ease: Linear.easeNone}),
-      TweenMax.fromTo('#backdrop', 1, {height: 0}, {height: '100%', ease: Linear.easeNone}),
-      TweenMax.fromTo('#blog-text', 1, {color: '#404040'}, {color: '#fff', ease: Linear.easeNone}),
-    ])
+  connectAnimation() {
+    const lottie = this.lottie;
+    let lastProgress = 0;
+    let velocity = 0;
+    let lastFrameTime = Date.now();
 
-    return new ScrollMagic.Scene({
-      triggerElement: '#blog',
-      triggerHook: 1,
-      duration: '100%',
+    const scene = new ScrollMagic.Scene({
+      triggerElement: '#connect',
+      triggerHook: 0,
+      duration: '250%',
     })
-      .setTween(tween)
+      .on('progress', function(e) {
+        const now = Date.now();
+        const deltaTime = now - lastFrameTime;
+        const deltaProgress = e.progress - lastProgress;
+
+        velocity = deltaProgress / deltaTime * 10;
+        lastProgress = e.progress;
+        lastFrameTime = now;
+
+        const frame = e.progress * (lottie.totalFrames - 1);
+        lottie.goToAndStop(frame, true);
+        applyInertia();
+      });
+
+    const applyInertia = debounce(function() {
+      function inertiaStep() {
+        if (Math.abs(velocity) > 0.0001) {
+          lastProgress += velocity;
+          lastProgress = Math.max(0, Math.min(1, lastProgress));
+          const frame = lastProgress * (lottie.totalFrames - 1);
+          lottie.goToAndStop(frame, true);
+          velocity *= 0.98;
+          requestAnimationFrame(inertiaStep);
+        }
+      }
+      inertiaStep();
+    }, 20);
+
+    return scene;
+  }
+
+  blog() {
+  //   const tween = new TimelineMax().add([
+      // TweenMax.fromTo('#blog-text', 1, {y: '-50vh'}, {y: 0, ease: Linear.easeNone}),
+      // TweenMax.fromTo('#blog-text', 1, {color: '#404040'}, {color: '#fff', ease: Linear.easeNone}),
+  //   ])
+  //
+  //   return new ScrollMagic.Scene({
+  //     triggerElement: '#blog',
+  //     triggerHook: 1,
+  //     duration: '100%',
+  //   })
+  //     .setTween(tween)
   }
 
   blogShowcase() {
@@ -495,7 +550,6 @@ class Scene {
       duration: '100%',
     })
       .setClassToggle('#blog', 'active')
-    // .addIndicators()
   }
 
   emoji() {
