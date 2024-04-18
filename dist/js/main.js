@@ -518,10 +518,11 @@ class Scene {
 
     const applyInertia = debounce(function() {
       function inertiaStep() {
-        if (Math.abs(velocity) > 0.0002) {
+        if (Math.abs(velocity) > 0.00025 && lastProgress !== 0 && lastProgress !== 1) {
           lastProgress += velocity;
           lastProgress = Math.max(0, Math.min(1, lastProgress));
           const frame = lastProgress * (lottie.totalFrames - 1);
+          console.log("lastProgress", lastProgress, Math.abs(velocity), frame);
           lottie.goToAndStop(frame, true);
           velocity *= 0.98;
           requestAnimationFrame(inertiaStep);
