@@ -1,1 +1,284 @@
-<svg id="图层_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1169.87 588.46"><defs><style>.cls-1,.cls-2,.cls-3,.cls-4{fill:none;}.cls-1{stroke:#858585;stroke-miterlimit:10;}.cls-2{stroke:#b8b8b8;}.cls-4{stroke:#979797;}.cls-12,.cls-5,.cls-6{isolation:isolate;font-size:12px;}.cls-5{font-family:AdobeSongStd-Light-GBpc-EUC-H, Adobe Song Std;}.cls-12,.cls-6{font-family:ArialMT, Arial;}.cls-7{letter-spacing:-0.04em;}.cls-8{letter-spacing:-0.02em;}.cls-9{letter-spacing:-0.11em;}.cls-10{letter-spacing:-0.07em;}.cls-11{letter-spacing:-0.06em;}.cls-12,.cls-13{fill:#404040;}</style></defs><path class="cls-1" d="M919.5,471.8,862.1,555Z" transform="translate(-389.1 -107.44)"/><path class="cls-2" d="M1407.1,365.8l-14.5,92.8-78,75.9-149-54.9" transform="translate(-389.1 -107.44)"/><line class="cls-3" x1="525" y1="117.56" x2="444" y2="20.36"/><line class="cls-4" x1="280" y1="344.56" x2="925.5" y2="427.06"/><path class="cls-4" d="M584.1,369l-81-88m81,88,47-88-77-55" transform="translate(-389.1 -107.44)"/><path class="cls-4" d="M644.1,226l-13,55m-47,88,85,83-25,83m25-83,87,63m73-146-160,83m160-83,91,103,106,58" transform="translate(-389.1 -107.44)"/><path class="cls-4" d="M920.1,472l182-103m-182,103-9,161m-242-181,58,124m-58-124-3,233m3-233-217-2m217,2-233,63-42,38m520-328,96-4" transform="translate(-389.1 -107.44)"/><path class="cls-4" d="M669.1,452l-247,147m247-147,40,181" transform="translate(-389.1 -107.44)"/><path class="cls-4" d="M669.1,452l151,234m-151-234-260,223m260-223-122-287-44,116" transform="translate(-389.1 -107.44)"/><path class="cls-4" d="M829.1,369l85-144" transform="translate(-389.1 -107.44)"/><path class="cls-4" d="M1102.1,369l62-79-15-120m16,120,107-68m-44-110-63,177" transform="translate(-389.1 -107.44)"/><path class="cls-4" d="M1392.6,457.5l86,148m-72-239,66-111,20-91M1423.1,152l-16.5,214.5-66-89,29-79" transform="translate(-389.1 -107.44)"/><path class="cls-4" d="M669.1,452l-95,121" transform="translate(-389.1 -107.44)"/><path class="cls-4" d="M564.1,626l105-174,326,211" transform="translate(-389.1 -107.44)"/><line class="cls-4" x1="158" y1="57.56" x2="255" y2="116.56"/><path class="cls-2" d="M1276.3,317.7l130.9,48.8" transform="translate(-389.1 -107.44)"/><text class="cls-5" transform="translate(208.01 267.56)">网站前端</text><circle cx="194" cy="261.56" r="4"/><text class="cls-5" transform="translate(726.01 267.56)">人工智能</text><circle cx="712" cy="261.56" r="4"/><text class="cls-5" transform="translate(453.01 267.56)">服务器</text><circle cx="439" cy="261.56" r="4"/><text class="cls-6" transform="translate(634.01 255.06)">AR/VR</text><circle cx="620" cy="249.06" r="4"/><text class="cls-5" transform="translate(1031.51 265.06)">数据库</text><circle cx="1017.5" cy="259.06" r="4"/><text class="cls-6" transform="translate(293.01 350.56)">JavaScript</text><circle cx="279" cy="344.56" r="4"/><text class="cls-6" transform="translate(255.01 179.56)">CSS</text><circle cx="241" cy="173.56" r="4"/><text class="cls-6" transform="translate(126.01 178.56)">HTM<tspan class="cls-7" x="25.99" y="0">L</tspan></text><circle cx="112" cy="172.56" r="4"/><text class="cls-6" transform="translate(544.01 370.56)">Python</text><circle cx="530" cy="364.56" r="4"/><text class="cls-6" transform="translate(790.51 378.06)">C++</text><circle cx="776.5" cy="372.06" r="4"/><text class="cls-6" transform="translate(617.01 181.56)">PH<tspan class="cls-8" x="16.67" y="0">P</tspan></text><circle cx="603" cy="175.56" r="4"/><text class="cls-6" transform="translate(412.01 124.56)">Docker</text><circle cx="398" cy="118.56" r="4"/><text class="cls-6" transform="translate(358.01 79.56)">Kubernetes</text><circle cx="344" cy="73.56" r="4"/><text class="cls-6" transform="translate(538.01 123.56)">Nginx</text><circle cx="524" cy="117.56" r="4"/><text class="cls-6" transform="translate(532.01 69.56)">Apache</text><circle cx="518" cy="63.56" r="4"/><text class="cls-6" transform="translate(650.01 428.56)">Flask</text><circle cx="636" cy="422.56" r="4"/><text class="cls-6" transform="translate(589.01 482.56)">Django</text><circle cx="575" cy="476.56" r="4"/><text class="cls-5" transform="translate(789.01 187.56)">机器学习</text><circle cx="775" cy="181.56" r="4"/><text class="cls-5" transform="translate(965.51 176.06)">缓存策略</text><circle cx="951.5" cy="170.06" r="4"/><text class="cls-5" transform="translate(773.01 68.56)">图像分类</text><circle cx="759" cy="62.56" r="4"/><text class="cls-5" transform="translate(852.01 10.56)">图像识别</text><circle cx="838" cy="4.56" r="4"/><text class="cls-6" transform="translate(896.01 120.56)"><tspan class="cls-9">T</tspan><tspan x="6" y="0">ensorFlow</tspan></text><circle cx="882" cy="114.56" r="4"/><text class="cls-5" transform="translate(487.01 453.56)">爬虫</text><circle cx="473" cy="447.56" r="4"/><text class="cls-6" transform="translate(634.01 119.56)"><tspan class="cls-8">W</tspan><tspan x="11.11" y="0">ordPress</tspan></text><circle cx="620" cy="113.56" r="4"/><text class="cls-6" transform="translate(268.01 433.56)"><tspan class="cls-7">V</tspan><tspan x="7.56" y="0">ue.js</tspan></text><circle cx="254" cy="427.56" r="4"/><text class="cls-6" transform="translate(198.01 471.56)">D3.js</text><circle cx="184" cy="465.56" r="4"/><text class="cls-6" transform="translate(178.01 124.56)">SCSS</text><circle cx="164" cy="118.56" r="4"/><text class="cls-6" transform="translate(268.01 122.56)">LESS</text><circle cx="254" cy="116.56" r="4"/><text class="cls-6" transform="translate(171.01 63.56)">Bootstrap</text><circle cx="157" cy="57.56" r="4"/><text class="cls-6" transform="translate(380.01 413.56)">NodeJS</text><circle cx="366" cy="407.56" r="4"/><text class="cls-6" transform="translate(290.01 583.56)">NPM</text><circle cx="276" cy="577.56" r="4"/><text class="cls-6" transform="translate(444.01 584.56)">SVG</text><circle cx="430" cy="578.56" r="4"/><text class="cls-6" transform="translate(535.01 531.56)">PI<tspan class="cls-8" x="11.34" y="0">P</tspan></text><circle cx="521" cy="525.56" r="4"/><text class="cls-6" transform="translate(189.01 524.56)">Electron</text><circle cx="175" cy="518.56" r="4"/><text class="cls-6" transform="translate(46.01 497.56)">jQuery</text><circle cx="32" cy="491.56" r="4"/><text class="cls-6" transform="translate(60.01 413.56)"><tspan class="cls-8">W</tspan><tspan x="11.11" y="0">ebpack</tspan></text><circle cx="46" cy="407.56" r="4"/><text class="cls-6" transform="translate(18.01 451.56)">Three.js</text><circle cx="4" cy="445.56" r="4"/><text class="cls-6" transform="translate(29.01 201.56)"><tspan class="cls-10">Y</tspan><tspan x="7.11" y="0">arn</tspan></text><circle cx="15" cy="195.56" r="4"/><text class="cls-6" transform="translate(76.01 348.56)"><tspan class="cls-8">W</tspan><tspan x="11.11" y="0">ebG</tspan><tspan class="cls-7" x="33.79" y="0">L</tspan></text><circle cx="62" cy="342.56" r="4"/><text class="cls-6" transform="translate(717.01 343.56)">Unity</text><circle cx="703" cy="337.56" r="4"/><text class="cls-6" transform="translate(1097.51 154.06)">NoSQ<tspan class="cls-7" x="32.68" y="0">L</tspan></text><circle cx="1083.5" cy="148.06" r="4"/><text class="cls-6" transform="translate(1116.51 64.06)">MongoDB</text><circle cx="1102.5" cy="58.06" r="4"/><text class="cls-6" transform="translate(1103.51 504.06)">Access</text><circle cx="1089.5" cy="498.06" r="4"/><text class="cls-5" transform="translate(1017.51 356.06)">关系型数据库</text><circle cx="1003.5" cy="350.06" r="4"/><text class="cls-6" transform="translate(939.51 432.94)">MySQ<tspan class="cls-7" x="33.33" y="0">L</tspan></text><circle cx="925.5" cy="427.06" r="4"/><text class="cls-6" transform="translate(994.51 97.06)">Redis</text><circle cx="980.5" cy="91.06" r="4"/><text class="cls-6" transform="translate(458.01 26.56)">Linux</text><circle cx="444" cy="20.56" r="4"/><text class="cls-6" transform="translate(46.01 88.56)">XM<tspan class="cls-7" x="18" y="0">L</tspan></text><circle cx="32" cy="82.56" r="4"/><text class="cls-6" transform="translate(50.01 146.56)"><tspan class="cls-11">T</tspan><tspan x="6.67" y="0">ypeScript</tspan></text><circle cx="36" cy="140.56" r="4"/><text class="cls-6" transform="translate(1048.01 50.56)">Git</text><circle cx="1034" cy="44.56" r="4"/><text class="cls-6" transform="translate(619.01 561.56)">JSON</text><circle cx="605" cy="555.56" r="4"/><text class="cls-5" transform="translate(33.01 573.56)">微信小程序</text><circle cx="19" cy="567.56" r="4"/><text class="cls-6" transform="translate(351.01 474.56)">React</text><circle cx="337" cy="468.56" r="4"/><text class="cls-6" transform="translate(333.01 531.56)">GSA<tspan class="cls-8" x="25.34" y="0">P</tspan></text><circle cx="319" cy="525.56" r="4"/><text class="cls-5" transform="translate(370.01 175.56)">容器化</text><circle cx="356" cy="169.56" r="4"/><path class="cls-4" d="M1242.4,422.8" transform="translate(-389.1 -107.44)"/><path class="cls-4" d="M1279.7,317.7" transform="translate(-389.1 -107.44)"/><text class="cls-12" transform="translate(900.37 214.24)">SVN</text><circle class="cls-13" cx="887" cy="210.26" r="4"/><path class="cls-13" d="M1276.1,317.7" transform="translate(-389.1 -107.44)"/><line class="cls-3" x1="887" y1="210.26" x2="1018" y2="258.36"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1920 773" style="enable-background:new 0 0 1920 773;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#979797;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#979797;stroke-miterlimit:10;}
+	.st2{font-family:'ArialMT';}
+	.st3{font-size:16.4857px;}
+</style>
+<g>
+	<polyline class="st0" points="1365.95,352.89 1614.24,321.66 1582.64,562.08 	"/>
+	<polyline class="st1" points="619.84,257.4 461.71,321.35 499.57,460.73 	"/>
+	<polyline class="st1" points="291.36,124.9 435.61,225.19 461.71,321.35 558.78,388.96 699.38,295.25 724.24,158.49 	"/>
+	<polyline class="st1" points="270.75,359.82 461.71,321.35 354.4,436.75 	"/>
+	<path d="M558.78,388.96"/>
+	<polyline class="st1" points="140.37,306.86 461.71,321.35 213.7,488.17 14.5,512.9 	"/>
+	<polyline class="st1" points="136.91,622.8 203.78,569.22 213.7,488.17 311.84,605.73 	"/>
+	<polyline class="st1" points="208.2,200.46 461.71,321.35 410.88,528.8 	"/>
+	<polyline class="st1" points="820.57,340.59 699.38,295.25 801.04,225.19 	"/>
+	<path class="st1" d="M1819.22,254.04"/>
+	<polyline class="st1" points="1111.71,624.89 1128.45,527.72 936.18,680.23 	"/>
+	<polyline class="st1" points="1298.54,521.85 1128.45,527.72 1283.43,607.03 	"/>
+	<polyline class="st1" points="1535.83,211.28 1614.14,321.65 1467.52,266.36 	"/>
+	<polyline class="st1" points="1819.22,254.04 1614.14,321.65 1667.71,179.68 1768.71,188.41 	"/>
+	<polyline class="st1" points="1804.11,338.3 1614.14,321.65 1548.58,436.87 	"/>
+	<polyline class="st1" points="1820.59,493.26 1614.14,321.65 1691.47,441.13 	"/>
+	<polyline class="st1" points="1467.52,624.89 1582.39,562.37 1622.13,651.19 1708.1,558.48 1806.41,601.07 1806.41,702.73 	"/>
+	<line class="st1" x1="1308.16" y1="697.7" x2="1128.45" y2="527.72"/>
+	<line class="st1" x1="1614.14" y1="321.65" x2="1716.68" y2="262.42"/>
+	<path class="st1" d="M558.78,388.96"/>
+	<polyline class="st0" points="558.78,387.56 1129.76,527.73 1614.24,321.66 	"/>
+	<polyline class="st1" points="670.53,605.73 704.88,518.39 699.38,295.25 756.3,402.08 	"/>
+	<polyline class="st1" points="995.62,441.13 1128.45,527.72 1207.87,418.82 	"/>
+	<line class="st1" x1="1161.35" y1="341.36" x2="1128.45" y2="527.72"/>
+	<polyline class="st1" points="1050.03,148.45 1090.04,285.95 1128.45,523.5 	"/>
+	<line class="st1" x1="914.97" y1="350.51" x2="1090.04" y2="285.95"/>
+	<line class="st1" x1="1622.48" y1="651.37" x2="1717.37" y2="754.94"/>
+	<line class="st1" x1="704.88" y1="518.39" x2="816.15" y2="543.91"/>
+	<polyline class="st1" points="580,12.87 635.57,92.55 596.49,183.22 461.71,321.35 508.57,143.38 	"/>
+	<g>
+		<g>
+			<text transform="matrix(1 0 0 1 572.5312 394.457)" class="st2 st3">Web Front End</text>
+			<circle cx="558.78" cy="388.96" r="8.26"/>
+		</g>
+		<g>
+			<text transform="matrix(1 0 0 1 572.5312 394.457)" class="st2 st3">Web Front End</text>
+			<circle cx="558.78" cy="388.96" r="8.26"/>
+		</g>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1142.2002 533.2119)" class="st2 st3">Python</text>
+		<circle cx="1128.45" cy="527.72" r="8.26"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1627.8955 327.1396)" class="st2 st3">Server</text>
+		<circle cx="1614.14" cy="321.65" r="8.26"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 834.3174 346.0825)" class="st2 st3">XML</text>
+		<circle cx="820.57" cy="340.59" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 713.1323 300.7466)" class="st2 st3">HTML</text>
+		<circle cx="699.38" cy="295.25" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 305.1104 130.3936)" class="st2 st3">React</text>
+		<circle cx="291.36" cy="124.9" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 829.9062 549.4062)" class="st2 st3">SCSS</text>
+		<circle cx="816.15" cy="543.91" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 449.3604 230.6826)" class="st2 st3">Vue.js</text>
+		<circle cx="435.61" cy="225.19" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 475.4629 326.8491)" class="st2 st3">Javascript</text>
+		<circle cx="461.71" cy="321.35" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 284.5029 365.3159)" class="st2 st3">Bootstrap</text>
+		<circle cx="270.75" cy="359.82" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 684.2822 611.2285)" class="st2 st3">LESS</text>
+		<circle cx="670.53" cy="605.73" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 222.6816 205.9536)" class="st2 st3">Typescript</text>
+		<circle cx="208.93" cy="200.46" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 718.6279 523.3047)" class="st2 st3">CSS</text>
+		<circle cx="704.88" cy="517.81" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 814.7944 230.6826)" class="st2 st3">JSON</text>
+		<circle cx="801.04" cy="225.19" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 368.3057 442.25)" class="st2 st3">JQuery</text>
+		<circle cx="354.55" cy="436.75" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 424.6318 534.2949)" class="st2 st3">Wechat mini Programs</text>
+		<circle cx="410.88" cy="528.8" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 737.9966 163.9844)" class="st2 st3">SVG</text>
+		<circle cx="724.24" cy="158.49" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 154.126 312.3564)" class="st2 st3">GASP</text>
+		<circle cx="140.37" cy="306.86" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 593.7539 18.3613)" class="st2 st3">Three.js</text>
+		<circle cx="580" cy="12.87" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 325.5898 611.8086)" class="st2 st3">Electron</text>
+		<circle cx="311.84" cy="606.31" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 28.2466 518.3896)" class="st2 st3">Webpack</text>
+		<circle cx="14.5" cy="512.9" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 227.4492 493.6611)" class="st2 st3">NodeJS</text>
+		<circle cx="213.7" cy="488.17" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 145.1694 628.2939)" class="st2 st3">Yarn</text>
+		<circle cx="131.42" cy="622.8" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 217.5332 574.7168)" class="st2 st3">NPM</text>
+		<circle cx="203.78" cy="569.22" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 610.2397 188.7139)" class="st2 st3">WebGL</text>
+		<circle cx="596.49" cy="183.22" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 633.5957 262.8994)" class="st2 st3">WebCAD</text>
+		<circle cx="619.84" cy="257.4" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 522.3174 148.873)" class="st2 st3">Fabric.js</text>
+		<circle cx="508.57" cy="143.38" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 770.0469 407.5752)" class="st2 st3">Canvas</text>
+		<circle cx="756.3" cy="402.08" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 513.3184 466.2236)" class="st2 st3">Lodop</text>
+		<circle cx="499.57" cy="460.73" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 649.3257 98.042)" class="st2 st3">Babylon.js</text>
+		<circle cx="635.57" cy="92.55" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1221.625 424.3125)" class="st2 st3">Flask</text>
+		<circle cx="1207.87" cy="418.82" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1312.2969 527.3486)" class="st2 st3">PIP</text>
+		<circle cx="1298.54" cy="521.85" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1321.9131 703.1963)" class="st2 st3">MySQL</text>
+		<circle cx="1308.16" cy="697.7" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1817.8594 341.8838)" class="st2 st3">Nginx</text>
+		<circle cx="1804.11" cy="336.39" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1831.5977 259.4551)" class="st2 st3">Wordpress</text>
+		<circle cx="1819.22" cy="253.96" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1481.2754 630.3848)" class="st2 st3">AR/VR</text>
+		<circle cx="1467.52" cy="624.89" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1562.3301 442.1719)" class="st2 st3">Docker</text>
+		<circle cx="1548.58" cy="436.68" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1297.1846 612.5254)" class="st2 st3">Crawler</text>
+		<circle cx="1283.43" cy="607.03" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1125.458 630.3848)" class="st2 st3">MongoDB</text>
+		<circle cx="1111.71" cy="624.89" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1834.3447 498.75)" class="st2 st3">HTTP</text>
+		<circle cx="1820.59" cy="493.26" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1681.4648 185.1729)" class="st2 st3">Git</text>
+		<circle cx="1667.71" cy="179.68" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1549.5791 216.7705)" class="st2 st3">Redis</text>
+		<circle cx="1535.83" cy="211.28" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1730.0205 267.9111)" class="st2 st3">SSL</text>
+		<circle cx="1716.27" cy="262.42" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1596.1406 567.8662)" class="st2 st3">C++</text>
+		<circle cx="1582.39" cy="562.37" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1635.8779 656.6807)" class="st2 st3">Computer Graphics</text>
+		<circle cx="1622.13" cy="651.19" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1782.457 193.8994)" class="st2 st3">SVN</text>
+		<circle cx="1768.71" cy="188.41" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1103.7939 291.4404)" class="st2 st3">Computer Vision</text>
+		<circle cx="1090.04" cy="285.95" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 949.9268 685.7246)" class="st2 st3">Machine Learning</text>
+		<circle cx="936.18" cy="680.23" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1173.7246 346.8569)" class="st2 st3">TensorFlow</text>
+		<circle cx="1161.35" cy="341.36" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1705.2236 446.4102)" class="st2 st3">NoSQL</text>
+		<circle cx="1691.47" cy="440.92" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1379.7021 358.3887)" class="st2 st3">Access</text>
+		<circle cx="1365.95" cy="352.89" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1007.9971 446.623)" class="st2 st3">Web Back End</text>
+		<circle cx="995.62" cy="441.13" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1481.3594 271.8584)" class="st2 st3">Linux</text>
+		<circle cx="1467.61" cy="266.36" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 927.7783 355.8926)" class="st2 st3">Image Classification</text>
+		<circle cx="915.4" cy="350.4" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1063.7861 153.9424)" class="st2 st3">Image Recognition</text>
+		<circle cx="1050.03" cy="148.45" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1721.8545 563.9775)" class="st2 st3">OpenGL</text>
+		<circle cx="1708.1" cy="558.48" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1820.165 606.5654)" class="st2 st3">GLFW</text>
+		<circle cx="1806.41" cy="601.07" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1820.165 708.2275)" class="st2 st3">GLAD</text>
+		<circle cx="1806.41" cy="702.73" r="5.5"/>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 1732.8652 760.4326)" class="st2 st3">CMake</text>
+		<circle cx="1719.11" cy="754.94" r="5.5"/>
+	</g>
+</g>
+</svg>
