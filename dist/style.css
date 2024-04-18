@@ -427,7 +427,7 @@ section p {
 }
 
 #nodes {
-  margin: 30px 0;
+  margin: 200px 0;
   overflow-x: auto;
   scrollbar-width: none;
   scroll-behavior: smooth;
@@ -1120,14 +1120,12 @@ section p {
   float: right;
 }
 
-#messages .message-content {
-  font-size: 14px;
-  line-height: 1.6;
-  letter-spacing: .5px;
-}
-
+#guestbook p,
+#messages .message-content,
 #messages .message-content p {
   text-align: left;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 @media (max-width: 1200px) {

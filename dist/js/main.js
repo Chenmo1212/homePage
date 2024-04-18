@@ -32,12 +32,11 @@ window.onload = () => {
   guestbook = new Guestbook()
   guestbook.init()
 
+  const lang = getLanguageFromURL() || getBrowserLanguage();
+  applyLanguage(lang);
+
   if (cookieLanguage !== htmlLanguage) {
     applyLanguage(cookieLanguage)
-  }
-
-  if (getLanguageFromURL()) {
-    applyLanguage(getLanguageFromURL())
   }
 }
 
@@ -71,6 +70,11 @@ function getLanguageFromCookie() {
     }
   }
   return 'en';
+}
+
+const getBrowserLanguage = () => {
+  const lang = navigator.language.toLowerCase() || navigator.userLanguage.toLowerCase();
+  return lang.indexOf('en')=== 0 ? 'en' : 'zh';
 }
 
 function getLanguageFromURL() {
@@ -413,9 +417,9 @@ class Scene {
   programming() {
     const tween = new TimelineMax()
     tween.add(TweenMax.fromTo('.programming1', 1, {autoAlpha: 0}, {autoAlpha: 1}))
-    tween.add(TweenMax.fromTo('.programming2', 1, {y: 150, autoAlpha: 0}, {y: 100, autoAlpha: 1}, '+=2'))
-    tween.add(TweenMax.fromTo('.programming3', 1, {y: 250, autoAlpha: 0}, {y: 200, autoAlpha: 1}, '+=2'))
-    tween.add(TweenMax.fromTo('.programming4', 1, {y: 350, autoAlpha: 0}, {y: 300, autoAlpha: 1}, '+=2'))
+    tween.add(TweenMax.fromTo('.programming2', 1, {y: 200, autoAlpha: 0}, {y: 100, autoAlpha: 1}, '+=2'))
+    tween.add(TweenMax.fromTo('.programming3', 1, {y: 400, autoAlpha: 0}, {y: 250, autoAlpha: 1}, '+=2'))
+    tween.add(TweenMax.fromTo('.programming4', 1, {y: 600, autoAlpha: 0}, {y: 400, autoAlpha: 1}, '+=2'))
 
     return new ScrollMagic.Scene({
       triggerElement: '#programming',
