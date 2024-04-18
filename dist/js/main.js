@@ -518,7 +518,7 @@ class Scene {
 
     const applyInertia = debounce(function() {
       function inertiaStep() {
-        if (Math.abs(velocity) > 0.0001) {
+        if (Math.abs(velocity) > 0.0002) {
           lastProgress += velocity;
           lastProgress = Math.max(0, Math.min(1, lastProgress));
           const frame = lastProgress * (lottie.totalFrames - 1);
