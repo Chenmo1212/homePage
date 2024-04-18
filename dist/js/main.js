@@ -32,12 +32,11 @@ window.onload = () => {
   guestbook = new Guestbook()
   guestbook.init()
 
+  const lang = getLanguageFromURL() || getBrowserLanguage();
+  applyLanguage(lang);
+
   if (cookieLanguage !== htmlLanguage) {
     applyLanguage(cookieLanguage)
-  }
-
-  if (getLanguageFromURL()) {
-    applyLanguage(getLanguageFromURL())
   }
 }
 
@@ -71,6 +70,11 @@ function getLanguageFromCookie() {
     }
   }
   return 'en';
+}
+
+const getBrowserLanguage = () => {
+  const lang = navigator.language.toLowerCase() || navigator.userLanguage.toLowerCase();
+  return lang.indexOf('en')=== 0 ? 'en' : 'zh';
 }
 
 function getLanguageFromURL() {
