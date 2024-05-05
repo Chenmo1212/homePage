@@ -20,7 +20,7 @@
 <br/>
 <br/>
     <a href="https://github.com/Chenmo1212/homepage" target="_blank">
-        <img alt="GitHub followers" src="https://img.shields.io/github/followers/pudongping?style=social">
+        <img alt="GitHub followers" src="https://img.shields.io/github/followers/chenmo1212?style=social">
     </a>
     <a href="https://github.com/Chenmo1212/homepage" target="_blank">
         <img alt="GitHub forks" src="https://img.shields.io/github/forks/Chenmo1212/homepage?style=social">
