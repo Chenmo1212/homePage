@@ -522,7 +522,6 @@ class Scene {
           lastProgress += velocity;
           lastProgress = Math.max(0, Math.min(1, lastProgress));
           const frame = lastProgress * (lottie.totalFrames - 1);
-          console.log("lastProgress", lastProgress, Math.abs(velocity), frame);
           lottie.goToAndStop(frame, true);
           velocity *= 0.98;
           requestAnimationFrame(inertiaStep);
