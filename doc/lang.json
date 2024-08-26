@@ -78,7 +78,7 @@
     },
     "programming4": {
       "zh": "回归学生时代给我带来截然不同的感受<br />带着新的见解重新投入职场 <br /> 目前正在<a href=\"https://www.ibm.com/\" target=\"_blank\" class=\"underline\">IBM</a>公司继续探索前行",
-      "en": "Returning to student life brought me a completely different feeling. \n With new insights, I re-entered the workplace. \nNow I am continuing to explore and move forward at <a href=\"https://www.ibm.com/\" target=\"_blank\" class=\"underline\">IBM</a> Corporation."
+      "en": "Returning to student life brought me a completely different feeling. <br />\n With new insights, I re-entered the workplace. <br />\nNow I am continuing to explore and move forward at <a href=\"https://www.ibm.com/\" target=\"_blank\" class=\"underline\">IBM</a> Corporation."
     }
   },
   "connect": {
@@ -269,8 +269,8 @@
       "en": "Hubei ICP No. 19020558"
     },
     "copyright": {
-      "zh": "版权所有 © 2018-2023 ChenMo1212.cn",
-      "en": "All rights reserved © 2018-2023 ChenMo1212.cn"
+      "zh": "版权所有 © 2018-2024 ChenMo1212.cn",
+      "en": "All rights reserved © 2018-2024 ChenMo1212.cn"
     }
   }
 }
