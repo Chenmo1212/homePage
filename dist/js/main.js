@@ -21,6 +21,15 @@ function debounce(func, wait) {
   };
 }
 
+function addStatistics() {
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?fe38adea9165b7e07b70c8b5bac9b6a9";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+}
+
 window.onload = () => {
   globe = new Globe()
   globe.init()
@@ -34,6 +43,7 @@ window.onload = () => {
 
   const lang = getLanguageFromURL() || getBrowserLanguage();
   applyLanguage(lang);
+  addStatistics();
 
   if (cookieLanguage !== htmlLanguage) {
     applyLanguage(cookieLanguage)
