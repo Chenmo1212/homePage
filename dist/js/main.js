@@ -48,6 +48,14 @@ window.onload = () => {
   if (cookieLanguage !== htmlLanguage) {
     applyLanguage(cookieLanguage)
   }
+
+  // Simple elevator usage.
+  let elementButton = document.querySelector('.elevator');
+  new Elevator({
+    element: elementButton,
+    mainAudio: 'https://tholman.com/elevator.js/music/elevator.mp3', // Music from http://www.bensound.com/
+    endAudio: 'https://tholman.com/elevator.js/music/ding.mp3'
+  });
 }
 
 /**
@@ -706,23 +714,15 @@ darkModeToggle.onclick = function () {
  *  ============================
  */
 
-// Simple elevator usage.
-let elementButton = document.querySelector('.elevator');
-let elevator = new Elevator({
-  element: elementButton,
-  mainAudio: 'https://tholman.com/elevator.js/music/elevator.mp3', // Music from http://www.bensound.com/
-  endAudio: 'https://tholman.com/elevator.js/music/ding.mp3'
-});
-
 document.addEventListener('scroll', function () {
-  let elevator = document.querySelector('.elevator');
-  let threshold = 100; // 设置阈值，当滚动位置超过100px时，显示 "elevator" 元素
+  let backToTop = document.querySelector('.back-to-up');
+  let threshold = 100; // 设置阈值，当滚动位置超过100px时，显示 "backToTop" 元素
 
   if (window.pageYOffset > threshold) {
-    elevator.style.opacity = 1;
-    elevator.style.visibility = 'visible';
+    backToTop.style.opacity = 1;
+    backToTop.style.visibility = 'visible';
   } else {
-    elevator.style.opacity = 0;
-    elevator.style.visibility = 'hidden';
+    backToTop.style.opacity = 0;
+    backToTop.style.visibility = 'hidden';
   }
 });

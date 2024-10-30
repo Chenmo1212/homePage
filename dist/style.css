@@ -248,7 +248,7 @@ section p {
 .slice {
   width: 100%;
   height: 100%;
-  background-image: url("https://images.pexels.com/photos/1646311/pexels-photo-1646311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-image: url("https://cdn.chenmo1212.cn/img/homepage_cover.jpeg?imageView2/0/w/800/q/100");
   background-size: cover;
   box-shadow: 0 20px 90px 0 rgba(0, 0, 0, .08), 0 9px 30px 0 rgba(0, 0, 0, .1);
 }
