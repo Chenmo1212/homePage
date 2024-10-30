@@ -121,15 +121,15 @@
   },
   "tiku": {
     "heading": {
-      "zh": "Little Cookies",
-      "en": "Little Cookies"
+      "zh": "2024版爱尔兰理论驾照测试",
+      "en": "2024 DDT Ireland Theory Test"
     },
     "paragraph": {
-      "zh": "自己开发的东西能被别人所用，算是最大的满足。<br />基于新拟态UI风格，使用Vue框架开发的大学Web端题库，另有音乐播放器，与炫酷音效的待办事项。",
-      "en": "One of the greatest satisfactions is when something I developed can be used by others.<br />Little Cookies is a university web-based question bank developed using the neumorphic UI design style and Vue framework,. It also includes a music player and a stylish task manager with cool sound effects."
+      "zh": "自己开发的东西能被别人所用，算是最大的满足。<br />基于新拟态UI风格，使用React框架开发的爱尔兰理论驾考中英文Web端题库。题目内容来自DDT爱尔兰理论驾照考试题库，带有模拟考试功能。",
+      "en": "One of the greatest satisfactions is when something I developed can be used by others.<br /> Based on the new neumorphic UI style, developed for the Irish Theory Test Web application. The questions are sourced from the DDT Ireland Theory Test library, with a mock test feature. "
     },
     "button": {
-      "zh": "浏览 Little Cookies",
+      "zh": "浏览 DDT test",
       "en": "Visit"
     }
   },
