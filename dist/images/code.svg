@@ -7,37 +7,41 @@
 	.st1{fill:none;stroke:#979797;stroke-miterlimit:10;}
 	.st2{font-family:'ArialMT';}
 	.st3{font-size:16.4857px;}
+	.line-animate {
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 1000;
+	}
 </style>
 <g>
-	<polyline class="st0" points="1365.95,352.89 1614.24,321.66 1582.64,562.08 	"/>
-	<polyline class="st1" points="619.84,257.4 461.71,321.35 499.57,460.73 	"/>
-	<polyline class="st1" points="291.36,124.9 435.61,225.19 461.71,321.35 558.78,388.96 699.38,295.25 724.24,158.49 	"/>
-	<polyline class="st1" points="270.75,359.82 461.71,321.35 354.4,436.75 	"/>
+	<polyline class="st0 line-animate" points="1365.95,352.89 1614.24,321.66 1582.64,562.08 	"/>
+	<polyline class="st1 line-animate" points="619.84,257.4 461.71,321.35 499.57,460.73 	"/>
+	<polyline class="st1 line-animate" points="291.36,124.9 435.61,225.19 461.71,321.35 558.78,388.96 699.38,295.25 724.24,158.49 	"/>
+	<polyline class="st1 line-animate" points="270.75,359.82 461.71,321.35 354.4,436.75 	"/>
 	<path d="M558.78,388.96"/>
-	<polyline class="st1" points="140.37,306.86 461.71,321.35 213.7,488.17 14.5,512.9 	"/>
-	<polyline class="st1" points="136.91,622.8 203.78,569.22 213.7,488.17 311.84,605.73 	"/>
-	<polyline class="st1" points="208.2,200.46 461.71,321.35 410.88,528.8 	"/>
-	<polyline class="st1" points="820.57,340.59 699.38,295.25 801.04,225.19 	"/>
+	<polyline class="st1 line-animate" points="140.37,306.86 461.71,321.35 213.7,488.17 14.5,512.9 	"/>
+	<polyline class="st1 line-animate" points="136.91,622.8 203.78,569.22 213.7,488.17 311.84,605.73 	"/>
+	<polyline class="st1 line-animate" points="208.2,200.46 461.71,321.35 410.88,528.8 	"/>
+	<polyline class="st1 line-animate" points="820.57,340.59 699.38,295.25 801.04,225.19 	"/>
 	<path class="st1" d="M1819.22,254.04"/>
-	<polyline class="st1" points="1111.71,624.89 1128.45,527.72 936.18,680.23 	"/>
-	<polyline class="st1" points="1298.54,521.85 1128.45,527.72 1283.43,607.03 	"/>
-	<polyline class="st1" points="1535.83,211.28 1614.14,321.65 1467.52,266.36 	"/>
-	<polyline class="st1" points="1819.22,254.04 1614.14,321.65 1667.71,179.68 1768.71,188.41 	"/>
-	<polyline class="st1" points="1804.11,338.3 1614.14,321.65 1548.58,436.87 	"/>
-	<polyline class="st1" points="1820.59,493.26 1614.14,321.65 1691.47,441.13 	"/>
-	<polyline class="st1" points="1467.52,624.89 1582.39,562.37 1622.13,651.19 1708.1,558.48 1806.41,601.07 1806.41,702.73 	"/>
-	<line class="st1" x1="1308.16" y1="697.7" x2="1128.45" y2="527.72"/>
-	<line class="st1" x1="1614.14" y1="321.65" x2="1716.68" y2="262.42"/>
+	<polyline class="st1 line-animate" points="1111.71,624.89 1128.45,527.72 936.18,680.23 	"/>
+	<polyline class="st1 line-animate" points="1298.54,521.85 1128.45,527.72 1283.43,607.03 	"/>
+	<polyline class="st1 line-animate" points="1535.83,211.28 1614.14,321.65 1467.52,266.36 	"/>
+	<polyline class="st1 line-animate" points="1819.22,254.04 1614.14,321.65 1667.71,179.68 1768.71,188.41 	"/>
+	<polyline class="st1 line-animate" points="1804.11,338.3 1614.14,321.65 1548.58,436.87 	"/>
+	<polyline class="st1 line-animate" points="1820.59,493.26 1614.14,321.65 1691.47,441.13 	"/>
+	<polyline class="st1 line-animate" points="1467.52,624.89 1582.39,562.37 1622.13,651.19 1708.1,558.48 1806.41,601.07 1806.41,702.73 	"/>
+	<line class="st1 line-animate" x1="1308.16" y1="697.7" x2="1128.45" y2="527.72"/>
+	<line class="st1 line-animate" x1="1614.14" y1="321.65" x2="1716.68" y2="262.42"/>
 	<path class="st1" d="M558.78,388.96"/>
-	<polyline class="st0" points="558.78,387.56 1129.76,527.73 1614.24,321.66 	"/>
-	<polyline class="st1" points="670.53,605.73 704.88,518.39 699.38,295.25 756.3,402.08 	"/>
-	<polyline class="st1" points="995.62,441.13 1128.45,527.72 1207.87,418.82 	"/>
-	<line class="st1" x1="1161.35" y1="341.36" x2="1128.45" y2="527.72"/>
-	<polyline class="st1" points="1050.03,148.45 1090.04,285.95 1128.45,523.5 	"/>
-	<line class="st1" x1="914.97" y1="350.51" x2="1090.04" y2="285.95"/>
-	<line class="st1" x1="1622.48" y1="651.37" x2="1717.37" y2="754.94"/>
-	<line class="st1" x1="704.88" y1="518.39" x2="816.15" y2="543.91"/>
-	<polyline class="st1" points="580,12.87 635.57,92.55 596.49,183.22 461.71,321.35 508.57,143.38 	"/>
+	<polyline class="st0 line-animate" points="558.78,387.56 1129.76,527.73 1614.24,321.66 	"/>
+	<polyline class="st1 line-animate" points="670.53,605.73 704.88,518.39 699.38,295.25 756.3,402.08 	"/>
+	<polyline class="st1 line-animate" points="995.62,441.13 1128.45,527.72 1207.87,418.82 	"/>
+	<line class="st1 line-animate" x1="1161.35" y1="341.36" x2="1128.45" y2="527.72"/>
+	<polyline class="st1 line-animate" points="1050.03,148.45 1090.04,285.95 1128.45,523.5 	"/>
+	<line class="st1 line-animate" x1="914.97" y1="350.51" x2="1090.04" y2="285.95"/>
+	<line class="st1 line-animate" x1="1622.48" y1="651.37" x2="1717.37" y2="754.94"/>
+	<line class="st1 line-animate" x1="704.88" y1="518.39" x2="816.15" y2="543.91"/>
+	<polyline class="st1 line-animate" points="580,12.87 635.57,92.55 596.49,183.22 461.71,321.35 508.57,143.38 	"/>
 	<g>
 		<g>
 			<text transform="matrix(1 0 0 1 572.5312 394.457)" class="st2 st3">Web Front End</text>
@@ -282,3 +286,5 @@
 	</g>
 </g>
 </svg>
+
+<!-- Made with Bob -->
