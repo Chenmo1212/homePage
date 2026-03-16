@@ -570,7 +570,7 @@ class Scene {
     return new ScrollMagic.Scene({
       triggerElement: '#learned',
       triggerHook: .5,
-      duration: '200%',
+      duration: '180%',
     })
       .on('progress', function(e) {
         const codeObject = document.getElementById('code');
@@ -607,8 +607,8 @@ class Scene {
             const maxDist = 800; // Maximum distance to consider
             const normalizedDist = Math.min(distFromHub / maxDist, 1);
             
-            const lineStart = normalizedDist * 0.4; // Closer lines start earlier
-            const lineEnd = lineStart + 0.3;
+            const lineStart = normalizedDist * 0.25; // Closer lines start earlier
+            const lineEnd = lineStart + 0.2;
             const lineProgress = Math.max(0, Math.min(1, (progress - lineStart) / (lineEnd - lineStart)));
             
             const offset = 1000 - (1000 * lineProgress);
@@ -627,8 +627,8 @@ class Scene {
           const maxDist = 800;
           const normalizedDist = Math.min(distFromHub / maxDist, 1);
           
-          const circleStart = normalizedDist * 0.4 + 0.15;
-          const circleEnd = circleStart + 0.15;
+          const circleStart = normalizedDist * 0.25 + 0.1;
+          const circleEnd = circleStart + 0.1;
           const circleProgress = Math.max(0, Math.min(1, (progress - circleStart) / (circleEnd - circleStart)));
           
           circle.style.opacity = circleProgress;
@@ -650,8 +650,8 @@ class Scene {
               const maxDist = 800;
               const normalizedDist = Math.min(distFromHub / maxDist, 1);
               
-              const textStart = normalizedDist * 0.4 + 0.25;
-              const textEnd = textStart + 0.15;
+              const textStart = normalizedDist * 0.25 + 0.15;
+              const textEnd = textStart + 0.1;
               const textProgress = Math.max(0, Math.min(1, (progress - textStart) / (textEnd - textStart)));
               
               text.style.opacity = textProgress;
