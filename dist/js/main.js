@@ -475,19 +475,190 @@ class Scene {
   }
 
   node() {
-    const tween = new TimelineMax().add([
-      TweenMax.fromTo('#nodes path', 1, {'stroke-dashoffset': 1200}, {
-        'stroke-dashoffset': 0,
-        ease: Linear.easeIn
-      })
-    ])
+    // Wait for SVG to load
+    const codeObject = document.getElementById('code');
+    
+    // Define the three main hub nodes coordinates
+    const hubNodes = [
+      { cx: 558.78, cy: 388.96, name: 'Web Front End' },  // Javascript hub
+      { cx: 1128.45, cy: 527.72, name: 'Python' },        // Python hub
+      { cx: 1614.14, cy: 321.65, name: 'Server' }         // Server hub
+    ];
+    
+    const initAnimation = () => {
+      const svgDoc = codeObject.contentDocument;
+      if (!svgDoc) {
+        setTimeout(initAnimation, 100);
+        return;
+      }
+      
+      // Hide all elements initially
+      const lines = svgDoc.querySelectorAll('.line-animate');
+      const circles = svgDoc.querySelectorAll('circle');
+      const texts = svgDoc.querySelectorAll('text');
+      
+      lines.forEach(line => {
+        line.style.strokeDashoffset = '1000';
+      });
+      
+      circles.forEach(circle => {
+        circle.style.opacity = '0';
+        circle.style.transform = 'scale(0)';
+        circle.style.transformOrigin = 'center';
+      });
+      
+      texts.forEach(text => {
+        text.style.opacity = '0';
+      });
+      
+      // Show hub nodes immediately
+      circles.forEach(circle => {
+        const cx = parseFloat(circle.getAttribute('cx'));
+        const cy = parseFloat(circle.getAttribute('cy'));
+        
+        // Check if this circle is one of the hub nodes
+        const isHub = hubNodes.some(hub =>
+          Math.abs(hub.cx - cx) < 1 && Math.abs(hub.cy - cy) < 1
+        );
+        
+        if (isHub) {
+          circle.style.opacity = '1';
+          circle.style.transform = 'scale(1)';
+          circle.setAttribute('data-hub', 'true');
+        }
+      });
+      
+      // Show hub node text immediately
+      texts.forEach(text => {
+        const transform = text.getAttribute('transform');
+        if (transform) {
+          const match = transform.match(/matrix\([\d\s.]+\s+([\d.]+)\s+([\d.]+)\)/);
+          if (match) {
+            const x = parseFloat(match[1]);
+            const y = parseFloat(match[2]);
+            
+            const isHubText = hubNodes.some(hub =>
+              Math.abs(hub.cx - x + 14) < 20 && Math.abs(hub.cy - y + 5) < 20
+            );
+            
+            if (isHubText) {
+              text.style.opacity = '1';
+              text.setAttribute('data-hub', 'true');
+            }
+          }
+        }
+      });
+    };
+    
+    // Calculate distance from a point to nearest hub
+    const getDistanceToNearestHub = (x, y) => {
+      let minDist = Infinity;
+      hubNodes.forEach(hub => {
+        const dist = Math.sqrt(Math.pow(hub.cx - x, 2) + Math.pow(hub.cy - y, 2));
+        if (dist < minDist) minDist = dist;
+      });
+      return minDist;
+    };
+    
+    // Initialize animation when SVG loads
+    if (codeObject.contentDocument) {
+      initAnimation();
+    } else {
+      codeObject.addEventListener('load', initAnimation);
+    }
 
     return new ScrollMagic.Scene({
       triggerElement: '#learned',
       triggerHook: .5,
-      duration: '80%',
+      duration: '180%',
     })
-      .setTween(tween)
+      .on('progress', function(e) {
+        const codeObject = document.getElementById('code');
+        const svgDoc = codeObject.contentDocument;
+        if (!svgDoc) return;
+        
+        const lines = svgDoc.querySelectorAll('.line-animate');
+        const circles = svgDoc.querySelectorAll('circle');
+        const texts = svgDoc.querySelectorAll('text');
+        const progress = e.progress;
+        
+        // Animate lines based on distance from hub nodes
+        lines.forEach((line, index) => {
+          // Get line endpoints
+          const points = line.getAttribute('points') || '';
+          const x1 = line.getAttribute('x1');
+          const y1 = line.getAttribute('y1');
+          
+          let startX, startY;
+          if (points) {
+            const coords = points.trim().split(/[\s,]+/);
+            startX = parseFloat(coords[0]);
+            startY = parseFloat(coords[1]);
+          } else if (x1 && y1) {
+            startX = parseFloat(x1);
+            startY = parseFloat(y1);
+          }
+          
+          if (startX && startY) {
+            // Calculate distance from nearest hub
+            const distFromHub = getDistanceToNearestHub(startX, startY);
+            
+            // Lines closer to hubs animate first
+            const maxDist = 800; // Maximum distance to consider
+            const normalizedDist = Math.min(distFromHub / maxDist, 1);
+            
+            const lineStart = normalizedDist * 0.25; // Closer lines start earlier
+            const lineEnd = lineStart + 0.2;
+            const lineProgress = Math.max(0, Math.min(1, (progress - lineStart) / (lineEnd - lineStart)));
+            
+            const offset = 1000 - (1000 * lineProgress);
+            line.style.strokeDashoffset = offset;
+          }
+        });
+        
+        // Animate circles based on distance from hubs
+        circles.forEach((circle) => {
+          if (circle.getAttribute('data-hub') === 'true') return; // Skip hub nodes
+          
+          const cx = parseFloat(circle.getAttribute('cx'));
+          const cy = parseFloat(circle.getAttribute('cy'));
+          const distFromHub = getDistanceToNearestHub(cx, cy);
+          
+          const maxDist = 800;
+          const normalizedDist = Math.min(distFromHub / maxDist, 1);
+          
+          const circleStart = normalizedDist * 0.25 + 0.1;
+          const circleEnd = circleStart + 0.1;
+          const circleProgress = Math.max(0, Math.min(1, (progress - circleStart) / (circleEnd - circleStart)));
+          
+          circle.style.opacity = circleProgress;
+          circle.style.transform = `scale(${circleProgress})`;
+        });
+        
+        // Animate text based on distance from hubs
+        texts.forEach((text) => {
+          if (text.getAttribute('data-hub') === 'true') return; // Skip hub text
+          
+          const transform = text.getAttribute('transform');
+          if (transform) {
+            const match = transform.match(/matrix\([\d\s.]+\s+([\d.]+)\s+([\d.]+)\)/);
+            if (match) {
+              const x = parseFloat(match[1]);
+              const y = parseFloat(match[2]);
+              const distFromHub = getDistanceToNearestHub(x, y);
+              
+              const maxDist = 800;
+              const normalizedDist = Math.min(distFromHub / maxDist, 1);
+              
+              const textStart = normalizedDist * 0.25 + 0.15;
+              const textEnd = textStart + 0.1;
+              const textProgress = Math.max(0, Math.min(1, (progress - textStart) / (textEnd - textStart)));
+              
+              text.style.opacity = textProgress;
+            }
+          }
+        });
+      });
   }
 
   connectProgram() {

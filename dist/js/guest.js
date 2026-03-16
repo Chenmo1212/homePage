@@ -10,7 +10,7 @@ class Guestbook {
         this.nameField = this.element('message-name')
         this.emailField = this.element('message-email')
         this.URLField = this.element('message-url')
-        this.baseURL = "https://api.chenmo1212.cn/message"
+        this.baseURL = "https://api.chenmo1212.cn"
         this.avatarURL = "https://api.dicebear.com/6.x/initials/svg"
     }
 
@@ -19,8 +19,21 @@ class Guestbook {
 
         this.GET()
             .then(data => {
-                let resData = data.data
+                // Handle new API response format
+                let resData = data.data || data.entries || []
                 for (let i = 0; i < resData.length; i++) {
+                    // Extract metadata fields for backward compatibility
+                    if (resData[i].metadata) {
+                        resData[i].name = resData[i].metadata.name
+                        resData[i].content = resData[i].metadata.content
+                        resData[i].email = resData[i].metadata.email
+                        resData[i].website = resData[i].metadata.website
+                    }
+                    // Extract create_time from timestamps for backward compatibility
+                    if (resData[i].timestamps && resData[i].timestamps.create_time) {
+                        resData[i].create_time = resData[i].timestamps.create_time
+                    }
+                    // Transform Entry model to display format
                     resData[i].date = this.changeTimeStyle(resData[i])
                 }
                 this.render(resData)
@@ -95,18 +108,24 @@ class Guestbook {
     }
 
     postBackend(button, content, name, email, website) {
+        // New API structure using Entry model
         const data = {
-            name: name,
-            content: content,
-            email: email,
-            website: website,
+            type: "message",
+            source: "homepage",
+            metadata: {
+                name: name,
+                content: content,
+                email: email,
+                website: website
+            },
             agent: navigator.userAgent + ' DWAPI/7.0'
         }
 
         button.className = 'posting'
         button.innerHTML = ''
 
-        let backendUrl = this.baseURL + '/messages'
+        // Use new aggregated API endpoint
+        let backendUrl = this.baseURL + 'message/api/v1/entries'
         this.POST(backendUrl, JSON.stringify(data))
             .then(res => {
                 if (res.status === 200 || res.status === 201) {
@@ -123,6 +142,7 @@ class Guestbook {
 
     // change time format
     changeTimeStyle(item) {
+        // Use create_time which should be set from timestamps.created_at
         const d = new Date(item.create_time)
         let timeStamp = d.getTime() / 1000 - 28800
         return this.getDateDiff(timeStamp, new Date(item.create_time))
@@ -187,7 +207,8 @@ class Guestbook {
     }
 
     GET() {
-        let url = this.baseURL + '/messages';
+        // Use new aggregated API endpoint with type filter
+        let url = this.baseURL + '/message/api/v1/entries?type=message&source=homepage';
         return fetch(url, {
             method: 'GET',
             headers: {
@@ -200,6 +221,7 @@ class Guestbook {
             return res.json();
         }).catch(err=>{
             console.log(err)
+            throw err;
         });
     }
 
