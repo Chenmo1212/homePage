@@ -125,7 +125,7 @@ class Guestbook {
         button.innerHTML = ''
 
         // Use new aggregated API endpoint
-        let backendUrl = this.baseURL + '/api/v1/entries'
+        let backendUrl = this.baseURL + 'message/api/v1/entries'
         this.POST(backendUrl, JSON.stringify(data))
             .then(res => {
                 if (res.status === 200 || res.status === 201) {
