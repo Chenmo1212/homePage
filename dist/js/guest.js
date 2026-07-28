@@ -125,7 +125,7 @@ class Guestbook {
         button.innerHTML = ''
 
         // Use new aggregated API endpoint
-        let backendUrl = this.baseURL + 'message/api/v1/entries'
+        let backendUrl = this.baseURL + 'message/entries'
         this.POST(backendUrl, JSON.stringify(data))
             .then(res => {
                 if (res.status === 200 || res.status === 201) {
@@ -208,7 +208,7 @@ class Guestbook {
 
     GET() {
         // Use new aggregated API endpoint with type filter
-        let url = this.baseURL + '/message/api/v1/entries?type=message&source=homepage';
+        let url = this.baseURL + '/message/entries?type=message&source=homepage';
         return fetch(url, {
             method: 'GET',
             headers: {
