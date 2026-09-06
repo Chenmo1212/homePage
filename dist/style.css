@@ -426,6 +426,11 @@ section p {
   }
 }
 
+#learned {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 #nodes {
   margin: 400px 0 100px;
   overflow-x: auto;
@@ -438,9 +443,15 @@ section p {
   height: 0;
 }
 
+#code {
+  width: 1920px;
+  height: 773px;
+}
+
 @media (max-width: 600px) {
   #code {
     width: 1500px;
+    height: 604px;
   }
 }
 
