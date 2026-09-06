@@ -839,7 +839,7 @@ function enableDarkMode() {
   setTimeout(function () {
     obj.classList.remove('scaling')
   }, 520)
-  code.src = './dist/images/code_dark.svg'
+  code.data = './dist/images/code_dark.svg'
 }
 
 function disableDarkMode() {
@@ -853,7 +853,7 @@ function disableDarkMode() {
   setTimeout(function () {
     obj.classList.remove('scaling')
   }, 520)
-  code.src = './dist/images/code.svg'
+  code.data = './dist/images/code.svg'
 }
 
 if (darkMode === 'enabled') {

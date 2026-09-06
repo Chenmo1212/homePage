@@ -10,7 +10,7 @@ class Guestbook {
         this.nameField = this.element('message-name')
         this.emailField = this.element('message-email')
         this.URLField = this.element('message-url')
-        this.baseURL = "https://api.chenmo1212.cn"
+        this.baseURL = "https://api.chenmo1212.cn/"
         this.avatarURL = "https://api.dicebear.com/6.x/initials/svg"
     }
 
@@ -125,7 +125,7 @@ class Guestbook {
         button.innerHTML = ''
 
         // Use new aggregated API endpoint
-        let backendUrl = this.baseURL + 'message/api/v1/entries'
+        let backendUrl = this.baseURL + 'message/entries'
         this.POST(backendUrl, JSON.stringify(data))
             .then(res => {
                 if (res.status === 200 || res.status === 201) {
@@ -208,7 +208,7 @@ class Guestbook {
 
     GET() {
         // Use new aggregated API endpoint with type filter
-        let url = this.baseURL + '/message/api/v1/entries?type=message&source=homepage';
+        let url = this.baseURL + '/message/entries?type=message&source=homepage';
         return fetch(url, {
             method: 'GET',
             headers: {
