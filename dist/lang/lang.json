@@ -93,12 +93,12 @@
       "en": "Personal Blog"
     },
     "paragraph1": {
-      "zh": "2019年基于阿里云服务器，使用WordPress搭建的个人博客。新拟态风格的博客网站，用来发布在平时学习编程，过程中遇到的问题，记录了许多编程笔记。",
-      "en": "A personal blog built in 2019 using WordPress on an Alibaba Cloud server. It features a new neumorphic design style and is used to publish programming-related content, documenting programming notes and the problems encountered during the learning process."
+      "zh": "这里记录着生活里的一些片段，也记录一些关于成长、关系和世界的思考。有些是认真想过很久的事情，有些只是某个时刻突然冒出来的念头。",
+      "en": "This is where I keep fragments of life, along with thoughts on growth, relationships, and the world around me. Some are things I’ve spent a long time thinking about; others are simply thoughts that came to me in a particular moment."
     },
     "paragraph2": {
-      "zh": "后来，也会在里面加入一些心情杂记，给我杂乱的脑子来一个缓冲。",
-      "en": "Later on, I also started including some miscellaneous personal thoughts in the blog, serving as a buffer for my cluttered mind."
+      "zh": "它们没有固定的主题，只是我留给自己的一小块地方，用来记录、整理，也试着留下些什么。",
+      "en": "There is no fixed topic here. It is simply a small corner I’ve kept for myself, a place to write things down, sort through my thoughts, and leave something behind."
     },
     "button": {
       "zh": "浏览我的博客",

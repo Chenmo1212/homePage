@@ -689,33 +689,36 @@ section p {
   width: 1000px;
   height: 100%;
   overflow: hidden;
+  perspective: 1200px;
 }
 
 #blog .showcase img {
-  max-width: 1000px;
+  max-width: 680px;
   position: absolute;
-  right: -300px;
+  right: -60px;
   transition: transform 1s ease-out;
   will-change: transform;
+  transform-origin: center center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 #blog.active .showcase img {
-  transform: translateY(0);
+  transform: translateY(20%) translate(11%, -42%) rotate(23deg) skew(-2deg, -6deg);
 }
 
 #blog-showcase-a {
-  top: 10%;
-  transform: translateY(100%);
+  top: 25%;
+  transform: translateY(150%) translate(11%, -42%) rotate(23deg) skew(-2deg, -6deg);
 }
 
 #blog-showcase-b {
-  top: 29%;
-  transform: translateY(166%);
+  top: 40%;
+  transform: translateY(170%) translate(11%, -42%) rotate(23deg) skew(-2deg, -6deg);
 }
 
 #blog-showcase-c {
-  top: 50%;
-  transform: translateY(200%);
+  top: 55%;
+  transform: translateY(220%) translate(11%, -42%) rotate(23deg) skew(-2deg, -6deg);
 }
 
 #backdrop {
@@ -902,7 +905,11 @@ section p {
   #blog .showcase img {
     max-width: 800px;
     right: auto;
-    transform: translateY(0);
+    transform: scale(0.7) translateY(120%) translate(-8%, -23%) rotate(23deg) skew(-2deg, -6deg);
+  }
+
+  #blog.active .showcase img {
+    transform: scale(0.7) translateY(20%) translate(-8%, -23%) rotate(23deg) skew(-2deg, -6deg);
   }
 
   #blog-showcase-a {
